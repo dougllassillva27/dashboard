@@ -17,7 +17,7 @@ export default function CategoryFilter() {
   return (
     <div className="w-full max-w-6xl mx-auto px-4 mb-6 animate-fadeIn">
       <div className="flex items-center justify-between gap-4">
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-hide flex-1">
+        <div className="flex items-center gap-2 overflow-x-auto py-2 scrollbar-hide flex-1">
           <Filter size={18} className="text-muted flex-shrink-0" />
           
           {allCategories.map(cat => {
@@ -30,7 +30,7 @@ export default function CategoryFilter() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
                   isActive
-                    ? 'bg-accent text-bg'
+                    ? 'bg-accent text-[#1a1a1a]'
                     : 'bg-card border border-border text-muted hover:text-text hover:border-accent'
                 }`}
               >
@@ -42,7 +42,7 @@ export default function CategoryFilter() {
         
         <button
           onClick={openAddSite}
-          className="flex items-center gap-2 px-4 py-2 bg-accent rounded-lg text-bg text-sm font-medium hover:opacity-90 transition-opacity flex-shrink-0"
+          className="flex items-center gap-2 px-4 py-2 bg-accent rounded-lg text-[#1a1a1a] text-sm font-medium hover:opacity-90 transition-opacity flex-shrink-0"
         >
           <Plus size={18} />
           <span className="hidden sm:inline">Adicionar Site</span>
