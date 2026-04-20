@@ -1,5 +1,4 @@
-import { useState, useMemo } from 'react'
-import { Plus } from 'lucide-react'
+import { useMemo } from 'react'
 import {
   DndContext,
   closestCenter,
@@ -17,7 +16,7 @@ import useStore from '../store/useStore'
 import SiteCard from './SiteCard'
 
 export default function SiteGrid() {
-  const { sites, activeCategory, searchQuery, reorderSites, openAddSite } = useStore()
+  const { sites, activeCategory, searchQuery, reorderSites } = useStore()
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -74,15 +73,6 @@ export default function SiteGrid() {
             {filteredSites.map(site => (
               <SiteCard key={site.id} site={site} />
             ))}
-            
-            {/* Add Site Button */}
-            <button
-              onClick={openAddSite}
-              className="border-2 border-dashed border-border rounded-xl p-4 flex flex-col items-center justify-center gap-2 text-muted hover:border-accent hover:text-accent transition-colors min-h-[88px]"
-            >
-              <Plus size={24} />
-              <span className="text-sm font-medium">Adicionar Site</span>
-            </button>
           </div>
         </SortableContext>
       </DndContext>
