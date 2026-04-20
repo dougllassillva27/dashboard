@@ -51,7 +51,7 @@ export default function App() {
 
         {/* Footer */}
         <footer className="text-center py-6 text-muted text-sm">
-          <p>Nebula Start · Sua página inicial personalizada</p>
+          <p>Orbit · Sua página inicial personalizada</p>
         </footer>
       </div>
 

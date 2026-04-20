@@ -56,7 +56,7 @@ export default function SettingsModal() {
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = 'nebula-startpage-config.json'
+    a.download = 'orbit-config.json'
     a.click()
     URL.revokeObjectURL(url)
   }

@@ -1,91 +1,145 @@
-# Nebula Start
+# Orbit
 
-Uma página inicial personalizada e moderna para seu navegador.
+**Sua página inicial, do seu jeito.**
+
+Orbit é uma página inicial personalizada para seu navegador. Rápida, bonita, sem rastreamento, sem contas, sem complicação. Apenas você e seus sites favoritos.
+
+---
+
+## Preview
+
+<!-- Adicione seu screenshot aqui -->
+<div align="center">
+  
+![Orbit Preview](./public/preview.png)
+
+</div>
+
+---
+
+## Por que usar?
+
+**Você abre o navegador dezenas de vezes por dia.** Cada vez é a mesma história: digitar o mesmo site, fazer a mesma pesquisa, perder tempo. 
+
+Orbit resolve isso colocando tudo que você precisa a um clique de distância. Seus sites favoritos, suas categorias, seu estilo.
+
+### Para usuários:
+
+- **Organize seus sites** - Agrupe por categorias (Dev, Trabalho, Social, Entretenimento...) e encontre o que precisa instantaneamente
+- **Pesquise mais rápido** - 6 provedores de busca com um toque (Google, Bing, DuckDuckGo, YouTube, Brave, Ecosia)
+- **Personalize o visual** - 7 temas únicos, do minimalista ao cyberpunk
+- **Feed de notícias** - Fique atualizado com tópicos que interessam a você
+- **Sem cadastro** - Tudo salvo localmente, sem contas, sem rastreamento
+- **Leve suas configurações** - Exporte e importe seu setup em JSON
+
+### Para recrutadores:
+
+Este projeto demonstra competência em:
+
+- **React moderno** - Hooks, Context, componentização limpa
+- **Estado global** - Zustand para gerenciamento eficiente
+- **UX/UI** - Interface intuitiva com micro-interações e animações suaves
+- **Performance** - Vite para build instantâneo, zero bibliotecas pesadas
+- **Responsividade** - Funciona perfeitamente em qualquer tela
+- **Persistência** - localStorage com sincronização automática
+- **Drag & Drop** - dnd-kit para reordenação fluida
+- **Temas dinâmicos** - CSS variables para troca de temas sem reload
+
+---
 
 ## Funcionalidades
 
-- **Relógio e Data** - Exibição em tempo real com formato localizado em português
-- **Barra de Pesquisa** - 6 provedores (Google, Bing, DuckDuckGo, YouTube, Brave, Ecosia) com ciclo via Tab
-- **Cards de Sites** - Adicione, edite, remova e reordene seus sites favoritos com drag and drop
-- **Filtro de Categorias** - Organize seus sites por categorias personalizadas
-- **Feed de Notícias** - RSS gratuito ou GNews API com tópicos de interesse
-- **7 Temas** - Minimal Light/Dark, Space (com estrelas animadas), Hacking, Nord, Sunset, Cyberpunk
-- **Export/Import** - Compartilhe sua configuração entre dispositivos
+### Relógio e Data
+Exibição em tempo real com formato localizado em português. Simples, elegante, sempre visível.
 
-## Instalação
+### Barra de Pesquisa Inteligente
+- Pressione `Tab` para alternar entre 6 provedores de busca
+- Digite para filtrar seus sites simultaneamente
+- Pressione `Enter` para pesquisar
 
-```bash
-# Instalar dependências
-npm install
+### Cards de Sites
+- Adicione quantos sites quiser
+- Arraste e solte para reorganizar
+- Favicon automático via Google S2
+- Edite ou remova com um clique
 
-# Iniciar servidor de desenvolvimento
-npm run dev
+### Categorias Personalizadas
+- Crie suas próprias categorias
+- Filtre seus sites instantaneamente
+- Organize por contexto: trabalho, lazer, estudos...
 
-# Build para produção
-npm run build
-```
+### Feed de Notícias
+- RSS gratuito integrado (sem API key necessária)
+- Suporte a GNews API para mais fontes
+- Escolha tópicos: tecnologia, ciência, negócios...
 
-## Uso como Página Inicial
+### 7 Temas Únicos
 
-### Desenvolvimento
-1. Execute `npm run dev`
-2. Configure seu navegador para abrir `http://localhost:5173` na inicialização
+| Tema | Descrição |
+|------|-----------|
+| Minimal Light | Clássico, limpo, profissional |
+| Minimal Dark | Escuro elegante, perfeito para programadores |
+| Space | Fundo escuro com estrelas animadas |
+| Hacking | Matrix-inspired, verde neon em terminal |
+| Nord | Paleta escandinava suave |
+| Sunset | Tons quentes de pôr do sol |
+| Cyberpunk | Neon vibrante, futurista |
 
-### Produção
-1. Execute `npm run build`
-2. Sirva a pasta `dist/` com qualquer servidor estático:
-   ```bash
-   npx serve dist
-   ```
-3. Configure a URL no navegador
+### Export/Import
+Exporte toda sua configuração (sites, categorias, tema) em um arquivo JSON. Importe em outro dispositivo e tenha tudo exatamente igual.
 
-## Deploy
+---
 
-### Netlify
-1. Conecte seu repositório GitHub
-2. Build command: `npm run build`
-3. Publish directory: `dist`
+## Começando
 
-### Vercel
-1. Importe o projeto do GitHub
-2. Framework preset: Vite
+### Usuários
 
-### GitHub Pages
-1. Instale `gh-pages`: `npm install -D gh-pages`
-2. Adicione ao `package.json`:
-   ```json
-   "homepage": "https://seu-usuario.github.io/nebula-startpage",
-   "scripts": {
-     "predeploy": "npm run build",
-     "deploy": "gh-pages -d dist"
-   }
-   ```
-3. Execute `npm run deploy`
+1. Clone o repositório
+2. Execute `npm install`
+3. Execute `npm run dev`
+4. Configure seu navegador para abrir `http://localhost:5173`
 
-## Estrutura de Dados (localStorage)
+### Deploy (Gratuito)
 
-```js
-{
-  "sp_sites": [{ id, name, url, category, order }],
-  "sp_categories": ["dev", "trabalho", ...],
-  "sp_theme": "minimal-dark",
-  "sp_search_provider": 0,
-  "sp_news_provider": "rss",
-  "sp_news_apikey": "",
-  "sp_news_topics": ["technology"],
-  "sp_active_category": "all"
-}
-```
+**Netlify/Vercel** - Conecte seu repositório, deploy automático em segundos.
+
+**GitHub Pages** - Hospedagem gratuita diretamente do seu repositório.
+
+---
 
 ## Tecnologias
 
-- **React 18** - Framework UI
-- **Vite** - Build tool
-- **Tailwind CSS** - Estilização
-- **Zustand** - Gerenciamento de estado
-- **dnd-kit** - Drag and drop
-- **Lucide React** - Ícones
+| Tecnologia | Uso |
+|------------|-----|
+| React 18 | Interface do usuário |
+| Vite | Build tool ultrarrápido |
+| Tailwind CSS | Estilização |
+| Zustand | Estado global |
+| dnd-kit | Drag and drop |
+| Lucide React | Ícones |
+
+---
+
+## Filosofia
+
+- **Sem rastreamento** - Seus dados ficam no seu navegador
+- **Sem contas** - Não precisa se cadastrar em nada
+- **Sem backend** - Funciona offline, 100% client-side
+- **Sem dependências pesadas** - Build leve, carregamento instantâneo
+- **Open source** - Código aberto, contribuições bem-vindas
+
+---
 
 ## Licença
 
-MIT
+MIT - Use livremente para qualquer propósito.
+
+---
+
+<div align="center">
+
+**Feito com cuidado por [Seu Nome]**
+
+[Twitter] · [LinkedIn] · [Portfolio]
+
+</div>
