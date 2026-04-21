@@ -6,7 +6,7 @@ import useStore from '../store/useStore'
 import { getFaviconUrl } from '../utils/favicon'
 
 export default function SiteCard({ site }) {
-  const { removeSite, openAddSite, setEditingSite } = useStore()
+  const { confirmDeleteSite, openAddSite, setEditingSite } = useStore()
   const [showActions, setShowActions] = useState(false)
   
   const {
@@ -33,7 +33,7 @@ export default function SiteCard({ site }) {
 
   const handleDelete = (e) => {
     e.stopPropagation()
-    removeSite(site.id)
+    confirmDeleteSite(site.id)
   }
 
   const handleClick = () => {

@@ -37,6 +37,7 @@ const useStore = create((set, get) => ({
   settingsOpen: false,
   addSiteOpen: false,
   editingSite: null,
+  deleteConfirmId: null,
 
   // Actions
   setSites: (sites) => {
@@ -183,6 +184,9 @@ const useStore = create((set, get) => ({
   closeAddSite: () => set({ addSiteOpen: false }),
   
   setEditingSite: (site) => set({ editingSite: site }),
+
+  confirmDeleteSite: (id) => set({ deleteConfirmId: id }),
+  cancelDeleteSite: () => set({ deleteConfirmId: null }),
   
   exportData: () => {
     return storage.exportAll()

@@ -9,6 +9,7 @@ import SiteGrid from './components/SiteGrid'
 import NewsFeed from './components/NewsFeed'
 import SettingsModal from './components/SettingsModal'
 import AddSiteModal from './components/AddSiteModal'
+import ConfirmModal from './components/ConfirmModal'
 import StarCanvas from './components/StarCanvas'
 
 export default function App() {
@@ -58,6 +59,7 @@ export default function App() {
       {/* Modals */}
       <SettingsModal />
       <AddSiteModal />
+      <ConfirmModal />
     </div>
   )
 }
