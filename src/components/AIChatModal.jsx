@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { X, Send, Trash2, AlertCircle, Loader2 } from 'lucide-react'
+import ReactMarkdown from 'react-markdown'
 import useStore from '../store/useStore'
 
 export default function AIChatModal() {
@@ -13,12 +14,13 @@ export default function AIChatModal() {
   } = useStore()
   
   const [input, setInput] = useState('')
+  const [streamingMessage, setStreamingMessage] = useState('')
   const messagesEndRef = useRef(null)
   const inputRef = useRef(null)
   
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }, [chatMessages])
+  }, [chatMessages, streamingMessage])
   
   useEffect(() => {
     if (chatOpen) {
@@ -46,6 +48,7 @@ export default function AIChatModal() {
     const userMessage = { role: 'user', content: message.trim() }
     addChatMessage(userMessage)
     setChatLoading(true)
+    setStreamingMessage('')
     
     try {
       const messages = [userMessage].map(m => ({
@@ -62,7 +65,7 @@ export default function AIChatModal() {
         body: JSON.stringify({
           model: 'deepseek-chat',
           messages,
-          stream: false
+          stream: true
         })
       })
       
@@ -71,13 +74,40 @@ export default function AIChatModal() {
         throw new Error(error.error?.message || 'Erro na API')
       }
       
-      const data = await response.json()
-      const assistantMessage = data.choices[0]?.message
+      const reader = response.body.getReader()
+      const decoder = new TextDecoder()
+      let fullContent = ''
       
-      if (assistantMessage) {
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
+        
+        const chunk = decoder.decode(value)
+        const lines = chunk.split('\n')
+        
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            const data = line.slice(6)
+            if (data === '[DONE]') continue
+            
+            try {
+              const parsed = JSON.parse(data)
+              const content = parsed.choices[0]?.delta?.content || ''
+              if (content) {
+                fullContent += content
+                setStreamingMessage(fullContent)
+              }
+            } catch (e) {
+              // Ignora erros de parse em chunks incompletos
+            }
+          }
+        }
+      }
+      
+      if (fullContent) {
         addChatMessage({
           role: 'assistant',
-          content: assistantMessage.content
+          content: fullContent
         })
       }
     } catch (error) {
@@ -88,6 +118,7 @@ export default function AIChatModal() {
       })
     } finally {
       setChatLoading(false)
+      setStreamingMessage('')
     }
   }
   
@@ -107,6 +138,7 @@ export default function AIChatModal() {
     addChatMessage(userMessage)
     setInput('')
     setChatLoading(true)
+    setStreamingMessage('')
     
     try {
       const messages = [...chatMessages, userMessage].map(m => ({
@@ -123,7 +155,7 @@ export default function AIChatModal() {
         body: JSON.stringify({
           model: 'deepseek-chat',
           messages,
-          stream: false
+          stream: true
         })
       })
       
@@ -132,13 +164,40 @@ export default function AIChatModal() {
         throw new Error(error.error?.message || 'Erro na API')
       }
       
-      const data = await response.json()
-      const assistantMessage = data.choices[0]?.message
+      const reader = response.body.getReader()
+      const decoder = new TextDecoder()
+      let fullContent = ''
       
-      if (assistantMessage) {
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
+        
+        const chunk = decoder.decode(value)
+        const lines = chunk.split('\n')
+        
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            const data = line.slice(6)
+            if (data === '[DONE]') continue
+            
+            try {
+              const parsed = JSON.parse(data)
+              const content = parsed.choices[0]?.delta?.content || ''
+              if (content) {
+                fullContent += content
+                setStreamingMessage(fullContent)
+              }
+            } catch (e) {
+              // Ignora erros de parse em chunks incompletos
+            }
+          }
+        }
+      }
+      
+      if (fullContent) {
         addChatMessage({
           role: 'assistant',
-          content: assistantMessage.content
+          content: fullContent
         })
       }
     } catch (error) {
@@ -149,6 +208,7 @@ export default function AIChatModal() {
       })
     } finally {
       setChatLoading(false)
+      setStreamingMessage('')
     }
   }
   
@@ -219,12 +279,29 @@ export default function AIChatModal() {
                       : 'bg-bg text-text'
                 }`}
               >
-                <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
+                {msg.role === 'user' ? (
+                  <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
+                ) : (
+                  <div className="text-sm prose prose-invert prose-sm max-w-none">
+                    <ReactMarkdown>{msg.content}</ReactMarkdown>
+                  </div>
+                )}
               </div>
             </div>
           ))}
           
-          {chatLoading && (
+          {streamingMessage && (
+            <div className="flex justify-start">
+              <div className="max-w-[80%] px-4 py-2 rounded-2xl bg-bg text-text">
+                <div className="text-sm prose prose-invert prose-sm max-w-none">
+                  <ReactMarkdown>{streamingMessage}</ReactMarkdown>
+                  <span className="animate-pulse">|</span>
+                </div>
+              </div>
+            </div>
+          )}
+          
+          {chatLoading && !streamingMessage && (
             <div className="flex justify-start">
               <div className="bg-bg px-4 py-2 rounded-2xl">
                 <Loader2 size={18} className="animate-spin text-muted" />

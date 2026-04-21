@@ -7,10 +7,10 @@ const searchProviders = [
   // { name: 'Bing', url: 'https://bing.com/search?q=', color: '#00B4F0', icon: 'B', type: 'search' },
   { name: 'DuckDuckGo', url: 'https://duckduckgo.com/?q=', color: '#DE5833', icon: 'D', type: 'search' },
   { name: 'YouTube', url: 'https://youtube.com/results?search_query=', color: '#FF0000', icon: 'Y', type: 'search' },
-  { name: 'Brave', url: 'https://search.brave.com/search?q=', color: '#FB542B', icon: 'Br', type: 'search' },
+  // { name: 'Brave', url: 'https://search.brave.com/search?q=', color: '#FB542B', icon: 'Br', type: 'search' },
   { name: 'Ecosia', url: 'https://ecosia.org/search?q=', color: '#4A9C5D', icon: 'E', type: 'search' },
   { name: 'AI Chat', url: '', color: '#00D4AA', icon: 'AI', type: 'ai' },
-]
+].filter(Boolean)
 
 const useStore = create((set, get) => ({
   // Sites
@@ -24,7 +24,7 @@ const useStore = create((set, get) => ({
   theme: storage.get('theme') || 'minimal-dark',
   
   // Search
-  searchProvider: storage.get('search_provider') || 0,
+  searchProvider: Math.min(storage.get('search_provider') || 0, searchProviders.length - 1),
   searchQuery: '',
   
   // News
