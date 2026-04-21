@@ -69,12 +69,33 @@ const useStore = create((set, get) => ({
   },
   
   reorderSites: (newOrder) => {
-    const reordered = newOrder.map((id, index) => {
-      const site = get().sites.find(s => s.id === id)
-      return { ...site, order: index }
+    const currentSites = [...get().sites].sort((a, b) => a.order - b.order)
+    const reorderedVisibleSites = newOrder
+      .map(id => currentSites.find(site => site.id === id))
+      .filter(Boolean)
+
+    if (reorderedVisibleSites.length === 0) return
+
+    const reorderedVisibleIds = new Set(newOrder)
+    let reorderedIndex = 0
+
+    const mergedSites = currentSites.map(site => {
+      if (!reorderedVisibleIds.has(site.id)) {
+        return site
+      }
+
+      const reorderedSite = reorderedVisibleSites[reorderedIndex]
+      reorderedIndex += 1
+      return reorderedSite
     })
-    storage.set('sites', reordered)
-    set({ sites: reordered })
+
+    const sites = mergedSites.map((site, index) => ({
+      ...site,
+      order: index,
+    }))
+
+    storage.set('sites', sites)
+    set({ sites })
   },
   
   setCategories: (categories) => {

@@ -49,16 +49,18 @@ export default function SiteGrid() {
 
   const handleDragEnd = (event) => {
     const { active, over } = event
-    if (active.id !== over?.id) {
-      const oldIndex = filteredSites.findIndex(s => s.id === active.id)
-      const newIndex = filteredSites.findIndex(s => s.id === over.id)
-      
-      const newOrder = [...filteredSites]
-      const [removed] = newOrder.splice(oldIndex, 1)
-      newOrder.splice(newIndex, 0, removed)
-      
-      reorderSites(newOrder.map(s => s.id))
-    }
+    if (!over || active.id === over.id) return
+
+    const oldIndex = filteredSites.findIndex(s => s.id === active.id)
+    const newIndex = filteredSites.findIndex(s => s.id === over.id)
+
+    if (oldIndex === -1 || newIndex === -1) return
+
+    const newOrder = [...filteredSites]
+    const [removed] = newOrder.splice(oldIndex, 1)
+    newOrder.splice(newIndex, 0, removed)
+
+    reorderSites(newOrder.map(s => s.id))
   }
 
   return (
