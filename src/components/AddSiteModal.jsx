@@ -1,67 +1,73 @@
-import { useState, useEffect } from 'react'
-import { X, Plus, Pencil } from 'lucide-react'
-import useStore from '../store/useStore'
+import { useState, useEffect } from 'react';
+import { X, Plus, Pencil } from 'lucide-react';
+import useStore from '../store/useStore';
 
 export default function AddSiteModal() {
-  const { addSiteOpen, closeAddSite, editingSite, updateSite, addSite, setEditingSite, categories } = useStore()
-  const [name, setName] = useState('')
-  const [url, setUrl] = useState('')
-  const [category, setCategory] = useState('')
+  const { addSiteOpen, closeAddSite, editingSite, updateSite, addSite, setEditingSite, categories } = useStore();
+  const [name, setName] = useState('');
+  const [url, setUrl] = useState('');
+  const [customIcon, setCustomIcon] = useState('');
+  const [category, setCategory] = useState('');
 
   useEffect(() => {
     if (editingSite) {
-      setName(editingSite.name)
-      setUrl(editingSite.url)
-      setCategory(editingSite.category)
+      setName(editingSite.name);
+      setUrl(editingSite.url);
+      setCustomIcon(editingSite.customIcon || '');
+      setCategory(editingSite.category);
     } else {
-      setName('')
-      setUrl('')
-      setCategory(categories[0] || '')
+      setName('');
+      setUrl('');
+      setCustomIcon('');
+      setCategory(categories[0] || '');
     }
-  }, [editingSite, addSiteOpen, categories])
+  }, [editingSite, addSiteOpen, categories]);
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    
-    if (!name.trim() || !url.trim()) return
-    
-    let finalUrl = url.trim()
+    e.preventDefault();
+
+    if (!name.trim() || !url.trim()) return;
+
+    let finalUrl = url.trim();
     if (!finalUrl.startsWith('http://') && !finalUrl.startsWith('https://')) {
-      finalUrl = 'https://' + finalUrl
+      finalUrl = 'https://' + finalUrl;
     }
-    
+
     if (editingSite) {
       updateSite(editingSite.id, {
         name: name.trim(),
         url: finalUrl,
-        category: category || categories[0] || 'all'
-      })
+        customIcon: customIcon.trim(),
+        category: category || categories[0] || 'all',
+      });
     } else {
       addSite({
         name: name.trim(),
         url: finalUrl,
-        category: category || categories[0] || 'all'
-      })
+        customIcon: customIcon.trim(),
+        category: category || categories[0] || 'all',
+      });
     }
-    
-    handleClose()
-  }
+
+    handleClose();
+  };
 
   const handleClose = () => {
-    setName('')
-    setUrl('')
-    setCategory('')
-    setEditingSite(null)
-    closeAddSite()
-  }
+    setName('');
+    setUrl('');
+    setCustomIcon('');
+    setCategory('');
+    setEditingSite(null);
+    closeAddSite();
+  };
 
-  if (!addSiteOpen) return null
+  if (!addSiteOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center modal-backdrop" onClick={handleClose}>
-      <div 
+      <div
         className="bg-card border border-border rounded-2xl p-6 w-full max-w-md mx-4 animate-slideIn"
-        onClick={e => e.stopPropagation()}
+        onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-semibold text-text flex items-center gap-2">
@@ -72,46 +78,57 @@ export default function AddSiteModal() {
             <X size={20} />
           </button>
         </div>
-        
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-sm text-muted mb-1">Nome</label>
             <input
               type="text"
               value={name}
-              onChange={e => setName(e.target.value)}
+              onChange={(e) => setName(e.target.value)}
               placeholder="GitHub"
               className="w-full px-4 py-3 bg-bg border border-border rounded-lg text-text placeholder-muted focus:border-accent transition-colors"
               autoFocus
             />
           </div>
-          
+
+          <div>
+            <label className="block text-sm text-muted mb-1">Ícone Customizado (URL Opcional)</label>
+            <input
+              type="text"
+              value={customIcon}
+              onChange={(e) => setCustomIcon(e.target.value)}
+              placeholder="https://exemplo.com/icon.png"
+              className="w-full px-4 py-3 bg-bg border border-border rounded-lg text-text placeholder-muted focus:border-accent transition-colors"
+            />
+          </div>
+
           <div>
             <label className="block text-sm text-muted mb-1">URL</label>
             <input
               type="text"
               value={url}
-              onChange={e => setUrl(e.target.value)}
+              onChange={(e) => setUrl(e.target.value)}
               placeholder="https://github.com"
               className="w-full px-4 py-3 bg-bg border border-border rounded-lg text-text placeholder-muted focus:border-accent transition-colors"
             />
           </div>
-          
+
           <div>
             <label className="block text-sm text-muted mb-1">Categoria</label>
             <select
               value={category}
-              onChange={e => setCategory(e.target.value)}
+              onChange={(e) => setCategory(e.target.value)}
               className="w-full px-4 py-3 bg-bg border border-border rounded-lg text-text focus:border-accent transition-colors"
             >
-              {categories.map(cat => (
+              {categories.map((cat) => (
                 <option key={cat} value={cat}>
                   {cat.charAt(0).toUpperCase() + cat.slice(1)}
                 </option>
               ))}
             </select>
           </div>
-          
+
           <div className="flex gap-3 pt-2">
             <button
               type="button"
@@ -130,5 +147,5 @@ export default function AddSiteModal() {
         </form>
       </div>
     </div>
-  )
+  );
 }

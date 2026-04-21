@@ -3,7 +3,7 @@ import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import { Pencil, Trash2 } from 'lucide-react';
 import useStore from '../store/useStore';
-import { getFaviconUrl } from '../utils/favicon';
+import { getFaviconUrls } from '../utils/favicon';
 
 const getAvatarColor = (name) => {
   const colors = [
@@ -30,14 +30,18 @@ const getAvatarColor = (name) => {
 export default function SiteCard({ site }) {
   const { confirmDeleteSite, openAddSite, setEditingSite } = useStore();
   const [showActions, setShowActions] = useState(false);
-  const [faviconSrc, setFaviconSrc] = useState(() => getFaviconUrl(site.url));
-  const [imgFailed, setImgFailed] = useState(() => !getFaviconUrl(site.url));
+
+  const initialUrls = site.customIcon ? [site.customIcon] : getFaviconUrls(site.url);
+  const [faviconUrls, setFaviconUrls] = useState(initialUrls);
+  const [currentUrlIndex, setCurrentUrlIndex] = useState(0);
+  const [imgFailed, setImgFailed] = useState(() => initialUrls.length === 0);
 
   useEffect(() => {
-    const url = getFaviconUrl(site.url);
-    setFaviconSrc(url);
-    setImgFailed(!url);
-  }, [site.url]);
+    const urls = site.customIcon ? [site.customIcon] : getFaviconUrls(site.url);
+    setFaviconUrls(urls);
+    setCurrentUrlIndex(0);
+    setImgFailed(urls.length === 0);
+  }, [site.url, site.customIcon]);
 
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: site.id });
 
@@ -64,7 +68,11 @@ export default function SiteCard({ site }) {
   };
 
   const handleImageError = () => {
-    setImgFailed(true);
+    if (currentUrlIndex < faviconUrls.length - 1) {
+      setCurrentUrlIndex((prev) => prev + 1);
+    } else {
+      setImgFailed(true);
+    }
   };
 
   return (
@@ -85,7 +93,7 @@ export default function SiteCard({ site }) {
         <div className="relative w-full h-full bg-card/80 backdrop-blur-md border border-border/50 group-hover/card:border-accent/50 rounded-2xl flex items-center justify-center shadow-sm group-hover/card:shadow-md transition-all duration-300 group-hover/card:-translate-y-1 overflow-hidden">
           {!imgFailed ? (
             <img
-              src={faviconSrc || ''}
+              src={faviconUrls[currentUrlIndex] || ''}
               alt={site.name}
               className="w-10 h-10 sm:w-12 sm:h-12 object-contain transition-transform duration-300 group-hover/card:scale-110 drop-shadow-md"
               onError={handleImageError}
