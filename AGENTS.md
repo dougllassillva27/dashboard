@@ -1,20 +1,20 @@
-# AGENTS.md — Orbit
+# AGENTS.md — Sol Hub
 
 ## Visão Geral
 
-Orbit é uma **startpage/new-tab page** para navegador — SPA client-side em React 18 com Vite 5. UI em **português brasileiro** (`lang="pt-BR"`).
+Sol Hub é uma **startpage/new-tab page** para navegador — SPA client-side em React 18 com Vite 5. UI em **português brasileiro** (`lang="pt-BR"`).
 
 ## Stack
 
-| Camada | Tecnologia |
-|--------|-----------|
-| UI | React 18 (JSX, **sem TypeScript**) |
-| Build | Vite 5 |
-| Estado | Zustand — store único plano em `src/store/useStore.js` |
-| Estilo | Tailwind CSS 3 + CSS custom properties (variáveis temáticas) |
-| Drag & Drop | @dnd-kit (core + sortable + utilities) |
-| Ícones | Lucide React |
-| Persistência | `localStorage` com prefixo `sp_` (`src/utils/storage.js`) |
+| Camada       | Tecnologia                                                   |
+| ------------ | ------------------------------------------------------------ |
+| UI           | React 18 (JSX, **sem TypeScript**)                           |
+| Build        | Vite 5                                                       |
+| Estado       | Zustand — store único plano em `src/store/useStore.js`       |
+| Estilo       | Tailwind CSS 3 + CSS custom properties (variáveis temáticas) |
+| Drag & Drop  | @dnd-kit (core + sortable + utilities)                       |
+| Ícones       | Lucide React                                                 |
+| Persistência | `localStorage` com prefixo `sp_` (`src/utils/storage.js`)    |
 
 ## Estrutura de Diretórios
 
@@ -34,22 +34,26 @@ src/
 ## Padrões de Código
 
 ### Exportações
+
 - **Componentes**: `export default function Nome`
 - **Utils/hooks**: `export const` / `export function`
 
 ### Estado (Zustand)
+
 - Store único e plano em `src/store/useStore.js`.
 - Toda mutação que precisa persistir chama `storage.set()` **sincronamente** dentro da ação.
 - Estado inclui: `sites`, `categories`, `activeCategory`, `theme`, `searchProvider`, `searchQuery`, `newsProvider`, `newsApiKey`, `newsTopics`, `newsItems`, `newsLoading`, `settingsOpen`, `addSiteOpen`, `editingSite`.
 - Exporta também o array `searchProviders` (Google, Bing, DuckDuckGo, YouTube, Brave, Ecosia).
 
 ### Temas
+
 - 7 temas: `minimal-light`, `minimal-dark`, `space`, `hacking`, `nord`, `sunset`, `cyberpunk`.
 - Temas são **CSS custom properties** aplicadas via `document.documentElement.style.setProperty()` (não classes).
 - Tailwind referencia variáveis: `bg-[var(--bg)]`, etc. (configurado em `tailwind.config.js` com tokens `bg`, `card`, `text`, `accent`, `muted`, `border`, `font-theme`).
 - `applyTheme()` em `src/themes/themes.js` reage a mudanças via `useEffect` em `App.jsx`.
 
 ### Componentes Principais
+
 - `StarCanvas` — canvas animado com estrelas, renderiza **apenas** no tema `space`.
 - `Clock` — relógio/data em tempo real.
 - `SearchBar` — input dual: filtra sites localmente (`searchQuery`) e abre busca web (`Enter` = novo tab, `Tab` = troca provider).
@@ -61,22 +65,24 @@ src/
 - `AddSiteModal` — modal para adicionar/editar site.
 
 ### Modais
+
 - Controlados por booleanos no store (`settingsOpen`, `addSiteOpen`).
 - Retornam `null` quando fechados.
 - Backdrop com `.modal-backdrop` (blur + overlay escuro), `onClick` fecha modal, conteúdo com `e.stopPropagation()`.
 
 ### Dados Padrão (`src/utils/storage.js`)
+
 - 8 sites preset (GitHub, Stack Overflow, YouTube, Twitter, Reddit, LinkedIn, Gmail, Netflix).
 - 4 categorias: `dev`, `trabalho`, `social`, `entretenimento`.
 - 2 tópicos de notícias: `technology`, `science`.
 
 ## APIs Externas (client-side)
 
-| Serviço | URL | Uso |
-|---------|-----|-----|
+| Serviço         | URL                                                        | Uso                                      |
+| --------------- | ---------------------------------------------------------- | ---------------------------------------- |
 | Google Favicons | `https://www.google.com/s2/favicons?domain=<domain>&sz=64` | Ícone de site (fallback: primeira letra) |
-| RSS2JSON | `https://api.rss2json.com/v1/api.json?rss_url=<feed>` | Notícias modo RSS |
-| GNews | `https://gnews.io/api/v4/top-headlines` | Notícias modo GNews (requer API key) |
+| RSS2JSON        | `https://api.rss2json.com/v1/api.json?rss_url=<feed>`      | Notícias modo RSS                        |
+| GNews           | `https://gnews.io/api/v4/top-headlines`                    | Notícias modo GNews (requer API key)     |
 
 ## Comandos
 

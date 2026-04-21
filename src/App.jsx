@@ -1,24 +1,24 @@
-import { useEffect } from 'react'
-import { Settings } from 'lucide-react'
-import useStore from './store/useStore'
-import { applyTheme } from './themes/themes'
-import Clock from './components/Clock'
-import SearchBar from './components/SearchBar'
-import CategoryFilter from './components/CategoryFilter'
-import SiteGrid from './components/SiteGrid'
-import NewsFeed from './components/NewsFeed'
-import SettingsModal from './components/SettingsModal'
-import AddSiteModal from './components/AddSiteModal'
-import ConfirmModal from './components/ConfirmModal'
-import AIChatModal from './components/AIChatModal'
-import StarCanvas from './components/StarCanvas'
+import { useEffect } from 'react';
+import { Settings } from 'lucide-react';
+import useStore from './store/useStore';
+import { applyTheme } from './themes/themes';
+import Clock from './components/Clock';
+import SearchBar from './components/SearchBar';
+import CategoryFilter from './components/CategoryFilter';
+import SiteGrid from './components/SiteGrid';
+import NewsFeed from './components/NewsFeed';
+import SettingsModal from './components/SettingsModal';
+import AddSiteModal from './components/AddSiteModal';
+import ConfirmModal from './components/ConfirmModal';
+import AIChatModal from './components/AIChatModal';
+import StarCanvas from './components/StarCanvas';
 
 export default function App() {
-  const { theme, openSettings } = useStore()
+  const { theme, openSettings } = useStore();
 
   useEffect(() => {
-    applyTheme(theme)
-  }, [theme])
+    applyTheme(theme);
+  }, [theme]);
 
   return (
     <div className="min-h-screen relative">
@@ -53,7 +53,7 @@ export default function App() {
 
         {/* Footer */}
         <footer className="text-center py-6 text-muted text-sm">
-          <p>Orbit · Sua página inicial personalizada</p>
+          <p>Sol Hub · Sua página inicial personalizada</p>
         </footer>
       </div>
 
@@ -63,5 +63,5 @@ export default function App() {
       <ConfirmModal />
       <AIChatModal />
     </div>
-  )
+  );
 }
