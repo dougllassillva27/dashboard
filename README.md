@@ -67,7 +67,7 @@ Exibição em tempo real com formato localizado em português. Simples, elegante
 
 - Adicione quantos sites quiser
 - Arraste e solte para reorganizar
-- Favicon automático via Google S2
+- Favicon resolvido automaticamente com cache inteligente em banco de dados global (Neon DB)
 - Edite ou remova com um clique
 
 ### 📂 Categorias Personalizadas
@@ -76,7 +76,7 @@ Exibição em tempo real com formato localizado em português. Simples, elegante
 - Filtre seus sites instantaneamente
 - Organize por contexto: trabalho, lazer, estudos...
 
-### 🎨 7 Temas Únicos
+### 🎨 8 Temas Únicos
 
 | Tema          | Descrição                                    |
 | ------------- | -------------------------------------------- |
@@ -87,6 +87,12 @@ Exibição em tempo real com formato localizado em português. Simples, elegante
 | Nord          | Paleta escandinava suave                     |
 | Sunset        | Tons quentes de pôr do sol                   |
 | Cyberpunk     | Neon vibrante, futurista                     |
+| Amoled Black  | Preto absoluto, ideal para telas OLED/AMOLED |
+
+### 🛠️ Widgets Utilitários
+
+- **Clima em Tempo Real:** Previsão exata via Open-Meteo (configurável por cidade, sem necessidade de chaves).
+- **Bloco de Notas:** Anotações rápidas na própria home, com auto-save e sincronização em nuvem via Senha Mestra.
 
 ### 📦 Export/Import
 
@@ -113,14 +119,15 @@ Exporte toda sua configuração (sites, categorias, tema) em um arquivo JSON. Im
 
 ## 🛠️ Tecnologias
 
-| Tecnologia      | Uso                     |
-| --------------- | ----------------------- |
-| ⚛️ React 18     | Interface do usuário    |
-| ⚡ Vite         | Build tool ultrarrápido |
-| 🎨 Tailwind CSS | Estilização             |
-| 🧠 Zustand      | Estado global           |
-| 🧲 dnd-kit      | Drag and drop           |
-| 🎯 Lucide React | Ícones                  |
+| Tecnologia            | Uso                                |
+| --------------------- | ---------------------------------- |
+| ⚛️ React 18           | Interface do usuário               |
+| ⚡ Vite               | Build tool ultrarrápido            |
+| 🎨 Tailwind CSS       | Estilização                        |
+| 🧠 Zustand            | Estado global e persistência       |
+| 🧲 dnd-kit            | Drag and drop                      |
+| ☁️ Netlify Functions  | Backend Serverless (APIs e Sync)   |
+| 🐘 Neon DB (Postgres) | Banco de Dados Global (Sync/Cache) |
 
 ---
 
