@@ -2,6 +2,8 @@ import { create } from 'zustand';
 import { storage, defaultSites, defaultCategories, defaultNewsTopics } from '../utils/storage';
 import { applyTheme } from '../themes/themes';
 import { encrypt, decrypt } from '../utils/crypto';
+import { getDomain } from '../utils/favicon';
+import { carregarFaviconsDb as fetchFaviconsDb, deletarFaviconDb } from '../utils/faviconDb';
 
 const searchProviders = [
   { name: 'Google', url: 'https://google.com/search?q=', color: '#4285F4', icon: 'G', type: 'search' },
@@ -30,6 +32,9 @@ const setSessionCategory = (cat) => {
 const useStore = create((set, get) => ({
   // Sites
   sites: storage.get('sites') || defaultSites,
+
+  // Favicons do banco (domain -> favicon_url)
+  faviconsDb: {},
 
   // Categories
   categories: storage.get('categories') || defaultCategories,
@@ -88,16 +93,46 @@ const useStore = create((set, get) => ({
   },
 
   updateSite: (id, updates, skipSync = false) => {
+    const siteAtual = get().sites.find((s) => s.id === id);
     const sites = get().sites.map((s) => (s.id === id ? { ...s, ...updates } : s));
     storage.set('sites', sites);
     set({ sites });
+    // Se URL mudou, gerencia favicon do domínio antigo
+    if (updates.url && siteAtual && updates.url !== siteAtual.url) {
+      const dominioAntigo = getDomain(siteAtual.url);
+      const dominioNovo = getDomain(updates.url);
+      if (dominioAntigo !== dominioNovo) {
+        const token = get().syncToken;
+        const aindaUsado = sites.some((s) => s.id !== id && getDomain(s.url) === dominioAntigo);
+        if (!aindaUsado && token) {
+          deletarFaviconDb(token, dominioAntigo).catch(() => {});
+        }
+        // Remove domínio antigo do cache em memória para forar re-resolução
+        const faviconsDb = { ...get().faviconsDb };
+        delete faviconsDb[dominioAntigo];
+        set({ faviconsDb });
+      }
+    }
     if (!skipSync) get().triggerAutoSync();
   },
 
   removeSite: (id) => {
+    const siteRemovido = get().sites.find((s) => s.id === id);
     const sites = get().sites.filter((s) => s.id !== id);
     storage.set('sites', sites);
     set({ sites });
+    // Remove favicon do banco se o domínio não for mais usado por outros sites
+    if (siteRemovido) {
+      const dominio = getDomain(siteRemovido.url);
+      const aindaUsado = sites.some((s) => getDomain(s.url) === dominio);
+      const token = get().syncToken;
+      if (!aindaUsado && token) {
+        deletarFaviconDb(token, dominio).catch(() => {});
+        const faviconsDb = { ...get().faviconsDb };
+        delete faviconsDb[dominio];
+        set({ faviconsDb });
+      }
+    }
     get().triggerAutoSync();
   },
 
@@ -185,6 +220,18 @@ const useStore = create((set, get) => ({
     storage.set('theme', theme);
     applyTheme(theme);
     set({ theme });
+  },
+
+  // Favicons do banco
+  setFaviconDb: (domain, url) => {
+    set((state) => ({ faviconsDb: { ...state.faviconsDb, [domain]: url } }));
+  },
+
+  carregarFaviconsDb: async () => {
+    const token = get().syncToken;
+    if (!token) return;
+    const favicons = await fetchFaviconsDb(token);
+    set({ faviconsDb: favicons });
   },
 
   setSearchProvider: (provider) => {

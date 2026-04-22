@@ -21,20 +21,12 @@ export default function App() {
   }, [theme]);
 
   useEffect(() => {
-    const { autoSync, syncToken, pullFromCloud } = useStore.getState();
+    const { autoSync, syncToken, pullFromCloud, carregarFaviconsDb } = useStore.getState();
     if (autoSync && syncToken) {
       pullFromCloud().catch((err) => console.error('Erro no auto-pull:', err));
     }
-  }, []);
-
-  // Limpeza única: remove resolvedIcon envenenado pelo DuckDuckGo (globo placeholder 200 OK)
-  useEffect(() => {
-    const { sites, updateSite } = useStore.getState();
-    sites.forEach((site) => {
-      if (site.resolvedIcon && site.resolvedIcon.includes('duckduckgo')) {
-        updateSite(site.id, { resolvedIcon: null }, true);
-      }
-    });
+    // Carrega favicons do banco em paralelo (independente do autoSync)
+    carregarFaviconsDb();
   }, []);
 
   return (

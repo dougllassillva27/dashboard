@@ -3,7 +3,8 @@ import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import { Pencil, Trash2 } from 'lucide-react';
 import useStore from '../store/useStore';
-import { getFaviconUrls } from '../utils/favicon';
+import { getFaviconUrls, getDomain } from '../utils/favicon';
+import { salvarFaviconDb } from '../utils/faviconDb';
 
 const getAvatarColor = (name) => {
   const colors = [
@@ -23,32 +24,34 @@ const getAvatarColor = (name) => {
       hash = name.charCodeAt(i) + ((hash << 5) - hash);
     }
   }
-  const index = Math.abs(hash) % colors.length;
-  return colors[index];
+  return colors[Math.abs(hash) % colors.length];
 };
 
 export default function SiteCard({ site }) {
-  const { confirmDeleteSite, openAddSite, setEditingSite, updateSite } = useStore();
+  const { confirmDeleteSite, openAddSite, setEditingSite, setFaviconDb, syncToken, faviconsDb } = useStore();
   const [showActions, setShowActions] = useState(false);
 
-  const baseUrls = site.customIcon ? [site.customIcon] : getFaviconUrls(site.url);
-  const initialUrls =
-    site.resolvedIcon && !site.customIcon ? Array.from(new Set([site.resolvedIcon, ...baseUrls])) : baseUrls;
+  const domain = getDomain(site.url);
+  const dbUrl = faviconsDb[domain];
 
-  const [faviconUrls, setFaviconUrls] = useState(initialUrls);
+  // Calcula a fila de URLs: favicon do banco primeiro (se existir), depois cadeia de fallback
+  const calcularUrls = (dbFavicon) => {
+    if (site.customIcon) return [site.customIcon];
+    const fallbacks = getFaviconUrls(site.url);
+    return dbFavicon ? [dbFavicon, ...fallbacks] : fallbacks;
+  };
+
+  const [faviconUrls, setFaviconUrls] = useState(() => calcularUrls(dbUrl));
   const [currentUrlIndex, setCurrentUrlIndex] = useState(0);
-  const [imgFailed, setImgFailed] = useState(() => initialUrls.length === 0);
+  const [imgFailed, setImgFailed] = useState(() => calcularUrls(dbUrl).length === 0);
 
+  // Reage a mudança de URL, customIcon ou favicon do banco (carregado assincronamente)
   useEffect(() => {
-    const urls = site.customIcon
-      ? [site.customIcon]
-      : site.resolvedIcon
-        ? Array.from(new Set([site.resolvedIcon, ...getFaviconUrls(site.url)]))
-        : getFaviconUrls(site.url);
+    const urls = calcularUrls(dbUrl);
     setFaviconUrls(urls);
     setCurrentUrlIndex(0);
     setImgFailed(urls.length === 0);
-  }, [site.url, site.customIcon, site.resolvedIcon]);
+  }, [site.url, site.customIcon, dbUrl]);
 
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: site.id });
 
@@ -84,14 +87,16 @@ export default function SiteCard({ site }) {
 
   const handleImageLoad = () => {
     const currentUrl = faviconUrls[currentUrlIndex];
-    // Só cacheia resolvedIcon de fontes confiáveis (evita envenenar com placeholders 200 OK)
+    // Só persiste no banco se a fonte for confiável (Google s2 ou origin/favicon.ico)
     const isFonteConfiavel =
       currentUrl &&
       (currentUrl.includes('google.com/s2/favicons') ||
         currentUrl.endsWith('/favicon.ico') ||
         currentUrl.endsWith('/favicon.png'));
-    if (isFonteConfiavel && site.resolvedIcon !== currentUrl && !site.customIcon) {
-      updateSite(site.id, { resolvedIcon: currentUrl }, true);
+
+    if (isFonteConfiavel && syncToken && faviconsDb[domain] !== currentUrl) {
+      setFaviconDb(domain, currentUrl); // atualiza cache em memória imediatamente
+      salvarFaviconDb(syncToken, domain, currentUrl); // persiste no banco (fire-and-forget)
     }
   };
 
