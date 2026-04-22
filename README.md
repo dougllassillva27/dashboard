@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/img/Sol%20Hub%20-%20Banner.webp" alt="Hubly Banner" />
+  <img src="assets/img/Hubly%20-%20banner.webp" alt="Hubly Banner" />
 </div>
 
 # 🚀 Hubly
@@ -18,7 +18,7 @@ Sem contas, sem complicação. Apenas você e tudo que importa.
 <!-- Adicione seu screenshot aqui -->
 <div align="center">
   
-  <img src="assets/img/preview.png" alt="Hubly Preview" />
+  <img src="assets/img/Hubly%20-%20preview.webp" alt="Hubly Preview" />
 
 ## </div>
 
