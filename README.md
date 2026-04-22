@@ -2,7 +2,7 @@
 
 **Sua página inicial, do seu jeito.**
 
-Sol Hub é uma página inicial personalizada para seu navegador. Rápida, bonita, sem rastreamento, sem contas, sem complicação. Apenas você e seus sites favoritos.
+Sol Hub é uma página inicial personalizada para seu navegador. Rápida, bonita, sem contas, sem complicação. Apenas você e seus sites favoritos.
 
 > **Aviso de Fork:** Este projeto é uma versão derivada de Orbit, criado por Matheusz Nied.
 > A base original foi adaptada e personalizada por Douglas Silva.
@@ -132,7 +132,7 @@ Exporte toda sua configuração (sites, categorias, tema) em um arquivo JSON. Im
 
 ## Filosofia
 
-- **Sem rastreamento** - Seus dados ficam no seu navegador
+- **Privacidade** - Seus dados ficam no seu navegador
 - **Sem contas** - Não precisa se cadastrar em nada
 - **Sem backend** - Funciona offline, 100% client-side
 - **Sem dependências pesadas** - Build leve, carregamento instantâneo
