@@ -15,8 +15,8 @@ import {
   MessageSquare,
   GripVertical,
   Cloud,
-  CloudUpload,
-  CloudDownload,
+  UploadCloud,
+  DownloadCloud,
   RefreshCw,
 } from 'lucide-react';
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
@@ -499,7 +499,7 @@ export default function SettingsModal() {
                       {syncStatus.loading ? (
                         <RefreshCw size={18} className="animate-spin" />
                       ) : (
-                        <CloudUpload size={18} />
+                        <UploadCloud size={18} />
                       )}
                       Salvar na Nuvem
                     </button>
@@ -511,7 +511,7 @@ export default function SettingsModal() {
                       {syncStatus.loading ? (
                         <RefreshCw size={18} className="animate-spin" />
                       ) : (
-                        <CloudDownload size={18} />
+                        <DownloadCloud size={18} />
                       )}
                       Restaurar da Nuvem
                     </button>
