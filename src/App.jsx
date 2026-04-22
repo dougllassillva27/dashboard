@@ -6,6 +6,7 @@ import Clock from './components/Clock';
 import SearchBar from './components/SearchBar';
 import CategoryFilter from './components/CategoryFilter';
 import SiteGrid from './components/SiteGrid';
+import Widgets from './components/Widgets';
 import NewsFeed from './components/NewsFeed';
 import SettingsModal from './components/SettingsModal';
 import AddSiteModal from './components/AddSiteModal';
@@ -62,6 +63,7 @@ export default function App() {
             <SearchBar />
             <CategoryFilter />
             <SiteGrid />
+            <Widgets />
           </div>
         </div>
 

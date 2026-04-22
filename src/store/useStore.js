@@ -72,6 +72,10 @@ const useStore = create((set, get) => ({
   syncToken: storage.get('sync_token') || '',
   autoSync: storage.get('auto_sync') || false,
 
+  // Widgets
+  notesContent: storage.get('notes_content') || '',
+  weatherCity: storage.get('weather_city') || '',
+
   // Actions
   setSites: (sites) => {
     storage.set('sites', sites);
@@ -274,6 +278,18 @@ const useStore = create((set, get) => ({
     set({ newsLoading: loading });
   },
 
+  setNotesContent: (content) => {
+    storage.set('notes_content', content);
+    set({ notesContent: content });
+    get().triggerAutoSync();
+  },
+
+  setWeatherCity: (city) => {
+    storage.set('weather_city', city);
+    set({ weatherCity: city });
+    get().triggerAutoSync();
+  },
+
   // AI Chat Actions
   setOpenAiApiKey: (key) => {
     const token = get().syncToken;
@@ -351,6 +367,8 @@ const useStore = create((set, get) => ({
         newsProvider: storage.get('news_provider') || 'rss',
         newsApiKey: storage.get('news_apikey') || '',
         newsTopics: storage.get('news_topics') || defaultNewsTopics,
+        notesContent: storage.get('notes_content') || '',
+        weatherCity: storage.get('weather_city') || '',
         defaultCategory: storage.get('default_category') || 'all',
         activeCategory: getSessionCategory() || storage.get('default_category') || 'all',
         syncToken: storage.get('sync_token') || '',
@@ -377,9 +395,7 @@ const useStore = create((set, get) => ({
     // resolvedIcon é cache efêmero de cliente — não deve ser persistido na nuvem
     const dadosSanitizados = { ...data };
     if (Array.isArray(dadosSanitizados.sp_sites)) {
-      dadosSanitizados.sp_sites = dadosSanitizados.sp_sites.map(
-        ({ resolvedIcon, ...site }) => site
-      );
+      dadosSanitizados.sp_sites = dadosSanitizados.sp_sites.map(({ resolvedIcon, ...site }) => site);
     }
     const response = await fetch('/.netlify/functions/sync', {
       method: 'POST',

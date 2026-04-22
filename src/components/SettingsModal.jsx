@@ -18,6 +18,7 @@ import {
   UploadCloud,
   DownloadCloud,
   RefreshCw,
+  LayoutGrid,
   ChevronDown,
 } from 'lucide-react';
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
@@ -36,6 +37,7 @@ const tabs = [
   { id: 'search', label: 'Busca', icon: Search },
   { id: 'ai', label: 'Chat IA', icon: MessageSquare },
   { id: 'news', label: 'Notícias', icon: Newspaper },
+  { id: 'widgets', label: 'Widgets', icon: LayoutGrid },
   { id: 'categories', label: 'Categorias', icon: FolderOpen },
   { id: 'data', label: 'Dados', icon: Database },
 ];
@@ -105,6 +107,8 @@ export default function SettingsModal() {
     setNewsApiKey,
     newsTopics,
     setNewsTopics,
+    weatherCity,
+    setWeatherCity,
     categories,
     defaultCategory,
     setDefaultCategory,
@@ -473,6 +477,30 @@ export default function SettingsModal() {
                 </div>
               </div>
               */}
+            </div>
+          )}
+
+          {/* Widgets Tab */}
+          {activeTab === 'widgets' && (
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-sm font-medium text-muted mb-3">Clima (Open-Meteo)</h3>
+                <input
+                  type="text"
+                  value={weatherCity}
+                  onChange={(e) => setWeatherCity(e.target.value)}
+                  placeholder="Ex: São Paulo, SP"
+                  className="w-full px-4 py-3 bg-bg border border-border rounded-lg text-text placeholder-muted focus:border-accent transition-colors"
+                />
+                <p className="text-xs text-muted mt-2">Deixe em branco para desativar o widget de clima.</p>
+              </div>
+              <div>
+                <h3 className="text-sm font-medium text-muted mb-3">Bloco de Notas</h3>
+                <p className="text-sm text-muted">
+                  O bloco de notas é exibido e editado diretamente na página inicial, sincronizando automaticamente
+                  junto com seus sites.
+                </p>
+              </div>
             </div>
           )}
 
