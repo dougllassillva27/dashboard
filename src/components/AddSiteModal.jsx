@@ -8,6 +8,7 @@ export default function AddSiteModal() {
   const [url, setUrl] = useState('');
   const [customIcon, setCustomIcon] = useState('');
   const [category, setCategory] = useState('');
+  const [urlError, setUrlError] = useState(false);
 
   useEffect(() => {
     if (editingSite) {
@@ -21,12 +22,16 @@ export default function AddSiteModal() {
       setCustomIcon('');
       setCategory(categories[0] || '');
     }
+    setUrlError(false);
   }, [editingSite, addSiteOpen, categories]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!name.trim() || !url.trim()) return;
+    if (!url.trim()) {
+      setUrlError(true);
+      return;
+    }
 
     let finalUrl = url.trim();
     if (!finalUrl.startsWith('http://') && !finalUrl.startsWith('https://')) {
@@ -60,6 +65,7 @@ export default function AddSiteModal() {
     setUrl('');
     setCustomIcon('');
     setCategory('');
+    setUrlError(false);
     setEditingSite(null);
     closeAddSite();
   };
@@ -100,10 +106,14 @@ export default function AddSiteModal() {
             <input
               type="text"
               value={url}
-              onChange={(e) => setUrl(e.target.value)}
+              onChange={(e) => {
+                setUrl(e.target.value);
+                setUrlError(false);
+              }}
               placeholder="https://github.com"
-              className="w-full px-4 py-3 bg-bg border border-border rounded-lg text-text placeholder-muted focus:border-accent transition-colors"
+              className={`w-full px-4 py-3 bg-bg border rounded-lg text-text placeholder-muted focus:border-accent transition-colors ${urlError ? 'border-red-500' : 'border-border'}`}
             />
+            {urlError && <p className="text-xs text-red-500 mt-1">A URL é obrigatória para salvar o site.</p>}
           </div>
 
           <div>
