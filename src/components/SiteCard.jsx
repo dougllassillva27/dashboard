@@ -82,13 +82,7 @@ export default function SiteCard({ site }) {
     }
   };
 
-  const handleImageLoad = (e) => {
-    const img = e.target;
-    // Placeholder detectado: globo genérico do DuckDuckGo/fallback tem 16x16 ou menos
-    if (img.naturalWidth <= 16 && img.naturalHeight <= 16) {
-      handleImageError();
-      return;
-    }
+  const handleImageLoad = () => {
     const currentUrl = faviconUrls[currentUrlIndex];
     // Só cacheia resolvedIcon de fontes confiáveis (evita envenenar com placeholders 200 OK)
     const isFonteConfiavel =
@@ -123,7 +117,7 @@ export default function SiteCard({ site }) {
               alt={site.name}
               className="w-10 h-10 sm:w-14 sm:h-14 object-contain transition-transform duration-300 group-hover/card:scale-110 drop-shadow-md"
               onError={handleImageError}
-              onLoad={(e) => handleImageLoad(e)}
+              onLoad={handleImageLoad}
               referrerPolicy="no-referrer"
             />
           ) : (
