@@ -109,7 +109,7 @@ export default function SiteCard({ site }) {
       if (window.navigator && window.navigator.vibrate) {
         window.navigator.vibrate(50);
       }
-    }, 800);
+    }, 500);
   };
 
   const handleTouchEnd = () => {

@@ -1,5 +1,13 @@
 import { useMemo } from 'react';
-import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
+import {
+  DndContext,
+  closestCenter,
+  KeyboardSensor,
+  MouseSensor,
+  TouchSensor,
+  useSensor,
+  useSensors,
+} from '@dnd-kit/core';
 import { SortableContext, sortableKeyboardCoordinates, rectSortingStrategy } from '@dnd-kit/sortable';
 import useStore from '../store/useStore';
 import SiteCard from './SiteCard';
@@ -8,9 +16,15 @@ export default function SiteGrid() {
   const { sites, activeCategory, searchQuery, reorderSites } = useStore();
 
   const sensors = useSensors(
-    useSensor(PointerSensor, {
+    useSensor(MouseSensor, {
       activationConstraint: {
         distance: 8,
+      },
+    }),
+    useSensor(TouchSensor, {
+      activationConstraint: {
+        delay: 800,
+        tolerance: 5,
       },
     }),
     useSensor(KeyboardSensor, {
