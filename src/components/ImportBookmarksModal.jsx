@@ -132,7 +132,9 @@ export default function ImportBookmarksModal() {
                       </button>
                       <LinkIcon size={14} className="text-muted flex-shrink-0" />
                       <div className="min-w-0 flex-1">
-                        <p className="text-sm text-text truncate">{bm.name}</p>
+                        <p className="text-sm text-text truncate">
+                          {bm.name || <span className="italic opacity-50">(Sem nome)</span>}
+                        </p>
                         <p className="text-xs text-muted truncate">{bm.url}</p>
                       </div>
                     </div>

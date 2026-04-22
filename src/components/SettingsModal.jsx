@@ -250,7 +250,7 @@ export default function SettingsModal() {
           if (h3) folderName = h3.textContent.trim();
           if (a && a.href && a.href.startsWith('http')) {
             results.push({
-              name: a.textContent.trim() || new URL(a.href).hostname,
+              name: a.textContent.trim(),
               url: a.href,
               folder: folderName || 'Favoritos',
             });
