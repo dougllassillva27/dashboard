@@ -21,7 +21,7 @@ export const themes = {
     '--font': "'Inter', system-ui, sans-serif",
     '--star': '0',
   },
-  'space': {
+  space: {
     name: 'Space',
     '--bg': '#050510',
     '--card': '#0d0d1f',
@@ -32,7 +32,7 @@ export const themes = {
     '--font': "'Inter', system-ui, sans-serif",
     '--star': '1',
   },
-  'hacking': {
+  hacking: {
     name: 'Hacking',
     '--bg': '#000000',
     '--card': '#0a0a0a',
@@ -43,7 +43,7 @@ export const themes = {
     '--font': "'JetBrains Mono', monospace",
     '--star': '0',
   },
-  'nord': {
+  nord: {
     name: 'Nord',
     '--bg': '#2e3440',
     '--card': '#3b4252',
@@ -54,7 +54,7 @@ export const themes = {
     '--font': "'Inter', system-ui, sans-serif",
     '--star': '0',
   },
-  'sunset': {
+  sunset: {
     name: 'Sunset',
     '--bg': '#1a0a0f',
     '--card': '#2d1520',
@@ -65,7 +65,7 @@ export const themes = {
     '--font': "'Inter', system-ui, sans-serif",
     '--star': '0',
   },
-  'cyberpunk': {
+  cyberpunk: {
     name: 'Cyberpunk',
     '--bg': '#0d0221',
     '--card': '#130334',
@@ -76,21 +76,32 @@ export const themes = {
     '--font': "'Inter', system-ui, sans-serif",
     '--star': '0',
   },
-}
+  'amoled-black': {
+    name: 'Amoled Black',
+    '--bg': '#000000',
+    '--card': '#050505',
+    '--text': '#f5f5f5',
+    '--accent': '#ffffff',
+    '--muted': '#52525b',
+    '--border': '#171717',
+    '--font': "'Inter', system-ui, sans-serif",
+    '--star': '0',
+  },
+};
 
 export const applyTheme = (themeName) => {
-  const theme = themes[themeName]
-  if (!theme) return
+  const theme = themes[themeName];
+  if (!theme) return;
 
-  const root = document.documentElement
+  const root = document.documentElement;
   Object.entries(theme).forEach(([key, value]) => {
     if (key !== 'name') {
-      root.style.setProperty(key, value)
+      root.style.setProperty(key, value);
     }
-  })
-}
+  });
+};
 
-export const themeList = Object.keys(themes).map(key => ({
+export const themeList = Object.keys(themes).map((key) => ({
   id: key,
-  name: themes[key].name
-}))
+  name: themes[key].name,
+}));
