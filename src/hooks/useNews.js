@@ -40,7 +40,7 @@ export function useNews({ provider, apiKey, topics }) {
         const topic = topics[0] || 'technology';
         const feedUrl = rssFeeds[topic] || rssFeeds.technology;
 
-        const url = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`;
+        const url = `/.netlify/functions/rss?url=${encodeURIComponent(feedUrl)}`;
 
         const response = await fetch(url);
         const data = await response.json();

@@ -41,8 +41,8 @@ const tabs = [
 ];
 
 const newsProviders = [
-  { id: 'rss', name: 'RSS (Gratuito)', requiresKey: false },
-  { id: 'gnews', name: 'GNews API', requiresKey: true },
+  { id: 'rss', name: 'TabNews', requiresKey: false },
+  // { id: 'gnews', name: 'GNews API', requiresKey: true },
 ];
 
 const availableTopics = [
@@ -424,6 +424,7 @@ export default function SettingsModal() {
                 </div>
               </div>
 
+              {/* 
               {newsProvider === 'gnews' && (
                 <div>
                   <h3 className="text-sm font-medium text-muted mb-3">API Key do GNews</h3>
@@ -441,8 +442,10 @@ export default function SettingsModal() {
                     </a>
                   </p>
                 </div>
-              )}
+              )} 
+              */}
 
+              {/* 
               <div>
                 <h3 className="text-sm font-medium text-muted mb-3">Tópicos de Interesse</h3>
                 <div className="flex flex-wrap gap-2">
@@ -461,6 +464,7 @@ export default function SettingsModal() {
                   ))}
                 </div>
               </div>
+              */}
             </div>
           )}
 
