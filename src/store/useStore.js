@@ -48,6 +48,9 @@ const useStore = create((set, get) => ({
   editingSite: null,
   deleteConfirmId: null,
 
+  // Cloud Sync
+  syncToken: storage.get('sync_token') || '',
+
   // Actions
   setSites: (sites) => {
     storage.set('sites', sites);
@@ -240,6 +243,11 @@ const useStore = create((set, get) => ({
   confirmDeleteSite: (id) => set({ deleteConfirmId: id }),
   cancelDeleteSite: () => set({ deleteConfirmId: null }),
 
+  setSyncToken: (token) => {
+    storage.set('sync_token', token);
+    set({ syncToken: token });
+  },
+
   exportData: () => {
     return storage.exportAll();
   },
@@ -259,10 +267,40 @@ const useStore = create((set, get) => ({
         defaultCategory: storage.get('default_category') || 'all',
         activeCategory: storage.get('default_category') || 'all',
         deepseekApiKey: storage.get('deepseek_apikey') || '',
+        syncToken: storage.get('sync_token') || '',
       });
       applyTheme(get().theme);
     }
     return success;
+  },
+
+  pushToCloud: async () => {
+    const token = get().syncToken;
+    if (!token) throw new Error('Token ausente');
+    const data = get().exportData();
+    const response = await fetch('/.netlify/functions/sync', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-sync-token': token },
+      body: JSON.stringify({ data }),
+    });
+    if (!response.ok) throw new Error('Falha no sync');
+    return true;
+  },
+
+  pullFromCloud: async () => {
+    const token = get().syncToken;
+    if (!token) throw new Error('Token ausente');
+    const response = await fetch('/.netlify/functions/sync', {
+      method: 'GET',
+      headers: { 'x-sync-token': token },
+    });
+    if (!response.ok) throw new Error('Falha no sync');
+    const json = await response.json();
+    if (json.data) {
+      get().importData(json.data);
+      return true;
+    }
+    return false;
   },
 }));
 

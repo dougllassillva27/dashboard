@@ -14,6 +14,10 @@ import {
   AlertCircle,
   MessageSquare,
   GripVertical,
+  Cloud,
+  CloudUpload,
+  CloudDownload,
+  RefreshCw,
 } from 'lucide-react';
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
 import {
@@ -108,11 +112,16 @@ export default function SettingsModal() {
     reorderCategories,
     exportData,
     importData,
+    syncToken,
+    setSyncToken,
+    pushToCloud,
+    pullFromCloud,
   } = useStore();
 
   const [activeTab, setActiveTab] = useState('appearance');
   const [newCategory, setNewCategory] = useState('');
   const [importStatus, setImportStatus] = useState(null);
+  const [syncStatus, setSyncStatus] = useState({ loading: false, type: null, text: null });
   const fileInputRef = useRef(null);
 
   const sensors = useSensors(
@@ -175,6 +184,32 @@ export default function SettingsModal() {
     } else {
       setNewsTopics([...newsTopics, topicId]);
     }
+  };
+
+  const handlePushCloud = async () => {
+    setSyncStatus({ loading: true, type: null, text: null });
+    try {
+      await pushToCloud();
+      setSyncStatus({ loading: false, type: 'success', text: 'Salvo na nuvem com sucesso!' });
+    } catch (e) {
+      setSyncStatus({ loading: false, type: 'error', text: 'Erro ao salvar na nuvem.' });
+    }
+    setTimeout(() => setSyncStatus((s) => ({ ...s, text: null })), 3000);
+  };
+
+  const handlePullCloud = async () => {
+    setSyncStatus({ loading: true, type: null, text: null });
+    try {
+      const hasData = await pullFromCloud();
+      if (hasData) {
+        setSyncStatus({ loading: false, type: 'success', text: 'Sincronizado da nuvem!' });
+      } else {
+        setSyncStatus({ loading: false, type: 'error', text: 'Nenhum backup encontrado.' });
+      }
+    } catch (e) {
+      setSyncStatus({ loading: false, type: 'error', text: 'Erro ao buscar na nuvem.' });
+    }
+    setTimeout(() => setSyncStatus((s) => ({ ...s, text: null })), 3000);
   };
 
   if (!settingsOpen) return null;
@@ -442,6 +477,58 @@ export default function SettingsModal() {
           {/* Data Tab */}
           {activeTab === 'data' && (
             <div className="space-y-6">
+              <div>
+                <h3 className="text-sm font-medium text-muted mb-3">Sincronização em Nuvem (Neon DB)</h3>
+                <p className="text-sm text-muted mb-3">
+                  Defina sua Senha Mestra para proteger e sincronizar seus sites na nuvem.
+                </p>
+                <div className="flex flex-col gap-3">
+                  <input
+                    type="password"
+                    value={syncToken}
+                    onChange={(e) => setSyncToken(e.target.value)}
+                    placeholder="Senha mestra secreta..."
+                    className="w-full px-4 py-3 bg-bg border border-border rounded-lg text-text placeholder-muted focus:border-accent transition-colors"
+                  />
+                  <div className="flex gap-2">
+                    <button
+                      onClick={handlePushCloud}
+                      disabled={!syncToken || syncStatus.loading}
+                      className="flex-1 px-4 py-3 bg-accent rounded-lg text-bg font-medium hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    >
+                      {syncStatus.loading ? (
+                        <RefreshCw size={18} className="animate-spin" />
+                      ) : (
+                        <CloudUpload size={18} />
+                      )}
+                      Salvar na Nuvem
+                    </button>
+                    <button
+                      onClick={handlePullCloud}
+                      disabled={!syncToken || syncStatus.loading}
+                      className="flex-1 px-4 py-3 bg-bg border border-border rounded-lg text-text font-medium hover:border-accent transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    >
+                      {syncStatus.loading ? (
+                        <RefreshCw size={18} className="animate-spin" />
+                      ) : (
+                        <CloudDownload size={18} />
+                      )}
+                      Restaurar da Nuvem
+                    </button>
+                  </div>
+                  {syncStatus.text && (
+                    <div
+                      className={`flex items-center gap-2 text-sm ${syncStatus.type === 'success' ? 'text-green-500' : 'text-red-500'}`}
+                    >
+                      {syncStatus.type === 'success' ? <Check size={16} /> : <AlertCircle size={16} />}
+                      {syncStatus.text}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              <hr className="border-border my-6" />
+
               <div>
                 <h3 className="text-sm font-medium text-muted mb-3">Exportar Configuração</h3>
                 <p className="text-sm text-muted mb-3">
