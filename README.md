@@ -1,15 +1,15 @@
 <div align="center">
-  <img src="assets/img/Sol%20Hub%20-%20Banner.webp" alt="Sol Hub Banner" />
+  <img src="assets/img/Sol%20Hub%20-%20Banner.webp" alt="Hubly Banner" />
 </div>
 
-# 🚀 Sol Hub
+# 🚀 Hubly
 
 **Sua página inicial, do seu jeito.** ✨
 
-Sol Hub é uma página inicial personalizada para o seu navegador — rápida, bonita e feita para quem quer mais organização no dia a dia.  
+Hubly é uma página inicial personalizada para o seu navegador — rápida, bonita e feita para quem quer mais organização no dia a dia.  
 Sem contas, sem complicação. Apenas você e tudo que importa.
 
-🔗 **Acesse:** https://solhubapp.netlify.app/
+🔗 **Acesse:** https://gethubly.netlify.app/
 
 ---
 
@@ -18,7 +18,7 @@ Sem contas, sem complicação. Apenas você e tudo que importa.
 <!-- Adicione seu screenshot aqui -->
 <div align="center">
   
-  <img src="assets/img/preview.png" alt="Sol Hub Preview" />
+  <img src="assets/img/preview.png" alt="Hubly Preview" />
 
 ## </div>
 
@@ -26,7 +26,7 @@ Sem contas, sem complicação. Apenas você e tudo que importa.
 
 **Você abre o navegador dezenas de vezes por dia.** Cada vez é a mesma história: digitar o mesmo site, fazer a mesma pesquisa, perder tempo.
 
-Sol Hub resolve isso colocando tudo que você precisa a um clique de distância. Seus sites favoritos, suas categorias, seu estilo.
+Hubly resolve isso colocando tudo que você precisa a um clique de distância. Seus sites favoritos, suas categorias, seu estilo.
 
 ### 👤 Para usuários:
 

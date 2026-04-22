@@ -51,7 +51,7 @@ export default function App() {
           <div className="flex-1 flex flex-col pt-8">
             <div className="text-center animate-fadeIn px-4 mt-2 sm:mt-4">
               <h1 className="text-xl md:text-2xl text-text mb-2 tracking-tight">
-                <strong className="font-bold">Sol Hub</strong>{' '}
+                <strong className="font-bold">Hubly</strong>{' '}
                 <span className="opacity-80 font-normal">— sua página inicial pessoal, inteligente e organizada</span>
               </h1>
               <p className="text-sm md:text-base text-text opacity-60 max-w-2xl mx-auto">
@@ -74,7 +74,7 @@ export default function App() {
 
         {/* Footer */}
         <footer className="text-center py-6 text-muted text-sm">
-          <p>Sol Hub · Sua página inicial personalizada</p>
+          <p>Hubly · Sua página inicial personalizada</p>
         </footer>
       </div>
 

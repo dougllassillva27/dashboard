@@ -19,5 +19,6 @@ CREATE TABLE IF NOT EXISTS solhub_sync (
 CREATE TABLE IF NOT EXISTS solhub_favicons (
   domain TEXT PRIMARY KEY,
   favicon_url TEXT NOT NULL,
+-- Script de configuração inicial do banco de dados Neon para o Hubly
   updated_at TIMESTAMPTZ DEFAULT NOW()
 );

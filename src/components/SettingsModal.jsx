@@ -162,7 +162,7 @@ export default function SettingsModal() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'sol-hub-config.json';
+    a.download = 'hubly-config.json';
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -228,7 +228,7 @@ export default function SettingsModal() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center modal-backdrop" onClick={closeSettings}>
       <div
-        className="bg-card border border-border rounded-2xl w-full max-w-2xl mx-4 max-h-[80vh] flex flex-col animate-slideIn"
+        className="bg-card border border-border rounded-2xl w-full max-w-4xl mx-4 max-h-[85vh] flex flex-col animate-slideIn"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -280,7 +280,7 @@ export default function SettingsModal() {
         </div>
 
         {/* Desktop Tabs */}
-        <div className="hidden sm:flex border-b border-border overflow-x-auto px-2">
+        <div className="hidden sm:flex flex-wrap border-b border-border px-2">
           {tabs.map((tab) => {
             const Icon = tab.icon;
             return (
@@ -522,7 +522,7 @@ export default function SettingsModal() {
                   ))}
                 </select>
                 <p className="text-xs text-muted mt-2">
-                  Esta categoria será carregada automaticamente toda vez que você abrir o Sol Hub.
+                  Esta categoria será carregada automaticamente toda vez que você abrir o Hubly.
                 </p>
               </div>
 

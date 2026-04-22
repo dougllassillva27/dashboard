@@ -1,8 +1,8 @@
-# AGENTS.md — Sol Hub
+# AGENTS.md — Hubly
 
 ## Visão Geral
 
-Sol Hub é uma **startpage/new-tab page** para navegador — SPA client-side em React 18 com Vite 5. UI em **português brasileiro** (`lang="pt-BR"`).
+Hubly é uma **startpage/new-tab page** para navegador — SPA client-side em React 18 com Vite 5. UI em **português brasileiro** (`lang="pt-BR"`).
 
 ## Stack
 
