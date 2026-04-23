@@ -659,7 +659,7 @@ export default function SettingsModal() {
                         type="text"
                         value={futebolRssUrl}
                         onChange={(e) => setFutebolRssUrl(e.target.value)}
-                        placeholder="https://ge.globo.com/Esportes/Rss/0,,AS0-9825,00.xml"
+                        placeholder="https://www.ogol.com.br/rss/noticias.php"
                         className="w-full px-4 py-3 bg-bg border border-border rounded-lg text-text placeholder-muted focus:border-accent transition-colors"
                       />
                       <p className="text-xs text-muted mt-2">

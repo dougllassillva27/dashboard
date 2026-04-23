@@ -10,7 +10,7 @@ const parser = new Parser({
 });
 
 export const handler = async (event) => {
-  const rssUrl = event.queryStringParameters?.url || 'https://ge.globo.com/Esportes/Rss/0,,AS0-9825,00.xml';
+  const rssUrl = event.queryStringParameters?.url || 'https://www.ogol.com.br/rss/noticias.php';
 
   try {
     const response = await fetch(rssUrl);

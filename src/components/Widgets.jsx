@@ -1,3 +1,20 @@
+/*
+ * DADOS ADICIONAIS DO OPEN-METEO (Para referência futura)
+ * Dados Diários (Daily):
+ * - sunrise / sunset (Nascer e pôr do sol)
+ * - uv_index_max (Índice UV máximo do dia)
+ * - precipitation_probability_max (Probabilidade máxima de chuva em %)
+ * - precipitation_sum / rain_sum (Acúmulo de precipitação em mm)
+ * - wind_speed_10m_max / wind_gusts_10m_max (Velocidade e rajadas máximas de vento)
+ * - daylight_duration (Duração do dia em segundos)
+ *
+ * Dados Atuais / Horários (Current/Hourly):
+ * - apparent_temperature (Sensação térmica)
+ * - relative_humidity_2m (Umidade relativa do ar)
+ * - surface_pressure (Pressão atmosférica)
+ * - visibility (Visibilidade em metros)
+ * - cloud_cover (Cobertura total de nuvens)
+ */
 import { useState, useEffect, useRef } from 'react';
 import {
   Cloud,
@@ -57,11 +74,11 @@ export default function Widgets() {
         const { latitude, longitude, name, admin1 } = geoData.results[0];
 
         const weatherRes = await fetch(
-          `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=auto`
+          `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code&daily=weathercode,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=auto`
         );
         const weatherData = await weatherRes.json();
 
-        if (!weatherData.current_weather) {
+        if (!weatherData.current) {
           throw new Error('Sem dados de clima');
         }
 
@@ -71,11 +88,14 @@ export default function Widgets() {
             code: weatherData.daily.weathercode[i],
             max: Math.round(weatherData.daily.temperature_2m_max[i]),
             min: Math.round(weatherData.daily.temperature_2m_min[i]),
+            pop: weatherData.daily.precipitation_probability_max[i],
           })) || [];
 
         setWeather({
-          temp: Math.round(weatherData.current_weather.temperature),
-          code: weatherData.current_weather.weathercode,
+          temp: Math.round(weatherData.current.temperature_2m),
+          code: weatherData.current.weather_code,
+          feelsLike: Math.round(weatherData.current.apparent_temperature),
+          humidity: weatherData.current.relative_humidity_2m,
           location: admin1 ? `${name}, ${admin1}` : name,
           forecast,
         });
@@ -131,14 +151,24 @@ export default function Widgets() {
             </div>
           ) : weather ? (
             <div className="flex-1 flex flex-col justify-between">
-              <div className="flex items-center gap-4 px-2 mt-2">
-                {getWeatherIcon(weather.code, 'w-10 h-10')}
-                <div>
-                  <div className="text-3xl font-light text-text">{weather.temp}°C</div>
-                  <div className="text-sm text-muted">{getWeatherDesc(weather.code)}</div>
+              <div className="flex items-center justify-between px-2 mt-2">
+                <div className="flex items-center gap-4">
+                  {getWeatherIcon(weather.code, 'w-10 h-10')}
+                  <div>
+                    <div className="text-3xl font-light text-text">{weather.temp}°C</div>
+                    <div className="text-sm text-muted">{getWeatherDesc(weather.code)}</div>
+                  </div>
+                </div>
+                <div className="flex flex-col items-end gap-0.5">
+                  <div className="text-xs text-muted">
+                    Sensação <span className="text-text font-medium">{weather.feelsLike}°C</span>
+                  </div>
+                  <div className="text-xs text-muted">
+                    Umidade <span className="text-text font-medium">{weather.humidity}%</span>
+                  </div>
                 </div>
               </div>
-              <div className="mt-6 pt-4 border-t border-border flex gap-3 sm:gap-4 overflow-x-auto scrollbar-hide pb-1">
+              <div className="mt-4 pt-3 border-t border-border flex gap-3 sm:gap-4 overflow-x-auto scrollbar-hide pb-1">
                 {weather.forecast?.map((day, i) => {
                   const dateObj = new Date(day.date + 'T12:00:00');
                   const dayName =
@@ -150,6 +180,9 @@ export default function Widgets() {
                       <div className="flex gap-1.5 text-xs">
                         <span className="text-text font-medium">{day.max}°</span>
                         <span className="text-muted">{day.min}°</span>
+                      </div>
+                      <div className="h-3 flex items-center justify-center">
+                        {day.pop > 0 && <span className="text-[10px] text-blue-400 font-medium">{day.pop}%</span>}
                       </div>
                     </div>
                   );
