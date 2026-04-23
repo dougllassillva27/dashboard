@@ -13,7 +13,15 @@ export const handler = async (event) => {
   const rssUrl = event.queryStringParameters?.url || 'https://ge.globo.com/Esportes/Rss/0,,AS0-9825,00.xml';
 
   try {
-    const feed = await parser.parseURL(rssUrl);
+    const response = await fetch(rssUrl);
+    const buffer = await response.arrayBuffer();
+
+    let xml = new TextDecoder('utf-8').decode(buffer);
+    if (xml.includes('encoding="ISO-8859-1"') || xml.includes('encoding="iso-8859-1"')) {
+      xml = new TextDecoder('iso-8859-1').decode(buffer);
+    }
+
+    const feed = await parser.parseString(xml);
     const items = [];
 
     for (const item of feed.items.slice(0, 8)) {
