@@ -1,39 +1,40 @@
+import Parser from 'rss-parser';
+
+const parser = new Parser({
+  customFields: {
+    item: [
+      ['media:content', 'media'],
+      ['content:encoded', 'contentEncoded'],
+    ],
+  },
+});
+
 export const handler = async (event) => {
   const rssUrl = event.queryStringParameters?.url || 'https://ge.globo.com/Esportes/Rss/0,,AS0-9825,00.xml';
 
   try {
-    const response = await fetch(rssUrl);
-    const xml = await response.text();
-
+    const feed = await parser.parseURL(rssUrl);
     const items = [];
-    const itemRegex = /<item>([\s\S]*?)<\/item>/g;
-    let match;
 
-    while ((match = itemRegex.exec(xml)) !== null && items.length < 8) {
-      const content = match[1];
-
-      const getTag = (tag) => {
-        const regex = new RegExp(`<${tag}>(?:<!\\[CDATA\\[)?([\\s\\S]*?)(?:\\]\\]>)?<\\/${tag}>`);
-        return content.match(regex)?.[1]?.trim() || '';
-      };
-
-      // Tenta extrair imagem do media:content ou da description
+    for (const item of feed.items.slice(0, 8)) {
       let imagem = null;
-      const mediaMatch = content.match(/<media:content[^>]*url="([^"]+)"/);
-      if (mediaMatch) {
-        imagem = mediaMatch[1];
+
+      if (item.media && item.media.$ && item.media.$.url) {
+        imagem = item.media.$.url;
       } else {
-        const desc = getTag('description');
-        const imgMatch = desc.match(/src="([^"]+)"/);
-        if (imgMatch) imagem = imgMatch[1];
+        const html = item.content || item.contentEncoded || item.contentSnippet || '';
+        const imgMatch = html.match(/<img[^>]+src="([^">]+)"/i);
+        if (imgMatch) {
+          imagem = imgMatch[1];
+        }
       }
 
       items.push({
-        id: getTag('guid') || getTag('link'),
-        titulo: getTag('title'),
-        link: getTag('link'),
-        dataPublicacao: getTag('pubDate'),
-        fonte: 'GE Futebol',
+        id: item.guid || item.id || item.link,
+        titulo: item.title,
+        link: item.link,
+        dataPublicacao: item.pubDate || item.isoDate,
+        fonte: feed.title || 'Futebol Notícias',
         imagem: imagem,
       });
     }
