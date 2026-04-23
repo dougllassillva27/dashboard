@@ -1,5 +1,6 @@
 export const handler = async (event) => {
   const apiKey = event.headers['x-api-key'];
+  const ligasParam = event.queryStringParameters?.ligas;
 
   if (!apiKey) {
     return { statusCode: 401, body: JSON.stringify({ error: 'API Key ausente' }) };
@@ -23,18 +24,33 @@ export const handler = async (event) => {
       return { statusCode: 400, body: JSON.stringify({ error: Object.values(data.errors)[0] }) };
     }
 
-    const jogosDoBrasil = (data.response || []).filter((j) => {
-      const country = j.league.country;
-      const name = j.league.name;
-      return (
-        country === 'Brazil' ||
-        name.includes('Libertadores') ||
-        name.includes('Sudamericana') ||
-        name.includes('Recopa')
-      );
-    });
+    let jogosFiltrados = data.response || [];
 
-    const jogos = jogosDoBrasil.map((j) => ({
+    if (ligasParam && ligasParam.trim() !== '') {
+      const ligasDesejadas = ligasParam
+        .toLowerCase()
+        .split(',')
+        .map((s) => s.trim())
+        .filter(Boolean);
+
+      jogosFiltrados = jogosFiltrados.filter((j) => {
+        const nameLower = j.league.name.toLowerCase();
+        return ligasDesejadas.some((liga) => nameLower.includes(liga));
+      });
+    } else {
+      jogosFiltrados = jogosFiltrados.filter((j) => {
+        const country = j.league.country;
+        const name = j.league.name;
+        return (
+          country === 'Brazil' ||
+          name.includes('Libertadores') ||
+          name.includes('Sudamericana') ||
+          name.includes('Recopa')
+        );
+      });
+    }
+
+    const jogos = jogosFiltrados.map((j) => ({
       id: String(j.fixture.id),
       campeonato: j.league.name,
       rodada: j.league.round,

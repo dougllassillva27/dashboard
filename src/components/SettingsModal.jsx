@@ -178,6 +178,8 @@ export default function SettingsModal() {
     openImportBookmarks,
     futebolApiKey,
     setFutebolApiKey,
+    futebolLigasFiltro,
+    setFutebolLigasFiltro,
   } = useStore();
 
   const [activeTab, setActiveTab] = useState('appearance');
@@ -634,6 +636,20 @@ export default function SettingsModal() {
                     <div className="mt-4 p-3 bg-blue-500/10 border border-blue-500/30 rounded-xl text-blue-400 text-xs leading-relaxed">
                       <strong>Aviso:</strong> A API-Football gratuita permite apenas 100 requisições diárias. Para
                       economizar sua cota, os jogos são cacheados localmente por 1 hora.
+                    </div>
+                    <div className="mt-6">
+                      <h3 className="text-sm font-medium text-muted mb-3">Filtro de Campeonatos</h3>
+                      <input
+                        type="text"
+                        value={futebolLigasFiltro}
+                        onChange={(e) => setFutebolLigasFiltro(e.target.value)}
+                        placeholder="Ex: Serie A, Copa do Brasil, Libertadores"
+                        className="w-full px-4 py-3 bg-bg border border-border rounded-lg text-text placeholder-muted focus:border-accent transition-colors"
+                      />
+                      <p className="text-xs text-muted mt-2">
+                        Busca parcial por nome de campeonato. Separe múltiplos por vírgula. Deixe vazio para usar o
+                        padrão (Brasil + Libertadores/Sul-Americana). Ao alterar, o cache será limpo.
+                      </p>
                     </div>
                   </>
                 )}

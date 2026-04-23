@@ -31,6 +31,7 @@ export function useFutebol() {
     const apiKey = state.futebolApiKey;
     const cache = state.futebolJogosCache;
     const cacheTime = state.futebolJogosCacheTime;
+    const ligasFiltro = state.futebolLigasFiltro;
 
     if (!apiKey) {
       setError((prev) => ({ ...prev, jogos: 'API Key de Futebol não configurada.' }));
@@ -49,7 +50,8 @@ export function useFutebol() {
     setLoading((prev) => ({ ...prev, jogos: true }));
     setError((prev) => ({ ...prev, jogos: null }));
     try {
-      const response = await fetch('/.netlify/functions/futebol-jogos', {
+      const url = `/.netlify/functions/futebol-jogos${ligasFiltro ? `?ligas=${encodeURIComponent(ligasFiltro)}` : ''}`;
+      const response = await fetch(url, {
         headers: { 'x-api-key': apiKey },
       });
       const data = await response.json();

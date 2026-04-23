@@ -69,6 +69,7 @@ const useStore = create((set, get) => ({
   futebolApiKey: decrypt(storage.get('futebol_apikey'), storage.get('sync_token') || '') || '',
   futebolJogosCache: storage.get('futebol_jogos_cache') || [],
   futebolJogosCacheTime: storage.get('futebol_jogos_cache_time') || 0,
+  futebolLigasFiltro: storage.get('futebol_ligas_filtro') || '',
 
   // UI State
   settingsOpen: false,
@@ -391,6 +392,13 @@ const useStore = create((set, get) => ({
     set({ futebolJogosCache: jogos, futebolJogosCacheTime: Date.now() });
   },
 
+  setFutebolLigasFiltro: (filtro) => {
+    storage.set('futebol_ligas_filtro', filtro);
+    storage.set('futebol_jogos_cache', []);
+    storage.set('futebol_jogos_cache_time', 0);
+    set({ futebolLigasFiltro: filtro, futebolJogosCache: [], futebolJogosCacheTime: 0 });
+  },
+
   setFutebolApiKey: (key) => {
     const token = get().syncToken;
     if (token) {
@@ -475,6 +483,7 @@ const useStore = create((set, get) => ({
         newsTopics: storage.get('news_topics') || defaultNewsTopics,
         notesContent: storage.get('notes_content') || '',
         weatherCity: storage.get('weather_city') || '',
+        futebolLigasFiltro: storage.get('futebol_ligas_filtro') || '',
         homeSortMethod: storage.get('home_sort_method') || 'manual',
         defaultCategory: storage.get('default_category') || 'all',
         activeCategory: getSessionCategory() || storage.get('default_category') || 'all',
