@@ -23,6 +23,7 @@ import {
   ChevronDown,
   Bookmark,
   Home,
+  Trophy,
 } from 'lucide-react';
 import {
   DndContext,
@@ -49,6 +50,7 @@ const tabs = [
   { id: 'search', label: 'Busca', icon: Search },
   { id: 'ai', label: 'Chat IA', icon: MessageSquare },
   { id: 'news', label: 'Notícias', icon: Newspaper },
+  { id: 'futebol', label: 'Futebol', icon: Trophy },
   { id: 'widgets', label: 'Widgets', icon: LayoutGrid },
   { id: 'categories', label: 'Categorias', icon: FolderOpen },
   { id: 'data', label: 'Dados', icon: Database },
@@ -174,6 +176,8 @@ export default function SettingsModal() {
     setAutoSync,
     setPendingBookmarks,
     openImportBookmarks,
+    futebolApiKey,
+    setFutebolApiKey,
   } = useStore();
 
   const [activeTab, setActiveTab] = useState('appearance');
@@ -594,6 +598,42 @@ export default function SettingsModal() {
                 </div>
               </div>
               */}
+            </div>
+          )}
+
+          {/* Futebol Tab */}
+          {activeTab === 'futebol' && (
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-sm font-medium text-muted mb-3">API Key do API-Football (Jogos Hoje)</h3>
+                {!syncToken ? (
+                  <div className="p-4 bg-yellow-500/10 border border-yellow-500/30 rounded-xl text-yellow-500 text-sm">
+                    Configure sua <strong>Senha Mestra</strong> na aba "Dados" primeiro. Ela será usada para
+                    criptografar sua chave no navegador.
+                  </div>
+                ) : (
+                  <>
+                    <input
+                      type="password"
+                      value={futebolApiKey}
+                      onChange={(e) => setFutebolApiKey(e.target.value)}
+                      placeholder="Insira sua API Key..."
+                      className="w-full px-4 py-3 bg-bg border border-border rounded-lg text-text placeholder-muted focus:border-accent transition-colors"
+                    />
+                    <p className="text-xs text-muted mt-2">
+                      Sua chave é criptografada localmente. Obtenha uma chave gratuita em{' '}
+                      <a
+                        href="https://api-football.com/"
+                        target="_blank"
+                        rel="noopener"
+                        className="text-accent hover:underline"
+                      >
+                        api-football.com
+                      </a>
+                    </p>
+                  </>
+                )}
+              </div>
             </div>
           )}
 

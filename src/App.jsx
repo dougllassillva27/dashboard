@@ -6,7 +6,7 @@ import SearchBar from './components/SearchBar';
 import CategoryFilter from './components/CategoryFilter';
 import SiteGrid from './components/SiteGrid';
 import Widgets from './components/Widgets';
-import NewsFeed from './components/NewsFeed';
+import BottomSection from './components/BottomSection';
 import SettingsModal from './components/SettingsModal';
 import AddSiteModal from './components/AddSiteModal';
 import ConfirmModal from './components/ConfirmModal';
@@ -93,9 +93,7 @@ export default function App() {
 
         {!isFocusMode && (
           <>
-            <div className="container mx-auto px-4 pb-16 pt-8 border-t border-border">
-              <NewsFeed />
-            </div>
+            <BottomSection />
             <footer className="text-center py-6 text-muted text-sm">
               <p>Hubly · Sua página inicial personalizada</p>
             </footer>

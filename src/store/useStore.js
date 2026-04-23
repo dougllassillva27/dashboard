@@ -65,6 +65,9 @@ const useStore = create((set, get) => ({
   chatLoading: false,
   initialChatMessage: null,
 
+  // Futebol (Hubly Futebol)
+  futebolApiKey: decrypt(storage.get('futebol_apikey'), storage.get('sync_token') || '') || '',
+
   // UI State
   settingsOpen: false,
   addSiteOpen: false,
@@ -380,6 +383,14 @@ const useStore = create((set, get) => ({
     set({ initialChatMessage: null });
   },
 
+  setFutebolApiKey: (key) => {
+    const token = get().syncToken;
+    if (token) {
+      storage.set('futebol_apikey', encrypt(key, token));
+    }
+    set({ futebolApiKey: key });
+  },
+
   addChatMessage: (message) => {
     const messages = [...get().chatMessages, message];
     set({ chatMessages: messages });
@@ -407,12 +418,18 @@ const useStore = create((set, get) => ({
 
   setSyncToken: (token) => {
     const currentKey = get().openAiApiKey;
+    const currentFutebolKey = get().futebolApiKey;
     storage.set('sync_token', token);
     set({ syncToken: token });
     if (currentKey && token) {
       storage.set('openai_apikey', encrypt(currentKey, token));
     } else if (!token) {
       storage.remove('openai_apikey');
+    }
+    if (currentFutebolKey && token) {
+      storage.set('futebol_apikey', encrypt(currentFutebolKey, token));
+    } else if (!token) {
+      storage.remove('futebol_apikey');
     }
   },
 
@@ -457,6 +474,7 @@ const useStore = create((set, get) => ({
         autoSync: storage.get('auto_sync') || false,
       });
       set({ openAiApiKey: decrypt(storage.get('openai_apikey'), get().syncToken) || '' });
+      set({ futebolApiKey: decrypt(storage.get('futebol_apikey'), get().syncToken) || '' });
       applyTheme(get().theme);
     }
     return success;
