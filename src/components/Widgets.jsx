@@ -138,13 +138,13 @@ export default function Widgets() {
                   <div className="text-sm text-muted">{getWeatherDesc(weather.code)}</div>
                 </div>
               </div>
-              <div className="mt-6 pt-4 border-t border-border flex gap-4 overflow-x-auto scrollbar-hide pb-1">
+              <div className="mt-6 pt-4 border-t border-border flex gap-3 sm:gap-4 overflow-x-auto scrollbar-hide pb-1">
                 {weather.forecast?.map((day, i) => {
                   const dateObj = new Date(day.date + 'T12:00:00');
                   const dayName =
                     i === 0 ? 'Hoje' : dateObj.toLocaleDateString('pt-BR', { weekday: 'short' }).replace('.', '');
                   return (
-                    <div key={day.date} className="flex flex-col items-center gap-2 min-w-[3.5rem]">
+                    <div key={day.date} className="flex flex-col items-center gap-2 min-w-[3.7rem] sm:min-w-[3.5rem]">
                       <span className="text-xs text-muted capitalize">{dayName}</span>
                       {getWeatherIcon(day.code, 'w-6 h-6')}
                       <div className="flex gap-1.5 text-xs">
