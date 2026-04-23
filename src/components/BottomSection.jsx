@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Newspaper, Trophy } from 'lucide-react';
 import NewsFeed from './NewsFeed';
-import FutebolTab from './futebol/FutebolTab';
+import FutebolTab from './FutebolTab';
 
 const tabs = [
   { id: 'news', label: 'Notícias Gerais', icon: Newspaper },

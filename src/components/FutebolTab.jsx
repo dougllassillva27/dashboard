@@ -1,5 +1,5 @@
 import { Trophy, Newspaper, Loader2, AlertCircle, RefreshCw } from 'lucide-react';
-import { useFutebol } from '../../hooks/useFutebol';
+import { useFutebol } from '../hooks/useFutebol';
 import NoticiasFutebol from './NoticiasFutebol';
 import JogosHoje from './JogosHoje';
 
