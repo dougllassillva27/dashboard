@@ -21,7 +21,7 @@ const EmptyState = ({ message }) => (
 );
 
 export default function FutebolTab() {
-  const { noticias, jogos, loading, error, refetch } = useFutebol();
+  const { noticias, jogos, loading, error, fetchNoticias, fetchJogos } = useFutebol();
 
   return (
     <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 animate-fadeIn">
@@ -32,6 +32,14 @@ export default function FutebolTab() {
             <Trophy size={20} />
             Jogos de Hoje
           </h2>
+          <button
+            onClick={fetchJogos}
+            disabled={loading.jogos}
+            className="p-2 text-muted hover:text-accent transition-colors disabled:opacity-50"
+            title="Buscar jogos"
+          >
+            <RefreshCw size={16} className={loading.jogos ? 'animate-spin' : ''} />
+          </button>
         </div>
         {loading.jogos ? (
           <LoadingState />
@@ -40,7 +48,7 @@ export default function FutebolTab() {
         ) : jogos.length > 0 ? (
           <JogosHoje jogos={jogos} />
         ) : (
-          <EmptyState message="Nenhum jogo para hoje." />
+          <EmptyState message="Clique no botão acima para carregar os jogos." />
         )}
       </div>
 
@@ -52,11 +60,11 @@ export default function FutebolTab() {
             Notícias de Futebol
           </h2>
           <button
-            onClick={refetch}
-            disabled={loading.noticias || loading.jogos}
+            onClick={fetchNoticias}
+            disabled={loading.noticias}
             className="p-2 text-muted hover:text-accent transition-colors disabled:opacity-50"
           >
-            <RefreshCw size={16} className={loading.noticias || loading.jogos ? 'animate-spin' : ''} />
+            <RefreshCw size={16} className={loading.noticias ? 'animate-spin' : ''} />
           </button>
         </div>
         {loading.noticias ? (

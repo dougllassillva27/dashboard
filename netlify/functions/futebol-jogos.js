@@ -23,7 +23,9 @@ export const handler = async (event) => {
       return { statusCode: 400, body: JSON.stringify({ error: Object.values(data.errors)[0] }) };
     }
 
-    const jogos = (data.response || []).map((j) => ({
+    const jogosDoBrasil = (data.response || []).filter((j) => j.league.country === 'Brazil');
+
+    const jogos = jogosDoBrasil.map((j) => ({
       id: String(j.fixture.id),
       campeonato: j.league.name,
       rodada: j.league.round,

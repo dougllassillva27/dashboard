@@ -5,7 +5,7 @@ export function useFutebol() {
   const { futebolApiKey } = useStore();
   const [noticias, setNoticias] = useState([]);
   const [jogos, setJogos] = useState([]);
-  const [loading, setLoading] = useState({ noticias: true, jogos: true });
+  const [loading, setLoading] = useState({ noticias: true, jogos: false });
   const [error, setError] = useState({ noticias: null, jogos: null });
 
   const fetchNoticias = useCallback(async () => {
@@ -48,14 +48,10 @@ export function useFutebol() {
     }
   }, [futebolApiKey]);
 
-  const refetch = useCallback(() => {
-    fetchNoticias();
-    fetchJogos();
-  }, [fetchNoticias, fetchJogos]);
-
   useEffect(() => {
-    refetch();
-  }, [refetch]);
+    // Jogos não são mais carregados no mount para economizar cota da API (BYOK)
+    fetchNoticias();
+  }, [fetchNoticias]);
 
-  return { noticias, jogos, loading, error, refetch };
+  return { noticias, jogos, loading, error, fetchNoticias, fetchJogos };
 }
