@@ -39,14 +39,7 @@ export const handler = async (event) => {
       });
     } else {
       jogosFiltrados = jogosFiltrados.filter((j) => {
-        const country = j.league.country;
-        const name = j.league.name;
-        return (
-          country === 'Brazil' ||
-          name.includes('Libertadores') ||
-          name.includes('Sudamericana') ||
-          name.includes('Recopa')
-        );
+        return j.league.country === 'Brazil';
       });
     }
 

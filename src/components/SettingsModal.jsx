@@ -70,6 +70,18 @@ const availableTopics = [
   { id: 'sports', label: 'Esportes' },
 ];
 
+const futebolLigasOpcoes = [
+  { id: 'serie a', label: 'Brasileiro Série A' },
+  { id: 'serie b', label: 'Brasileiro Série B' },
+  { id: 'copa do brasil', label: 'Copa do Brasil' },
+  { id: 'gaucho', label: 'Campeonato Gaúcho' },
+  { id: 'libertadores', label: 'Libertadores' },
+  { id: 'sudamericana', label: 'Sul-Americana' },
+  { id: 'world cup', label: 'Copa do Mundo' },
+  { id: 'wc qualification south america', label: 'Eliminatórias América do Sul' },
+  { id: 'champions league', label: 'Champions League' },
+];
+
 function SortableCategoryItem({ cat, onRemove, onUpdate }) {
   const [isEditing, setIsEditing] = useState(false);
   const [editValue, setEditValue] = useState(cat);
@@ -191,6 +203,12 @@ export default function SettingsModal() {
   const [syncStatus, setSyncStatus] = useState({ loading: false, type: null, text: null });
   const fileInputRef = useRef(null);
   const htmlInputRef = useRef(null);
+
+  const ligasSelecionadas = futebolLigasFiltro
+    .toLowerCase()
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean);
 
   const sensors = useSensors(
     useSensor(MouseSensor, { activationConstraint: { distance: 5 } }),
@@ -641,16 +659,34 @@ export default function SettingsModal() {
                     </div>
                     <div className="mt-6">
                       <h3 className="text-sm font-medium text-muted mb-3">Filtro de Campeonatos</h3>
-                      <input
-                        type="text"
-                        value={futebolLigasFiltro}
-                        onChange={(e) => setFutebolLigasFiltro(e.target.value)}
-                        placeholder="Ex: Serie A, Copa do Brasil, Libertadores"
-                        className="w-full px-4 py-3 bg-bg border border-border rounded-lg text-text placeholder-muted focus:border-accent transition-colors"
-                      />
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                        {futebolLigasOpcoes.map((liga) => {
+                          const isChecked = ligasSelecionadas.includes(liga.id);
+                          return (
+                            <label
+                              key={liga.id}
+                              className={`flex items-center gap-3 p-3 bg-bg border rounded-lg cursor-pointer transition-colors ${isChecked ? 'border-accent' : 'border-border hover:border-accent/50'}`}
+                            >
+                              <input
+                                type="checkbox"
+                                checked={isChecked}
+                                onChange={() => {
+                                  if (isChecked) {
+                                    setFutebolLigasFiltro(ligasSelecionadas.filter((l) => l !== liga.id).join(', '));
+                                  } else {
+                                    setFutebolLigasFiltro([...ligasSelecionadas, liga.id].join(', '));
+                                  }
+                                }}
+                                className="w-4 h-4 rounded border-border bg-card text-accent focus:ring-accent focus:ring-offset-bg transition-colors"
+                              />
+                              <span className="text-sm text-text">{liga.label}</span>
+                            </label>
+                          );
+                        })}
+                      </div>
                       <p className="text-xs text-muted mt-2">
-                        Busca parcial por nome de campeonato. Separe múltiplos por vírgula. Deixe vazio para usar o
-                        padrão (Brasil + Libertadores/Sul-Americana). Ao alterar, o cache será limpo.
+                        Se nenhum campeonato for selecionado, o sistema exibirá todos os jogos do Brasil por padrão. Ao
+                        alterar, o cache será limpo.
                       </p>
                     </div>
                     <div className="mt-6">
