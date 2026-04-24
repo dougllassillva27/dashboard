@@ -83,7 +83,9 @@ const futebolLigasOpcoes = [
   { id: '2', label: 'Champions League' },
   { id: '39', label: 'Premier League' },
   { id: '140', label: 'La Liga' },
-  { id: '135', label: 'Serie A Italiana' },
+  { id: '78', label: 'Bundesliga' },
+  { id: '61', label: 'Ligue 1' },
+  { id: '1', label: 'Copa do Mundo' },
 ];
 
 function SortableCategoryItem({ cat, onRemove, onUpdate }) {
