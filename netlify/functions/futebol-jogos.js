@@ -1,6 +1,34 @@
 import Parser from 'rss-parser';
 
-const parser = new Parser();
+const parser = new Parser({
+  customFields: {
+    item: [['dc:subject', 'subject']],
+  },
+});
+
+const MAPA_LIGAS = {
+  'Brasileirão Série A': ['Brasileirão', 'Campeonato Brasileiro', 'Serie A', 'Série A'],
+  'Brasileirão Série B': ['Serie B', 'Série B', 'Campeonato Brasileiro Série B'],
+  'Copa do Brasil': ['Copa do Brasil'],
+  Libertadores: ['Copa Libertadores', 'Libertadores'],
+  'Sul-Americana': ['Copa Sul-Americana', 'Sul-Americana'],
+  'Copa do Mundo': ['World Cup', 'Copa do Mundo'],
+  'Premier League': ['Premier League'],
+  'La Liga': ['LaLiga', 'LaLiga EA Sports', 'Campeonato Espanhol'],
+};
+
+function normalizarLiga(ligaOriginal) {
+  if (!ligaOriginal) return null;
+  const ligaLower = ligaOriginal.toLowerCase();
+  for (const [ligaPadrao, aliases] of Object.entries(MAPA_LIGAS)) {
+    for (const alias of aliases) {
+      if (ligaLower.includes(alias.toLowerCase())) {
+        return ligaPadrao;
+      }
+    }
+  }
+  return null;
+}
 
 const fetchAndParse = async (url) => {
   const response = await fetch(url, {
@@ -47,6 +75,11 @@ export const handler = async (event) => {
       // Ex: [Brasileirão] Flamengo x Vasco OU Flamengo vs Vasco
       const match = item.title.match(/^(?:\[(.*?)\]\s*)?(.*?)\s+(?:x|v|vs|-)\s+(.*)$/i);
       if (match) {
+        const ligaOriginal = item.subject || (match[1] ? match[1].trim() : null);
+        const ligaNormalizada = normalizarLiga(ligaOriginal);
+
+        if (!ligaNormalizada) return; // Descarta jogos fora do filtro
+
         let horarioFormatado = '';
         try {
           const d = new Date(item.pubDate || item.isoDate);
@@ -61,7 +94,7 @@ export const handler = async (event) => {
 
         jogos.push({
           id: `prox-${index}`,
-          campeonato: match[1] ? match[1].trim() : 'Futebol',
+          campeonato: ligaNormalizada,
           rodada: '',
           horario: horarioFormatado || '00:00',
           status: 'NS',
@@ -78,9 +111,14 @@ export const handler = async (event) => {
       // Ex: [Brasileirão] Flamengo 2-1 Vasco OU Flamengo 2 x 1 Vasco
       const match = item.title.match(/^(?:\[(.*?)\]\s*)?(.*?)\s+(\d+)\s*(?:x|-)\s*(\d+)\s+(.*)$/i);
       if (match) {
+        const ligaOriginal = item.subject || (match[1] ? match[1].trim() : null);
+        const ligaNormalizada = normalizarLiga(ligaOriginal);
+
+        if (!ligaNormalizada) return; // Descarta jogos fora do filtro
+
         jogos.push({
           id: `res-${index}`,
-          campeonato: match[1] ? match[1].trim() : 'Futebol',
+          campeonato: ligaNormalizada,
           rodada: '',
           horario: 'Encerrado',
           status: 'FT',
