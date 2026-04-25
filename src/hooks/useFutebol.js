@@ -36,7 +36,7 @@ export function useFutebol() {
     const urlRes = state.futebolRssResultados;
 
     const now = Date.now();
-    const CACHE_DURATION = 30 * 60 * 1000;
+    const CACHE_DURATION = 10 * 60 * 1000; // Reduzido para 10 minutos (Cache principal na Netlify Function)
 
     if (!force && cache && cache.length > 0 && now - cacheTime < CACHE_DURATION) {
       setJogos(cache);

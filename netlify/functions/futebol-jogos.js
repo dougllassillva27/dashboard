@@ -1,150 +1,166 @@
-import Parser from 'rss-parser';
-
-const parser = new Parser({
-  customFields: {
-    item: [['dc:subject', 'subject']],
-  },
-});
-
-const MAPA_LIGAS = {
-  'Brasileirão Série A': ['Brasileirão Série A', 'Brasileiro Série A', 'Campeonato Brasileiro Série A'],
-  'Brasileirão Série B': ['Brasileirão Série B', 'Brasileiro Série B', 'Campeonato Brasileiro Série B'],
-  'Copa do Brasil': ['Copa do Brasil'],
-  Libertadores: ['Copa Libertadores', 'Libertadores'],
-  'Sul-Americana': ['Copa Sul-Americana', 'Sul-Americana'],
-  'Copa do Mundo': ['World Cup', 'Copa do Mundo'],
-  'Premier League': ['Premier League'],
-  'La Liga': ['LaLiga', 'LaLiga EA Sports', 'Campeonato Espanhol'],
-};
-
-function normalizarLiga(ligaOriginal) {
-  if (!ligaOriginal) return null;
-  const ligaLower = ligaOriginal.toLowerCase();
-  for (const [ligaPadrao, aliases] of Object.entries(MAPA_LIGAS)) {
-    for (const alias of aliases) {
-      if (ligaLower.includes(alias.toLowerCase())) {
-        return ligaPadrao;
-      }
-    }
-  }
-  return null;
-}
-
-const fetchAndParse = async (url) => {
-  const response = await fetch(url, {
-    headers: {
-      'User-Agent':
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-      Accept: 'application/rss+xml, application/xml, text/xml, */*',
-    },
-  });
-
-  if (!response.ok) {
-    throw new Error(`Status ${response.status} ao acessar ${url}`);
-  }
-
-  const buffer = await response.arrayBuffer();
-  let xml = new TextDecoder('utf-8').decode(buffer);
-  if (xml.includes('encoding="ISO-8859-1"') || xml.includes('encoding="iso-8859-1"')) {
-    xml = new TextDecoder('iso-8859-1').decode(buffer);
-  }
-  return parser.parseString(xml);
-};
+import { buscarJogosOgol } from './futebol/rss-ogol.js';
+import { buscarJogosCBF } from './futebol/fontes/cbf.js';
+import { buscarJogosConmebol } from './futebol/fontes/conmebol.js';
+import { buscarJogosFifa } from './futebol/fontes/fifa.js';
+import { buscarJogosPremierLeague } from './futebol/fontes/premier-league.js';
+import { buscarJogosLaLiga } from './futebol/fontes/la-liga.js';
+import { deduplicarJogos } from './futebol/dedupe.js';
+import { obterCache, salvarCache } from './futebol/cache.js';
+import { CAMPEONATOS_SUPORTADOS } from './futebol/ligas.js';
 
 export const handler = async (event) => {
   const { urlProx, urlRes } = event.queryStringParameters || {};
   const rssProx = urlProx || 'https://www.ogol.com.br/rss/proxjogos.php';
   const rssRes = urlRes || 'https://www.ogol.com.br/rss/resultados.php';
 
+  const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Sao_Paulo' });
+  const cacheKey = `futebol:jogos:${today}`;
+
+  const cacheValido = obterCache(cacheKey);
+  if (cacheValido) {
+    return {
+      statusCode: 200,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(cacheValido),
+    };
+  }
+
+  const avisos = [];
+  const fontesStatus = {
+    ogol: 'ok',
+    cbf: 'ignorado_sem_lacuna',
+    conmebol: 'ignorado_sem_lacuna',
+    fifa: 'ignorado_sem_lacuna',
+    premierleague: 'ignorado_sem_lacuna',
+    laliga: 'ignorado_sem_lacuna',
+  };
+  let todosJogos = [];
+
   try {
-    const [feedProx, feedRes] = await Promise.all([
-      fetchAndParse(rssProx).catch((e) => {
-        console.error('Erro ProxJogos:', e.message);
-        return { items: [] };
-      }),
-      fetchAndParse(rssRes).catch((e) => {
-        console.error('Erro Resultados:', e.message);
-        return { items: [] };
-      }),
-    ]);
+    const jogosOgol = await buscarJogosOgol(rssProx, rssRes);
+    todosJogos = [...jogosOgol];
 
-    const jogos = [];
+    const encontrados = new Set(todosJogos.map((j) => j.campeonato));
+    const faltantes = CAMPEONATOS_SUPORTADOS.filter((c) => !encontrados.has(c));
 
-    // Próximos Jogos (Agendados)
-    feedProx.items.forEach((item, index) => {
-      // Ex: [Brasileirão] Flamengo x Vasco OU Flamengo vs Vasco
-      const match = item.title.match(/^(?:\[(.*?)\]\s*)?(.*?)\s+(?:x|v|vs|-)\s+(.*)$/i);
-      if (match) {
-        const ligaOriginal = item.subject || (match[1] ? match[1].trim() : null);
-        const ligaNormalizada = normalizarLiga(ligaOriginal);
+    if (faltantes.length > 0) {
+      avisos.push(`RSS ogol não retornou: ${faltantes.join(', ')}. Fallbacks acionados.`);
+      const promises = [];
 
-        if (!ligaNormalizada) return; // Descarta jogos fora do filtro
-
-        let horarioFormatado = '';
-        try {
-          const d = new Date(item.pubDate || item.isoDate);
-          if (!isNaN(d.getTime())) {
-            horarioFormatado = d.toLocaleTimeString('pt-BR', {
-              hour: '2-digit',
-              minute: '2-digit',
-              timeZone: 'America/Sao_Paulo',
-            });
-          }
-        } catch (e) {}
-
-        jogos.push({
-          id: `prox-${index}`,
-          campeonato: ligaNormalizada,
-          rodada: '',
-          horario: horarioFormatado || '00:00',
-          status: 'NS',
-          minuto: null,
-          mandante: { nome: match[2] ? match[2].trim() : 'Desconhecido', escudo: null },
-          visitante: { nome: match[3] ? match[3].trim() : 'Desconhecido', escudo: null },
-          placar: { mandante: null, visitante: null },
-        });
+      if (faltantes.some((f) => f.includes('Brasileirão') || f.includes('Copa do Brasil'))) {
+        fontesStatus.cbf = 'processando';
+        promises.push(
+          buscarJogosCBF()
+            .then((j) => {
+              fontesStatus.cbf = 'ok';
+              return j;
+            })
+            .catch(() => {
+              fontesStatus.cbf = 'erro';
+              return [];
+            })
+        );
       }
-    });
 
-    // Resultados (Encerrados)
-    feedRes.items.forEach((item, index) => {
-      // Ex: [Brasileirão] Flamengo 2-1 Vasco OU Flamengo 2 x 1 Vasco
-      const match = item.title.match(/^(?:\[(.*?)\]\s*)?(.*?)\s+(\d+)\s*(?:x|-)\s*(\d+)\s+(.*)$/i);
-      if (match) {
-        const ligaOriginal = item.subject || (match[1] ? match[1].trim() : null);
-        const ligaNormalizada = normalizarLiga(ligaOriginal);
-
-        if (!ligaNormalizada) return; // Descarta jogos fora do filtro
-
-        jogos.push({
-          id: `res-${index}`,
-          campeonato: ligaNormalizada,
-          rodada: '',
-          horario: 'Encerrado',
-          status: 'FT',
-          minuto: null,
-          mandante: { nome: match[2].trim(), escudo: null },
-          visitante: { nome: match[5].trim(), escudo: null },
-          placar: { mandante: parseInt(match[3], 10), visitante: parseInt(match[4], 10) },
-        });
+      if (faltantes.some((f) => f === 'Libertadores' || f === 'Sul-Americana')) {
+        fontesStatus.conmebol = 'processando';
+        promises.push(
+          buscarJogosConmebol()
+            .then((j) => {
+              fontesStatus.conmebol = 'ok';
+              return j;
+            })
+            .catch(() => {
+              fontesStatus.conmebol = 'erro';
+              return [];
+            })
+        );
       }
-    });
 
-    jogos.sort((a, b) => {
-      if (a.status === 'NS' && b.status === 'FT') return -1;
-      if (a.status === 'FT' && b.status === 'NS') return 1;
-      return 0;
+      if (faltantes.includes('Copa do Mundo')) {
+        fontesStatus.fifa = 'processando';
+        promises.push(
+          buscarJogosFifa()
+            .then((j) => {
+              fontesStatus.fifa = 'ok';
+              return j;
+            })
+            .catch(() => {
+              fontesStatus.fifa = 'erro';
+              return [];
+            })
+        );
+      }
+
+      if (faltantes.includes('Premier League')) {
+        fontesStatus.premierleague = 'processando';
+        promises.push(
+          buscarJogosPremierLeague()
+            .then((j) => {
+              fontesStatus.premierleague = 'ok';
+              return j;
+            })
+            .catch(() => {
+              fontesStatus.premierleague = 'erro';
+              return [];
+            })
+        );
+      }
+
+      if (faltantes.includes('La Liga')) {
+        fontesStatus.laliga = 'processando';
+        promises.push(
+          buscarJogosLaLiga()
+            .then((j) => {
+              fontesStatus.laliga = 'ok';
+              return j;
+            })
+            .catch(() => {
+              fontesStatus.laliga = 'erro';
+              return [];
+            })
+        );
+      }
+
+      const resultadosFallbacks = await Promise.allSettled(promises);
+      resultadosFallbacks.forEach((res) => {
+        if (res.status === 'fulfilled') {
+          todosJogos = [...todosJogos, ...res.value];
+        }
+      });
+    }
+
+    const jogosDeduplicados = deduplicarJogos(todosJogos);
+
+    jogosDeduplicados.sort((a, b) => {
+      const getPeso = (s) => {
+        if (['1H', '2H', 'HT', 'ET', 'P', 'LIVE'].includes(s)) return 1;
+        if (s === 'NS') return 2;
+        return 3;
+      };
+      const pesoA = getPeso(a.status);
+      const pesoB = getPeso(b.status);
+      if (pesoA !== pesoB) return pesoA - pesoB;
+      return a.horario.localeCompare(b.horario);
     });
 
     // Limita para não estourar a interface
-    const limitados = jogos.slice(0, 15);
+    const limitados = jogosDeduplicados.slice(0, 20);
 
-    const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Sao_Paulo' });
+    const payloadFinal = {
+      dataReferencia: today,
+      cache: { hit: false, ttlMs: 600000, geradoEm: new Date().toISOString() },
+      fontes: fontesStatus,
+      avisos,
+      jogos: limitados,
+    };
+
+    salvarCache(cacheKey, payloadFinal, 600000); // 10 minutos
 
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ dataReferencia: today, jogos: limitados }),
+      body: JSON.stringify(payloadFinal),
     };
   } catch (error) {
     return { statusCode: 500, body: JSON.stringify({ error: error.message }) };

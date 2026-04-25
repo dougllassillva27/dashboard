@@ -19,7 +19,8 @@
     "zustand": "^4.4.7",
     "@neondatabase/serverless": "^0.9.0",
     "crypto-js": "^4.2.0",
-    "rss-parser": "^3.13.0"
+    "rss-parser": "^3.13.0",
+    "cheerio": "^1.0.0-rc.12"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
