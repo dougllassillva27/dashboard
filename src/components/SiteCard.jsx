@@ -28,6 +28,15 @@ const getAvatarColor = (name) => {
   return colors[Math.abs(hash) % colors.length];
 };
 
+const getProxiedUrl = (url) => {
+  if (!url) return '';
+  if (url.startsWith('data:') || url.startsWith('/')) return url;
+  if (url.includes('google.com/s2')) return url;
+  if (url.includes('localhost') || url.match(/\b(127|192\.168|10|172\.(1[6-9]|2[0-9]|3[0-1]))\./)) return url;
+  if (url.startsWith('/.netlify/')) return url;
+  return `/.netlify/functions/proxy-img?url=${encodeURIComponent(url)}`;
+};
+
 export default function SiteCard({ site, disableDrag }) {
   const { confirmDeleteSite, openAddSite, setEditingSite, setFaviconDb, syncToken, faviconsDb, registerSiteVisit } =
     useStore();
@@ -48,7 +57,6 @@ export default function SiteCard({ site, disableDrag }) {
   const [currentUrlIndex, setCurrentUrlIndex] = useState(0);
   const [imgFailed, setImgFailed] = useState(false);
   const [isResolving, setIsResolving] = useState(() => !site.customIcon && !dbUrl && !localCachedUrl);
-  const [imgLoaded, setImgLoaded] = useState(false);
 
   const timerRef = useRef(null);
   const isLongPressRef = useRef(false);
@@ -56,8 +64,6 @@ export default function SiteCard({ site, disableDrag }) {
 
   useEffect(() => {
     let mounted = true;
-
-    setImgLoaded(false);
 
     if (site.customIcon) {
       setFaviconUrls([site.customIcon]);
@@ -192,7 +198,6 @@ export default function SiteCard({ site, disableDrag }) {
   };
 
   const handleImageError = () => {
-    setImgLoaded(false);
     if (currentUrlIndex < faviconUrls.length - 1) {
       setCurrentUrlIndex((prev) => prev + 1);
     } else {
@@ -201,8 +206,6 @@ export default function SiteCard({ site, disableDrag }) {
   };
 
   const handleImageLoad = () => {
-    setImgLoaded(true);
-
     const currentUrl = faviconUrls[currentUrlIndex];
     if (!currentUrl) return;
 
@@ -246,23 +249,21 @@ export default function SiteCard({ site, disableDrag }) {
 
         {/* Card Body */}
         <div className="relative w-full h-full bg-card/80 backdrop-blur-md border border-border/50 group-hover/card:border-accent/50 rounded-2xl flex items-center justify-center shadow-sm group-hover/card:shadow-md transition-all duration-300 group-hover/card:-translate-y-1 overflow-hidden">
-          {/* SKELETON / FALLBACK */}
-          <span
-            className={`absolute inset-0 m-auto flex w-10 h-10 sm:w-14 sm:h-14 items-center justify-center text-xl sm:text-3xl font-bold bg-gradient-to-br ${getAvatarColor(site.name)} rounded-xl transition-all duration-300 group-hover/card:scale-110 shadow-inner ${isResolving ? 'animate-pulse opacity-50' : ''} ${imgLoaded && !imgFailed ? 'opacity-0 scale-90' : 'opacity-100 scale-100'}`}
-          >
-            {site.name?.[0]?.toUpperCase()}
-          </span>
-
-          {/* IMAGE */}
-          {!imgFailed && !isResolving && (
+          {!imgFailed && !isResolving ? (
             <img
-              src={faviconUrls[currentUrlIndex] || ''}
+              src={getProxiedUrl(faviconUrls[currentUrlIndex])}
               alt={site.name}
-              className={`absolute inset-0 m-auto w-10 h-10 sm:w-14 sm:h-14 object-contain transition-all duration-300 group-hover/card:scale-110 drop-shadow-md ${imgLoaded ? 'opacity-100' : 'opacity-0'}`}
+              className="w-10 h-10 sm:w-14 sm:h-14 object-contain transition-transform duration-300 group-hover/card:scale-110 drop-shadow-md"
               onError={handleImageError}
               onLoad={handleImageLoad}
               referrerPolicy="no-referrer"
             />
+          ) : (
+            <span
+              className={`flex w-10 h-10 sm:w-14 sm:h-14 items-center justify-center text-xl sm:text-3xl font-bold bg-gradient-to-br ${getAvatarColor(site.name)} rounded-xl transition-transform duration-300 group-hover/card:scale-110 shadow-inner ${isResolving ? 'animate-pulse opacity-50' : ''}`}
+            >
+              {site.name?.[0]?.toUpperCase()}
+            </span>
           )}
         </div>
       </div>
