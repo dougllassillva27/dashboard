@@ -36,7 +36,11 @@ export default function SiteCard({ site, disableDrag }) {
   const domain = getDomain(site.url);
   const dbUrl = faviconsDb[domain];
 
-  const [faviconUrls, setFaviconUrls] = useState([]);
+  const [faviconUrls, setFaviconUrls] = useState(() => {
+    if (site.customIcon) return [site.customIcon];
+    if (dbUrl) return [dbUrl];
+    return [];
+  });
   const [currentUrlIndex, setCurrentUrlIndex] = useState(0);
   const [imgFailed, setImgFailed] = useState(false);
   const [isResolving, setIsResolving] = useState(() => !site.customIcon && !dbUrl);
