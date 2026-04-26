@@ -5,6 +5,7 @@ import { Pencil, Trash2 } from 'lucide-react';
 import useStore from '../store/useStore';
 import { getFaviconUrls, getDomain } from '../utils/favicon';
 import { salvarFaviconDb } from '../utils/faviconDb';
+import { resolverFavicon } from '../services/resolvedorFavicon';
 
 const getAvatarColor = (name) => {
   const colors = [
@@ -35,27 +36,50 @@ export default function SiteCard({ site, disableDrag }) {
   const domain = getDomain(site.url);
   const dbUrl = faviconsDb[domain];
 
-  // Calcula a fila de URLs: favicon do banco primeiro (se existir), depois cadeia de fallback
-  const calcularUrls = (dbFavicon) => {
-    if (site.customIcon) return [site.customIcon];
-    const fallbacks = getFaviconUrls(site.url);
-    return dbFavicon ? [dbFavicon, ...fallbacks] : fallbacks;
-  };
-
-  const [faviconUrls, setFaviconUrls] = useState(() => calcularUrls(dbUrl));
+  const [faviconUrls, setFaviconUrls] = useState([]);
   const [currentUrlIndex, setCurrentUrlIndex] = useState(0);
-  const [imgFailed, setImgFailed] = useState(() => calcularUrls(dbUrl).length === 0);
+  const [imgFailed, setImgFailed] = useState(false);
+  const [isResolving, setIsResolving] = useState(() => !site.customIcon && !dbUrl);
 
   const timerRef = useRef(null);
   const isLongPressRef = useRef(false);
   const isTouchRef = useRef(false);
 
-  // Reage a mudança de URL, customIcon ou favicon do banco (carregado assincronamente)
   useEffect(() => {
-    const urls = calcularUrls(dbUrl);
-    setFaviconUrls(urls);
-    setCurrentUrlIndex(0);
-    setImgFailed(urls.length === 0);
+    let mounted = true;
+
+    if (site.customIcon) {
+      setFaviconUrls([site.customIcon]);
+      setCurrentUrlIndex(0);
+      setImgFailed(false);
+      setIsResolving(false);
+      return;
+    }
+
+    if (dbUrl) {
+      setFaviconUrls([dbUrl]);
+      setCurrentUrlIndex(0);
+      setImgFailed(false);
+      setIsResolving(false);
+      return;
+    }
+
+    setIsResolving(true);
+    setImgFailed(false);
+
+    resolverFavicon(site.url).then((resolvedUrl) => {
+      if (!mounted) return;
+      const fallbacks = getFaviconUrls(site.url);
+      const finalUrls = resolvedUrl ? [resolvedUrl, ...fallbacks] : fallbacks;
+      setFaviconUrls(finalUrls);
+      setCurrentUrlIndex(0);
+      setImgFailed(finalUrls.length === 0);
+      setIsResolving(false);
+    });
+
+    return () => {
+      mounted = false;
+    };
   }, [site.url, site.customIcon, dbUrl]);
 
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({
@@ -157,14 +181,7 @@ export default function SiteCard({ site, disableDrag }) {
 
   const handleImageLoad = () => {
     const currentUrl = faviconUrls[currentUrlIndex];
-    // Só persiste no banco se a fonte for confiável (Google s2 ou origin/favicon.ico)
-    const isFonteConfiavel =
-      currentUrl &&
-      (currentUrl.includes('google.com/s2/favicons') ||
-        currentUrl.endsWith('/favicon.ico') ||
-        currentUrl.endsWith('/favicon.png'));
-
-    if (isFonteConfiavel && syncToken && faviconsDb[domain] !== currentUrl) {
+    if (currentUrl && syncToken && faviconsDb[domain] !== currentUrl) {
       setFaviconDb(domain, currentUrl); // atualiza cache em memória imediatamente
       salvarFaviconDb(syncToken, domain, currentUrl); // persiste no banco (fire-and-forget)
     }
@@ -199,7 +216,7 @@ export default function SiteCard({ site, disableDrag }) {
 
         {/* Card Body */}
         <div className="relative w-full h-full bg-card/80 backdrop-blur-md border border-border/50 group-hover/card:border-accent/50 rounded-2xl flex items-center justify-center shadow-sm group-hover/card:shadow-md transition-all duration-300 group-hover/card:-translate-y-1 overflow-hidden">
-          {!imgFailed ? (
+          {!imgFailed && !isResolving ? (
             <img
               src={faviconUrls[currentUrlIndex] || ''}
               alt={site.name}
@@ -210,7 +227,7 @@ export default function SiteCard({ site, disableDrag }) {
             />
           ) : (
             <span
-              className={`flex w-10 h-10 sm:w-14 sm:h-14 items-center justify-center text-xl sm:text-3xl font-bold bg-gradient-to-br ${getAvatarColor(site.name)} rounded-xl transition-transform duration-300 group-hover/card:scale-110 shadow-inner`}
+              className={`flex w-10 h-10 sm:w-14 sm:h-14 items-center justify-center text-xl sm:text-3xl font-bold bg-gradient-to-br ${getAvatarColor(site.name)} rounded-xl transition-transform duration-300 group-hover/card:scale-110 shadow-inner ${isResolving ? 'animate-pulse opacity-50' : ''}`}
             >
               {site.name?.[0]?.toUpperCase()}
             </span>

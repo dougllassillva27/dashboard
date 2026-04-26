@@ -229,7 +229,7 @@ Responsabilidades:
 
 - Buscar notícias via RSS.
 - Consultar dados de futebol.
-- Resolver ou armazenar favicons.
+- Resolver favicons varrendo HTML/Manifestos em background para evitar CORS/SSRF.
 - Sincronizar dados com banco remoto.
 - Intermediar chamadas externas quando necessário.
 
@@ -344,7 +344,7 @@ Recursos:
 - Organização por categoria.
 - Reordenação via drag and drop.
 - Favicons automáticos.
-- Cache inteligente de ícones.
+- Cache inteligente de ícones (Serverless Scraper + Neon DB + LocalStorage).
 
 ---
 
