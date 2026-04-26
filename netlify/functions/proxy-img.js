@@ -32,33 +32,52 @@ export const handler = async (event) => {
     return { statusCode: 400, body: JSON.stringify({ error: 'URL obrigatória' }) };
   }
 
+  console.log(`[PROXY-IMG] Iniciando requisição para: ${url}`);
+
   try {
     const urlObj = new URL(url);
-    const { address } = await dns.lookup(urlObj.hostname).catch(() => ({ address: null }));
+    console.log(`[PROXY-IMG] Hostname alvo: ${urlObj.hostname}`);
+
+    const dnsResult = await dns.lookup(urlObj.hostname).catch((err) => {
+      console.error(`[PROXY-IMG] Erro na resolução DNS:`, err.message);
+      return { address: null };
+    });
+    const address = dnsResult.address;
+    console.log(`[PROXY-IMG] IP Resolvido: ${address}`);
+
     if (address && isPrivateIP(address)) {
+      console.warn(`[PROXY-IMG] SSRF Bloqueado! O domínio resolveu para o IP privado: ${address}`);
       return { statusCode: 403, body: JSON.stringify({ error: 'SSRF bloqueado' }) };
     }
 
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
 
+    const fetchHeaders = {
+      'User-Agent':
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+      Accept: 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+      'Accept-Language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
+      Referer: urlObj.origin + '/',
+      'Sec-Ch-Ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+      'Sec-Ch-Ua-Mobile': '?0',
+      'Sec-Ch-Ua-Platform': '"Windows"',
+    };
+
+    console.log(`[PROXY-IMG] Enviando headers:`, JSON.stringify(fetchHeaders));
+
     const response = await fetch(url, {
       signal: controller.signal,
-      headers: {
-        'User-Agent':
-          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-        Accept: 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
-        'Accept-Language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7',
-        Referer: new URL(url).origin + '/',
-        'Sec-Ch-Ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
-        'Sec-Ch-Ua-Mobile': '?0',
-        'Sec-Ch-Ua-Platform': '"Windows"',
-      },
+      headers: fetchHeaders,
     });
 
     clearTimeout(timeoutId);
 
+    console.log(`[PROXY-IMG] Resposta da origem: ${response.status} ${response.statusText}`);
+
     if (!response.ok) {
+      const errorBody = await response.text();
+      console.error(`[PROXY-IMG] Body do erro na origem (trecho):`, errorBody.substring(0, 300));
       return { statusCode: response.status, body: `Erro na origem: ${response.statusText}` };
     }
 
