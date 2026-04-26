@@ -47,6 +47,13 @@ export const getCachedFavicon = (domain) => {
   return null;
 };
 
+export const setCachedFavicon = (domain, url) => {
+  storage.set(`${CACHE_PREFIX}${domain}`, {
+    url,
+    timestamp: Date.now(),
+  });
+};
+
 export const resolverFavicon = (url) => {
   return new Promise((resolve) => {
     const domain = getDomain(url);

@@ -5,7 +5,7 @@ import { Pencil, Trash2 } from 'lucide-react';
 import useStore from '../store/useStore';
 import { getFaviconUrls, getDomain } from '../utils/favicon';
 import { salvarFaviconDb } from '../utils/faviconDb';
-import { resolverFavicon, getCachedFavicon } from '../services/resolvedorFavicon';
+import { resolverFavicon, getCachedFavicon, setCachedFavicon } from '../services/resolvedorFavicon';
 
 const getAvatarColor = (name) => {
   const colors = [
@@ -198,9 +198,16 @@ export default function SiteCard({ site, disableDrag }) {
 
   const handleImageLoad = () => {
     const currentUrl = faviconUrls[currentUrlIndex];
-    if (currentUrl && syncToken && faviconsDb[domain] !== currentUrl) {
-      setFaviconDb(domain, currentUrl); // atualiza cache em memória imediatamente
-      salvarFaviconDb(syncToken, domain, currentUrl); // persiste no banco (fire-and-forget)
+    if (!currentUrl) return;
+
+    const cached = getCachedFavicon(domain);
+    if (cached !== currentUrl) {
+      setCachedFavicon(domain, currentUrl);
+    }
+
+    if (syncToken && faviconsDb[domain] !== currentUrl) {
+      setFaviconDb(domain, currentUrl);
+      salvarFaviconDb(syncToken, domain, currentUrl);
     }
   };
 
