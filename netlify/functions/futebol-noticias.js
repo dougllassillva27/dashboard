@@ -22,28 +22,45 @@ export const handler = async (event) => {
       },
     };
 
-    let response = await fetch(rssUrl, fetchOptions).catch(() => null);
+    let xml = null;
 
-    // Se falhou ou foi barrado pelo Cloudflare (403), aciona o fallback via proxy
-    if (!response || !response.ok) {
-      const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(rssUrl)}`;
-      response = await fetch(proxyUrl, fetchOptions);
+    const proxies = [
+      (url) => url, // 1. Direto
+      (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`, // 2. Proxy A
+      (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`, // 3. Proxy B
+      (url) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`, // 4. Proxy C
+    ];
+
+    for (const proxyFn of proxies) {
+      try {
+        const targetUrl = proxyFn(rssUrl);
+        const response = await fetch(targetUrl, fetchOptions);
+
+        if (!response.ok) continue;
+
+        const buffer = await response.arrayBuffer();
+        let text = new TextDecoder('utf-8').decode(buffer);
+
+        if (text.includes('encoding="ISO-8859-1"') || text.includes('encoding="iso-8859-1"')) {
+          text = new TextDecoder('iso-8859-1').decode(buffer);
+        }
+
+        // Validação WAF (Cloudflare/Sucuri)
+        if (text.trim().toLowerCase().startsWith('<!doctype') || text.includes('Just a moment...')) {
+          continue;
+        }
+
+        xml = text;
+        break;
+      } catch (err) {
+        continue;
+      }
     }
 
-    if (!response || !response.ok) {
-      throw new Error(`Falha de rede ou bloqueio ativo. Status: ${response?.status}`);
-    }
-
-    const buffer = await response.arrayBuffer();
-    let xml = new TextDecoder('utf-8').decode(buffer);
-
-    // Previne crash do parser caso o proxy devolva o desafio HTML do Cloudflare disfarçado de 200 OK
-    if (xml.trim().toLowerCase().startsWith('<!doctype html') || xml.includes('Just a moment...')) {
-      throw new Error('Acesso bloqueado permanentemente pelo Cloudflare do servidor de origem.');
-    }
-
-    if (xml.includes('encoding="ISO-8859-1"') || xml.includes('encoding="iso-8859-1"')) {
-      xml = new TextDecoder('iso-8859-1').decode(buffer);
+    if (!xml) {
+      throw new Error(
+        'Bloqueado por WAF em todos os proxies. Use o RSS do GE nas configurações: https://ge.globo.com/rss/futebol/'
+      );
     }
 
     const feed = await parser.parseString(xml);
