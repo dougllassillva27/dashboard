@@ -79,49 +79,41 @@ export default function App() {
                   </p>
                 </div>
 
-                {/* ZONA FULL WIDTH */}
                 <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] mt-6 mb-10">
-                  {/* MOBILE -> OCULTA TOPO */}
-                  <div className="md:hidden hidden">
-                    <WeatherWidget />
+                  <div className="md:hidden flex justify-center px-4">
                     <Clock />
-                    <NotesWidget />
                   </div>
 
-                  {/* DESKTOP */}
                   <div className="hidden md:grid grid-cols-[1fr_420px_1fr] items-center min-h-[230px] px-10 xl:px-20">
-                    {/* CLIMA */}
                     <div className="flex justify-center">
                       <div
                         className="
-      w-[360px] xl:w-[440px] 2xl:w-[520px]
-      shrink-0
-      origin-center
-      scale-[1.08] xl:scale-[1.14] 2xl:scale-[1.2]
-      [&>*]:w-full
-      [&>*]:max-w-none
-    "
+                          w-[360px] xl:w-[440px] 2xl:w-[520px]
+                          shrink-0
+                          origin-center
+                          scale-[1.08] xl:scale-[1.14] 2xl:scale-[1.2]
+                          [&>*]:w-full
+                          [&>*]:max-w-none
+                        "
                       >
                         <WeatherWidget />
                       </div>
                     </div>
 
-                    {/* CLOCK */}
                     <div className="flex justify-center">
                       <Clock />
                     </div>
 
-                    {/* NOTES */}
                     <div className="flex justify-center">
                       <div
                         className="
-      w-[360px] xl:w-[440px] 2xl:w-[520px]
-      shrink-0
-      origin-center
-      scale-[1.08] xl:scale-[1.14] 2xl:scale-[1.2]
-      [&>*]:w-full
-      [&>*]:max-w-none
-    "
+                          w-[360px] xl:w-[440px] 2xl:w-[520px]
+                          shrink-0
+                          origin-center
+                          scale-[1.08] xl:scale-[1.14] 2xl:scale-[1.2]
+                          [&>*]:w-full
+                          [&>*]:max-w-none
+                        "
                       >
                         <NotesWidget />
                       </div>
@@ -138,10 +130,8 @@ export default function App() {
                 <CategoryFilter />
                 <SiteGrid />
 
-                {/* MOBILE -> WIDGETS AQUI */}
-                <div className="md:hidden flex flex-col items-center gap-6 mt-6">
+                <div className="md:hidden flex flex-col items-center gap-6 mt-6 mb-12 pb-2">
                   <WeatherWidget />
-                  <Clock />
                   <NotesWidget />
                 </div>
               </>
