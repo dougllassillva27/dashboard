@@ -42,6 +42,7 @@ Acesse a aplicação em produção:
 - **Favicon Cache Intelligence:** Pipeline tripla (Google S2 -> icon.horse -> Origin) com cache local no navegador e persistência assíncrona no NeonDB para eliminar layouts quebrados ou atrasos visuais provocados por proxies WAF.
 - **Bypass Anti-SSRF e WAF:** Proxy de imagens construído em Node.js com rotação de headers severa para burlar defesas da Cloudflare e injetar Headers de HTTP Cache (`max-age=31536000`) forçados na renderização.
 - **Criptografia Client-Side:** Chave da API da OpenAI protegida, cifrada (AES-256 via `crypto-js`) no navegador e encapsulada através de uma Senha Mestra antes de tocar o localStorage.
+- **PWA Instalável com Modo Foco:** Transforme o Hubly em um aplicativo instalável, com um modo de busca dedicado que centraliza a `SearchBar` para uma experiência de widget.
 
 ---
 
@@ -146,6 +147,7 @@ Responsabilidades típicas:
 - Sincronização.
 - Favicons.
 - Estado de modais e interações globais.
+- Comportamento de abertura de links.
 
 ---
 
@@ -162,7 +164,7 @@ Responsável por componentes reutilizáveis da interface, como:
 - Seletor de tema.
 - Gerenciamento de sites.
 - Listas e grids.
-- Elementos de notícias e futebol.
+- Elementos de notícias.
 
 ---
 
@@ -175,7 +177,6 @@ Responsabilidades esperadas:
 - Carregamento de dados externos.
 - Integração com notícias.
 - Integração com futebol.
-- Busca.
 - Estados derivados da interface.
 
 ---
@@ -204,7 +205,6 @@ Essa pasta contém funções executadas pela Netlify, usadas para recursos que n
 Responsabilidades:
 
 - Buscar notícias via RSS.
-- Consultar dados de futebol.
 - Resolver favicons varrendo HTML/Manifestos em background para evitar CORS/SSRF.
 - Sincronizar dados com banco remoto.
 - Intermediar chamadas externas quando necessário.
@@ -296,6 +296,7 @@ Principais recursos:
 - Filtro de sites cadastrados.
 - Alternância rápida entre mecanismos.
 - Integração com o estado global.
+- Respeita a configuração de abertura de links do usuário.
 
 Exemplos de provedores:
 
@@ -321,6 +322,10 @@ Recursos:
 - Reordenação via drag and drop.
 - Favicons automáticos.
 - Cache inteligente de ícones (Serverless Scraper + Neon DB + LocalStorage).
+- Paginação para a categoria "Todos".
+- Ordenação por sites mais recentes na categoria "Todos".
+- Comportamento de abertura de links configurável (nova guia ou mesma guia).
+- Suporte a clique com o botão do meio do mouse para abrir em nova guia.
 
 ---
 
@@ -349,19 +354,15 @@ O projeto possui widgets integrados para enriquecer a homepage.
 
 ### 🌦️ Clima
 
-Consulta previsão e informações meteorológicas usando Open-Meteo.
+Consulta previsão e informações meteorológicas usando Open-Meteo. Exibido no cabeçalho em desktop (ao lado do relógio) e no rodapé em mobile, com previsão de 7 dias.
 
 ### 📝 Bloco de notas
 
-Permite anotações rápidas com persistência.
+Permite anotações rápidas com persistência. Exibido no cabeçalho em desktop (ao lado do relógio) e no rodapé em mobile.
 
 ### 📰 Notícias
 
 Consome feeds RSS via Netlify Functions.
-
-### ⚽ Futebol
-
-Consulta dados esportivos por API externa.
 
 ---
 
@@ -405,7 +406,6 @@ Exemplos esperados conforme integrações do projeto:
 
 ```env
 DATABASE_URL=
-FOOTBALL_API_KEY=
 ```
 
 > Os nomes finais devem seguir exatamente o que estiver implementado nas Netlify Functions do projeto.
