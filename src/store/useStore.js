@@ -455,9 +455,10 @@ const useStore = create((set, get) => ({
   },
 
   importData: (data) => {
-    console.log('>>> [DEBUG] importData INICIADO. Categoria ativa ATUAL:', get().activeCategory);
+    const currentActiveCategory = get().activeCategory;
     const success = storage.importAll(data);
     if (success) {
+      setSavedCategory(currentActiveCategory);
       // Reload state from storage
       set({
         sites: storage.get('sites') || defaultSites,
@@ -471,14 +472,13 @@ const useStore = create((set, get) => ({
         weatherCity: storage.get('weather_city') || '',
         homeSortMethod: storage.get('home_sort_method') || 'manual',
         defaultCategory: storage.get('default_category') || 'all',
-        activeCategory: getSavedCategory() || storage.get('default_category') || 'all',
+        activeCategory: currentActiveCategory,
         syncToken: storage.get('sync_token') || '',
         autoSync: storage.get('auto_sync') || false,
         faviconsDb: storage.get('favicons_db') || {},
       });
       set({ openAiApiKey: decrypt(storage.get('openai_apikey'), get().syncToken) || '' });
       applyTheme(get().theme);
-      console.log('>>> [DEBUG] importData FINALIZADO. Categoria ativa NOVA:', get().activeCategory);
     }
     return success;
   },
