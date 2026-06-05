@@ -342,9 +342,17 @@ export default function SiteCard({ site, disableDrag, isDraggingGlobal, lastDrop
       </a>
 
       {/* Name below card */}
-      <h3 className="text-xs sm:text-sm font-medium text-muted text-center line-clamp-1 w-full px-1 group-hover:text-text transition-colors drop-shadow-sm">
-        {site.name}
-      </h3>
+      <div className="relative group/title w-full flex justify-center">
+        <h3 className="text-xs sm:text-sm font-medium text-muted text-center line-clamp-1 w-full px-1 group-hover:text-text transition-colors drop-shadow-sm">
+          {site.name}
+        </h3>
+        {/* Tooltip customizado */}
+        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 px-3 py-1.5 bg-card/95 backdrop-blur-md border border-border/60 rounded-lg text-xs text-text whitespace-nowrap opacity-0 translate-y-1 group-hover/title:opacity-100 group-hover/title:translate-y-0 transition-all duration-200 pointer-events-none shadow-lg z-30">
+          {site.name}
+          {/* Seta inferior */}
+          <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-px w-2 h-2 bg-card/95 border-r border-b border-border/60 rotate-45" />
+        </div>
+      </div>
 
       {/* Action Buttons */}
       {showActions && (

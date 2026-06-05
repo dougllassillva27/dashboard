@@ -4,6 +4,321 @@
   "graph": {},
   "nodes": [
     {
+      "label": "out.json",
+      "file_type": "code",
+      "source_file": "out.json",
+      "source_location": "L1",
+      "id": "out_json",
+      "community": 20,
+      "norm_label": "out.json"
+    },
+    {
+      "label": "dataReferencia",
+      "file_type": "code",
+      "source_file": "out.json",
+      "source_location": "L1",
+      "id": "hubly_out_datareferencia",
+      "community": 20,
+      "norm_label": "datareferencia"
+    },
+    {
+      "label": "jogos",
+      "file_type": "code",
+      "source_file": "out.json",
+      "source_location": "L1",
+      "id": "hubly_out_jogos",
+      "community": 20,
+      "norm_label": "jogos"
+    },
+    {
+      "label": "output.json",
+      "file_type": "code",
+      "source_file": "output.json",
+      "source_location": "L1",
+      "id": "output_json",
+      "community": 21,
+      "norm_label": "output.json"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "id": "package_json",
+      "community": 14,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "id": "hubly_package_name",
+      "community": 14,
+      "norm_label": "name"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "id": "hubly_package_private",
+      "community": 14,
+      "norm_label": "private"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "id": "hubly_package_version",
+      "community": 14,
+      "norm_label": "version"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "id": "hubly_package_type",
+      "community": 14,
+      "norm_label": "type"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "id": "hubly_package_scripts",
+      "community": 14,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "id": "hubly_package_scripts_dev",
+      "community": 14,
+      "norm_label": "dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "id": "hubly_package_scripts_build",
+      "community": 14,
+      "norm_label": "build"
+    },
+    {
+      "label": "preview",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "id": "hubly_package_scripts_preview",
+      "community": 14,
+      "norm_label": "preview"
+    },
+    {
+      "label": "test",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "id": "hubly_package_scripts_test",
+      "community": 14,
+      "norm_label": "test"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "id": "hubly_package_dependencies",
+      "community": 14,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "@dnd-kit/core",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "id": "hubly_package_dependencies_dnd_kit_core",
+      "community": 14,
+      "norm_label": "@dnd-kit/core"
+    },
+    {
+      "label": "@dnd-kit/sortable",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "id": "hubly_package_dependencies_dnd_kit_sortable",
+      "community": 14,
+      "norm_label": "@dnd-kit/sortable"
+    },
+    {
+      "label": "@dnd-kit/utilities",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "id": "hubly_package_dependencies_dnd_kit_utilities",
+      "community": 14,
+      "norm_label": "@dnd-kit/utilities"
+    },
+    {
+      "label": "@neondatabase/serverless",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "id": "hubly_package_dependencies_neondatabase_serverless",
+      "community": 14,
+      "norm_label": "@neondatabase/serverless"
+    },
+    {
+      "label": "cheerio",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "id": "hubly_package_dependencies_cheerio",
+      "community": 14,
+      "norm_label": "cheerio"
+    },
+    {
+      "label": "crypto-js",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "id": "hubly_package_dependencies_crypto_js",
+      "community": 14,
+      "norm_label": "crypto-js"
+    },
+    {
+      "label": "lucide-react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "id": "hubly_package_dependencies_lucide_react",
+      "community": 14,
+      "norm_label": "lucide-react"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "id": "hubly_package_dependencies_react",
+      "community": 14,
+      "norm_label": "react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "id": "hubly_package_dependencies_react_dom",
+      "community": 14,
+      "norm_label": "react-dom"
+    },
+    {
+      "label": "react-markdown",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "id": "hubly_package_dependencies_react_markdown",
+      "community": 14,
+      "norm_label": "react-markdown"
+    },
+    {
+      "label": "rss-parser",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "id": "hubly_package_dependencies_rss_parser",
+      "community": 14,
+      "norm_label": "rss-parser"
+    },
+    {
+      "label": "zustand",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "id": "hubly_package_dependencies_zustand",
+      "community": 14,
+      "norm_label": "zustand"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "id": "hubly_package_devdependencies",
+      "community": 17,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "id": "hubly_package_devdependencies_types_react",
+      "community": 17,
+      "norm_label": "@types/react"
+    },
+    {
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "id": "hubly_package_devdependencies_types_react_dom",
+      "community": 17,
+      "norm_label": "@types/react-dom"
+    },
+    {
+      "label": "@vitejs/plugin-react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "id": "hubly_package_devdependencies_vitejs_plugin_react",
+      "community": 17,
+      "norm_label": "@vitejs/plugin-react"
+    },
+    {
+      "label": "autoprefixer",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "id": "hubly_package_devdependencies_autoprefixer",
+      "community": 17,
+      "norm_label": "autoprefixer"
+    },
+    {
+      "label": "postcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L31",
+      "id": "hubly_package_devdependencies_postcss",
+      "community": 17,
+      "norm_label": "postcss"
+    },
+    {
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L32",
+      "id": "hubly_package_devdependencies_tailwindcss",
+      "community": 17,
+      "norm_label": "tailwindcss"
+    },
+    {
+      "label": "vite",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "id": "hubly_package_devdependencies_vite",
+      "community": 17,
+      "norm_label": "vite"
+    },
+    {
       "label": "postcss.config.js",
       "file_type": "code",
       "source_file": "postcss.config.js",
@@ -211,12 +526,84 @@
       "norm_label": "handler()"
     },
     {
+      "label": "manifest.json",
+      "file_type": "code",
+      "source_file": "public/manifest.json",
+      "source_location": "L1",
+      "id": "public_manifest_json",
+      "community": 18,
+      "norm_label": "manifest.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "public/manifest.json",
+      "source_location": "L2",
+      "id": "public_manifest_name",
+      "community": 18,
+      "norm_label": "name"
+    },
+    {
+      "label": "short_name",
+      "file_type": "code",
+      "source_file": "public/manifest.json",
+      "source_location": "L3",
+      "id": "public_manifest_short_name",
+      "community": 18,
+      "norm_label": "short_name"
+    },
+    {
+      "label": "start_url",
+      "file_type": "code",
+      "source_file": "public/manifest.json",
+      "source_location": "L4",
+      "id": "public_manifest_start_url",
+      "community": 18,
+      "norm_label": "start_url"
+    },
+    {
+      "label": "display",
+      "file_type": "code",
+      "source_file": "public/manifest.json",
+      "source_location": "L5",
+      "id": "public_manifest_display",
+      "community": 18,
+      "norm_label": "display"
+    },
+    {
+      "label": "background_color",
+      "file_type": "code",
+      "source_file": "public/manifest.json",
+      "source_location": "L6",
+      "id": "public_manifest_background_color",
+      "community": 18,
+      "norm_label": "background_color"
+    },
+    {
+      "label": "theme_color",
+      "file_type": "code",
+      "source_file": "public/manifest.json",
+      "source_location": "L7",
+      "id": "public_manifest_theme_color",
+      "community": 18,
+      "norm_label": "theme_color"
+    },
+    {
+      "label": "icons",
+      "file_type": "code",
+      "source_file": "public/manifest.json",
+      "source_location": "L8",
+      "id": "public_manifest_icons",
+      "community": 18,
+      "norm_label": "icons"
+    },
+    {
       "label": "App.jsx",
       "file_type": "code",
       "source_file": "src/App.jsx",
       "source_location": "L1",
       "id": "src_app_jsx",
-      "community": 1,
+      "community": 4,
       "norm_label": "app.jsx"
     },
     {
@@ -225,7 +612,7 @@
       "source_file": "src/App.jsx",
       "source_location": "L20",
       "id": "src_app_app",
-      "community": 1,
+      "community": 4,
       "norm_label": "app()"
     },
     {
@@ -234,7 +621,7 @@
       "source_file": "src/main.jsx",
       "source_location": "L1",
       "id": "src_main_jsx",
-      "community": 38,
+      "community": 4,
       "norm_label": "main.jsx"
     },
     {
@@ -243,7 +630,7 @@
       "source_file": "src/components/AddSiteModal.jsx",
       "source_location": "L1",
       "id": "src_components_addsitemodal_jsx",
-      "community": 14,
+      "community": 4,
       "norm_label": "addsitemodal.jsx"
     },
     {
@@ -252,7 +639,7 @@
       "source_file": "src/components/AddSiteModal.jsx",
       "source_location": "L5",
       "id": "components_addsitemodal_addsitemodal",
-      "community": 14,
+      "community": 4,
       "norm_label": "addsitemodal()"
     },
     {
@@ -261,7 +648,7 @@
       "source_file": "src/components/AIChatModal.jsx",
       "source_location": "L1",
       "id": "src_components_aichatmodal_jsx",
-      "community": 15,
+      "community": 4,
       "norm_label": "aichatmodal.jsx"
     },
     {
@@ -270,7 +657,7 @@
       "source_file": "src/components/AIChatModal.jsx",
       "source_location": "L6",
       "id": "components_aichatmodal_aichatmodal",
-      "community": 15,
+      "community": 4,
       "norm_label": "aichatmodal()"
     },
     {
@@ -279,16 +666,25 @@
       "source_file": "src/components/BottomSection.jsx",
       "source_location": "L1",
       "id": "src_components_bottomsection_jsx",
-      "community": 16,
+      "community": 5,
       "norm_label": "bottomsection.jsx"
+    },
+    {
+      "label": "tabs",
+      "file_type": "code",
+      "source_file": "src/components/BottomSection.jsx",
+      "source_location": "L8",
+      "id": "components_bottomsection_tabs",
+      "community": 5,
+      "norm_label": "tabs"
     },
     {
       "label": "BottomSection()",
       "file_type": "code",
       "source_file": "src/components/BottomSection.jsx",
-      "source_location": "L13",
+      "source_location": "L14",
       "id": "components_bottomsection_bottomsection",
-      "community": 16,
+      "community": 5,
       "norm_label": "bottomsection()"
     },
     {
@@ -297,8 +693,17 @@
       "source_file": "src/components/CategoryFilter.jsx",
       "source_location": "L1",
       "id": "src_components_categoryfilter_jsx",
-      "community": 17,
+      "community": 4,
       "norm_label": "categoryfilter.jsx"
+    },
+    {
+      "label": "categoryLabels",
+      "file_type": "code",
+      "source_file": "src/components/CategoryFilter.jsx",
+      "source_location": "L4",
+      "id": "components_categoryfilter_categorylabels",
+      "community": 4,
+      "norm_label": "categorylabels"
     },
     {
       "label": "CategoryFilter()",
@@ -306,7 +711,7 @@
       "source_file": "src/components/CategoryFilter.jsx",
       "source_location": "L12",
       "id": "components_categoryfilter_categoryfilter",
-      "community": 17,
+      "community": 4,
       "norm_label": "categoryfilter()"
     },
     {
@@ -315,8 +720,26 @@
       "source_file": "src/components/Clock.jsx",
       "source_location": "L1",
       "id": "src_components_clock_jsx",
-      "community": 18,
+      "community": 4,
       "norm_label": "clock.jsx"
+    },
+    {
+      "label": "days",
+      "file_type": "code",
+      "source_file": "src/components/Clock.jsx",
+      "source_location": "L3",
+      "id": "components_clock_days",
+      "community": 4,
+      "norm_label": "days"
+    },
+    {
+      "label": "months",
+      "file_type": "code",
+      "source_file": "src/components/Clock.jsx",
+      "source_location": "L4",
+      "id": "components_clock_months",
+      "community": 4,
+      "norm_label": "months"
     },
     {
       "label": "Clock()",
@@ -324,7 +747,7 @@
       "source_file": "src/components/Clock.jsx",
       "source_location": "L19",
       "id": "components_clock_clock",
-      "community": 18,
+      "community": 4,
       "norm_label": "clock()"
     },
     {
@@ -333,7 +756,7 @@
       "source_file": "src/components/ConfirmModal.jsx",
       "source_location": "L1",
       "id": "src_components_confirmmodal_jsx",
-      "community": 19,
+      "community": 4,
       "norm_label": "confirmmodal.jsx"
     },
     {
@@ -342,7 +765,7 @@
       "source_file": "src/components/ConfirmModal.jsx",
       "source_location": "L4",
       "id": "components_confirmmodal_confirmmodal",
-      "community": 19,
+      "community": 4,
       "norm_label": "confirmmodal()"
     },
     {
@@ -351,7 +774,7 @@
       "source_file": "src/components/FloatingMenu.jsx",
       "source_location": "L1",
       "id": "src_components_floatingmenu_jsx",
-      "community": 20,
+      "community": 4,
       "norm_label": "floatingmenu.jsx"
     },
     {
@@ -360,7 +783,7 @@
       "source_file": "src/components/FloatingMenu.jsx",
       "source_location": "L5",
       "id": "components_floatingmenu_floatingmenu",
-      "community": 20,
+      "community": 4,
       "norm_label": "floatingmenu()"
     },
     {
@@ -369,7 +792,7 @@
       "source_file": "src/components/ImportBookmarksModal.jsx",
       "source_location": "L1",
       "id": "src_components_importbookmarksmodal_jsx",
-      "community": 21,
+      "community": 4,
       "norm_label": "importbookmarksmodal.jsx"
     },
     {
@@ -378,7 +801,7 @@
       "source_file": "src/components/ImportBookmarksModal.jsx",
       "source_location": "L5",
       "id": "components_importbookmarksmodal_importbookmarksmodal",
-      "community": 21,
+      "community": 4,
       "norm_label": "importbookmarksmodal()"
     },
     {
@@ -387,8 +810,26 @@
       "source_file": "src/components/NewsFeed.jsx",
       "source_location": "L1",
       "id": "src_components_newsfeed_jsx",
-      "community": 22,
+      "community": 5,
       "norm_label": "newsfeed.jsx"
+    },
+    {
+      "label": "rssFeeds",
+      "file_type": "code",
+      "source_file": "src/components/NewsFeed.jsx",
+      "source_location": "L5",
+      "id": "components_newsfeed_rssfeeds",
+      "community": 5,
+      "norm_label": "rssfeeds"
+    },
+    {
+      "label": "gnewsTopics",
+      "file_type": "code",
+      "source_file": "src/components/NewsFeed.jsx",
+      "source_location": "L14",
+      "id": "components_newsfeed_gnewstopics",
+      "community": 5,
+      "norm_label": "gnewstopics"
     },
     {
       "label": "NewsFeed()",
@@ -396,7 +837,7 @@
       "source_file": "src/components/NewsFeed.jsx",
       "source_location": "L23",
       "id": "components_newsfeed_newsfeed",
-      "community": 22,
+      "community": 5,
       "norm_label": "newsfeed()"
     },
     {
@@ -405,7 +846,7 @@
       "source_file": "src/components/NotesWidget.jsx",
       "source_location": "L1",
       "id": "src_components_noteswidget_jsx",
-      "community": 23,
+      "community": 4,
       "norm_label": "noteswidget.jsx"
     },
     {
@@ -414,7 +855,7 @@
       "source_file": "src/components/NotesWidget.jsx",
       "source_location": "L5",
       "id": "components_noteswidget_noteswidget",
-      "community": 23,
+      "community": 4,
       "norm_label": "noteswidget()"
     },
     {
@@ -423,7 +864,7 @@
       "source_file": "src/components/OnboardingModal.jsx",
       "source_location": "L1",
       "id": "src_components_onboardingmodal_jsx",
-      "community": 24,
+      "community": 4,
       "norm_label": "onboardingmodal.jsx"
     },
     {
@@ -432,7 +873,7 @@
       "source_file": "src/components/OnboardingModal.jsx",
       "source_location": "L4",
       "id": "components_onboardingmodal_onboardingmodal",
-      "community": 24,
+      "community": 4,
       "norm_label": "onboardingmodal()"
     },
     {
@@ -441,7 +882,7 @@
       "source_file": "src/components/SearchBar.jsx",
       "source_location": "L1",
       "id": "src_components_searchbar_jsx",
-      "community": 25,
+      "community": 1,
       "norm_label": "searchbar.jsx"
     },
     {
@@ -450,7 +891,7 @@
       "source_file": "src/components/SearchBar.jsx",
       "source_location": "L5",
       "id": "components_searchbar_searchbar",
-      "community": 25,
+      "community": 1,
       "norm_label": "searchbar()"
     },
     {
@@ -459,8 +900,44 @@
       "source_file": "src/components/SettingsModal.jsx",
       "source_location": "L1",
       "id": "src_components_settingsmodal_jsx",
-      "community": 7,
+      "community": 4,
       "norm_label": "settingsmodal.jsx"
+    },
+    {
+      "label": "tabs",
+      "file_type": "code",
+      "source_file": "src/components/SettingsModal.jsx",
+      "source_location": "L47",
+      "id": "components_settingsmodal_tabs",
+      "community": 4,
+      "norm_label": "tabs"
+    },
+    {
+      "label": "newsProviders",
+      "file_type": "code",
+      "source_file": "src/components/SettingsModal.jsx",
+      "source_location": "L59",
+      "id": "components_settingsmodal_newsproviders",
+      "community": 4,
+      "norm_label": "newsproviders"
+    },
+    {
+      "label": "availableTopics",
+      "file_type": "code",
+      "source_file": "src/components/SettingsModal.jsx",
+      "source_location": "L64",
+      "id": "components_settingsmodal_availabletopics",
+      "community": 4,
+      "norm_label": "availabletopics"
+    },
+    {
+      "label": "availableFutebolChampionships",
+      "file_type": "code",
+      "source_file": "src/components/SettingsModal.jsx",
+      "source_location": "L73",
+      "id": "components_settingsmodal_availablefutebolchampionships",
+      "community": 4,
+      "norm_label": "availablefutebolchampionships"
     },
     {
       "label": "SortableCategoryItem()",
@@ -468,7 +945,7 @@
       "source_file": "src/components/SettingsModal.jsx",
       "source_location": "L85",
       "id": "components_settingsmodal_sortablecategoryitem",
-      "community": 7,
+      "community": 4,
       "norm_label": "sortablecategoryitem()"
     },
     {
@@ -477,7 +954,7 @@
       "source_file": "src/components/SettingsModal.jsx",
       "source_location": "L154",
       "id": "components_settingsmodal_settingsmodal",
-      "community": 7,
+      "community": 4,
       "norm_label": "settingsmodal()"
     },
     {
@@ -513,7 +990,7 @@
       "source_file": "src/components/SiteGrid.jsx",
       "source_location": "L1",
       "id": "src_components_sitegrid_jsx",
-      "community": 26,
+      "community": 0,
       "norm_label": "sitegrid.jsx"
     },
     {
@@ -522,7 +999,7 @@
       "source_file": "src/components/SiteGrid.jsx",
       "source_location": "L15",
       "id": "components_sitegrid_sitegrid",
-      "community": 26,
+      "community": 0,
       "norm_label": "sitegrid()"
     },
     {
@@ -531,7 +1008,7 @@
       "source_file": "src/components/StarCanvas.jsx",
       "source_location": "L1",
       "id": "src_components_starcanvas_jsx",
-      "community": 27,
+      "community": 4,
       "norm_label": "starcanvas.jsx"
     },
     {
@@ -540,7 +1017,7 @@
       "source_file": "src/components/StarCanvas.jsx",
       "source_location": "L4",
       "id": "components_starcanvas_starcanvas",
-      "community": 27,
+      "community": 4,
       "norm_label": "starcanvas()"
     },
     {
@@ -549,7 +1026,7 @@
       "source_file": "src/components/WeatherWidget.jsx",
       "source_location": "L1",
       "id": "src_components_weatherwidget_jsx",
-      "community": 28,
+      "community": 4,
       "norm_label": "weatherwidget.jsx"
     },
     {
@@ -558,7 +1035,7 @@
       "source_file": "src/components/WeatherWidget.jsx",
       "source_location": "L5",
       "id": "components_weatherwidget_weatherwidget",
-      "community": 28,
+      "community": 4,
       "norm_label": "weatherwidget()"
     },
     {
@@ -576,7 +1053,7 @@
       "source_file": "src/components/futebol/CardJogoHoje.jsx",
       "source_location": "L1",
       "id": "src_components_futebol_cardjogohoje_jsx",
-      "community": 29,
+      "community": 4,
       "norm_label": "cardjogohoje.jsx"
     },
     {
@@ -585,7 +1062,7 @@
       "source_file": "src/components/futebol/CardJogoHoje.jsx",
       "source_location": "L1",
       "id": "futebol_cardjogohoje_cardjogohoje",
-      "community": 29,
+      "community": 4,
       "norm_label": "cardjogohoje()"
     },
     {
@@ -594,7 +1071,7 @@
       "source_file": "src/components/futebol/CardNoticiaFutebol.jsx",
       "source_location": "L1",
       "id": "src_components_futebol_cardnoticiafutebol_jsx",
-      "community": 30,
+      "community": 5,
       "norm_label": "cardnoticiafutebol.jsx"
     },
     {
@@ -603,7 +1080,7 @@
       "source_file": "src/components/futebol/CardNoticiaFutebol.jsx",
       "source_location": "L3",
       "id": "futebol_cardnoticiafutebol_cardnoticiafutebol",
-      "community": 30,
+      "community": 5,
       "norm_label": "cardnoticiafutebol()"
     },
     {
@@ -612,7 +1089,7 @@
       "source_file": "src/components/futebol/FutebolWidget.jsx",
       "source_location": "L1",
       "id": "src_components_futebol_futebolwidget_jsx",
-      "community": 31,
+      "community": 5,
       "norm_label": "futebolwidget.jsx"
     },
     {
@@ -621,7 +1098,7 @@
       "source_file": "src/components/futebol/FutebolWidget.jsx",
       "source_location": "L4",
       "id": "futebol_futebolwidget_futebolwidget",
-      "community": 31,
+      "community": 5,
       "norm_label": "futebolwidget()"
     },
     {
@@ -637,7 +1114,7 @@
       "label": "JogosHoje()",
       "file_type": "code",
       "source_file": "src/components/futebol/JogosHoje.jsx",
-      "source_location": "L5",
+      "source_location": "L7",
       "id": "futebol_jogoshoje_jogoshoje",
       "community": 4,
       "norm_label": "jogoshoje()"
@@ -666,7 +1143,7 @@
       "source_file": "src/components/futebol/NoticiasWidget.jsx",
       "source_location": "L1",
       "id": "src_components_futebol_noticiaswidget_jsx",
-      "community": 32,
+      "community": 5,
       "norm_label": "noticiaswidget.jsx"
     },
     {
@@ -675,7 +1152,7 @@
       "source_file": "src/components/futebol/NoticiasWidget.jsx",
       "source_location": "L4",
       "id": "futebol_noticiaswidget_noticiaswidget",
-      "community": 32,
+      "community": 5,
       "norm_label": "noticiaswidget()"
     },
     {
@@ -704,6 +1181,15 @@
       "id": "src_hooks_usenews_js",
       "community": 33,
       "norm_label": "usenews.js"
+    },
+    {
+      "label": "rssFeeds",
+      "file_type": "code",
+      "source_file": "src/hooks/useNews.js",
+      "source_location": "L3",
+      "id": "hooks_usenews_rssfeeds",
+      "community": 33,
+      "norm_label": "rssfeeds"
     },
     {
       "label": "useNews()",
@@ -760,6 +1246,15 @@
       "norm_label": "resolvedorfavicon.js"
     },
     {
+      "label": "queue",
+      "file_type": "code",
+      "source_file": "src/services/resolvedorFavicon.js",
+      "source_location": "L10",
+      "id": "services_resolvedorfavicon_queue",
+      "community": 0,
+      "norm_label": "queue"
+    },
+    {
       "label": "processQueue()",
       "file_type": "code",
       "source_file": "src/services/resolvedorFavicon.js",
@@ -805,6 +1300,24 @@
       "norm_label": "usestore.js"
     },
     {
+      "label": "searchProviders",
+      "file_type": "code",
+      "source_file": "src/store/useStore.js",
+      "source_location": "L8",
+      "id": "store_usestore_searchproviders",
+      "community": 1,
+      "norm_label": "searchproviders"
+    },
+    {
+      "label": "defaultFutebolCampeonatos",
+      "file_type": "code",
+      "source_file": "src/store/useStore.js",
+      "source_location": "L18",
+      "id": "store_usestore_defaultfutebolcampeonatos",
+      "community": 1,
+      "norm_label": "defaultfutebolcampeonatos"
+    },
+    {
       "label": "getSavedCategory()",
       "file_type": "code",
       "source_file": "src/store/useStore.js",
@@ -823,13 +1336,31 @@
       "norm_label": "setsavedcategory()"
     },
     {
+      "label": "useStore",
+      "file_type": "code",
+      "source_file": "src/store/useStore.js",
+      "source_location": "L54",
+      "id": "store_usestore_usestore",
+      "community": 4,
+      "norm_label": "usestore"
+    },
+    {
       "label": "themes.js",
       "file_type": "code",
       "source_file": "src/themes/themes.js",
       "source_location": "L1",
       "id": "src_themes_themes_js",
-      "community": 1,
+      "community": 4,
       "norm_label": "themes.js"
+    },
+    {
+      "label": "themes",
+      "file_type": "code",
+      "source_file": "src/themes/themes.js",
+      "source_location": "L1",
+      "id": "themes_themes_themes",
+      "community": 4,
+      "norm_label": "themes"
     },
     {
       "label": "applyTheme()",
@@ -837,8 +1368,17 @@
       "source_file": "src/themes/themes.js",
       "source_location": "L92",
       "id": "themes_themes_applytheme",
-      "community": 1,
+      "community": 4,
       "norm_label": "applytheme()"
+    },
+    {
+      "label": "themeList",
+      "file_type": "code",
+      "source_file": "src/themes/themes.js",
+      "source_location": "L104",
+      "id": "themes_themes_themelist",
+      "community": 4,
+      "norm_label": "themelist"
     },
     {
       "label": "crypto.js",
@@ -954,8 +1494,44 @@
       "source_file": "src/utils/storage.js",
       "source_location": "L1",
       "id": "src_utils_storage_js",
-      "community": 40,
+      "community": 1,
       "norm_label": "storage.js"
+    },
+    {
+      "label": "storage",
+      "file_type": "code",
+      "source_file": "src/utils/storage.js",
+      "source_location": "L3",
+      "id": "utils_storage_storage",
+      "community": 1,
+      "norm_label": "storage"
+    },
+    {
+      "label": "defaultSites",
+      "file_type": "code",
+      "source_file": "src/utils/storage.js",
+      "source_location": "L65",
+      "id": "utils_storage_defaultsites",
+      "community": 1,
+      "norm_label": "defaultsites"
+    },
+    {
+      "label": "defaultCategories",
+      "file_type": "code",
+      "source_file": "src/utils/storage.js",
+      "source_location": "L76",
+      "id": "utils_storage_defaultcategories",
+      "community": 1,
+      "norm_label": "defaultcategories"
+    },
+    {
+      "label": "defaultNewsTopics",
+      "file_type": "code",
+      "source_file": "src/utils/storage.js",
+      "source_location": "L78",
+      "id": "utils_storage_defaultnewstopics",
+      "community": 1,
+      "norm_label": "defaultnewstopics"
     },
     {
       "label": "versionador.js",
@@ -965,6 +1541,51 @@
       "id": "versionamento_versionador_js",
       "community": 3,
       "norm_label": "versionador.js"
+    },
+    {
+      "label": "__filename",
+      "file_type": "code",
+      "source_file": "versionamento/versionador.js",
+      "source_location": "L23",
+      "id": "versionamento_versionador_filename",
+      "community": 3,
+      "norm_label": "__filename"
+    },
+    {
+      "label": "__dirname",
+      "file_type": "code",
+      "source_file": "versionamento/versionador.js",
+      "source_location": "L24",
+      "id": "versionamento_versionador_dirname",
+      "community": 3,
+      "norm_label": "__dirname"
+    },
+    {
+      "label": "diretorioBase",
+      "file_type": "code",
+      "source_file": "versionamento/versionador.js",
+      "source_location": "L27",
+      "id": "versionamento_versionador_diretoriobase",
+      "community": 3,
+      "norm_label": "diretoriobase"
+    },
+    {
+      "label": "diretoriosIgnorados",
+      "file_type": "code",
+      "source_file": "versionamento/versionador.js",
+      "source_location": "L28",
+      "id": "versionamento_versionador_diretoriosignorados",
+      "community": 3,
+      "norm_label": "diretoriosignorados"
+    },
+    {
+      "label": "extensoesAlvo",
+      "file_type": "code",
+      "source_file": "versionamento/versionador.js",
+      "source_location": "L29",
+      "id": "versionamento_versionador_extensoesalvo",
+      "community": 3,
+      "norm_label": "extensoesalvo"
     },
     {
       "label": "gerarHash()",
@@ -1003,6 +1624,582 @@
       "norm_label": "varrerdiretorio()"
     },
     {
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "id": "agents_md",
+      "community": 15,
+      "norm_label": "agents.md"
+    },
+    {
+      "label": "AGENTS.md \u2014 Hubly",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "id": "hubly_agents_agents_md_hubly",
+      "community": 15,
+      "norm_label": "agents.md \u2014 hubly"
+    },
+    {
+      "label": "Vis\u00e3o Geral",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L3",
+      "id": "hubly_agents_vis\u00e3o_geral",
+      "community": 15,
+      "norm_label": "visao geral"
+    },
+    {
+      "label": "Stack",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L7",
+      "id": "hubly_agents_stack",
+      "community": 15,
+      "norm_label": "stack"
+    },
+    {
+      "label": "Estrutura de Diret\u00f3rios",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L20",
+      "id": "hubly_agents_estrutura_de_diret\u00f3rios",
+      "community": 15,
+      "norm_label": "estrutura de diretorios"
+    },
+    {
+      "label": "Padr\u00f5es de C\u00f3digo",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L35",
+      "id": "hubly_agents_padr\u00f5es_de_c\u00f3digo",
+      "community": 15,
+      "norm_label": "padroes de codigo"
+    },
+    {
+      "label": "Exporta\u00e7\u00f5es",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L37",
+      "id": "hubly_agents_exporta\u00e7\u00f5es",
+      "community": 15,
+      "norm_label": "exportacoes"
+    },
+    {
+      "label": "Estado (Zustand)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L42",
+      "id": "hubly_agents_estado_zustand",
+      "community": 15,
+      "norm_label": "estado (zustand)"
+    },
+    {
+      "label": "Temas",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L49",
+      "id": "hubly_agents_temas",
+      "community": 15,
+      "norm_label": "temas"
+    },
+    {
+      "label": "Componentes Principais",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L56",
+      "id": "hubly_agents_componentes_principais",
+      "community": 15,
+      "norm_label": "componentes principais"
+    },
+    {
+      "label": "Modais",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L69",
+      "id": "hubly_agents_modais",
+      "community": 15,
+      "norm_label": "modais"
+    },
+    {
+      "label": "Dados Padr\u00e3o (`src/utils/storage.js`)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L75",
+      "id": "hubly_agents_dados_padr\u00e3o_src_utils_storage_js",
+      "community": 15,
+      "norm_label": "dados padrao (`src/utils/storage.js`)"
+    },
+    {
+      "label": "APIs Externas (client-side)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L81",
+      "id": "hubly_agents_apis_externas_client_side",
+      "community": 15,
+      "norm_label": "apis externas (client-side)"
+    },
+    {
+      "label": "Comandos",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L90",
+      "id": "hubly_agents_comandos",
+      "community": 15,
+      "norm_label": "comandos"
+    },
+    {
+      "label": "Checklist ao Alterar C\u00f3digo",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L98",
+      "id": "hubly_agents_checklist_ao_alterar_c\u00f3digo",
+      "community": 15,
+      "norm_label": "checklist ao alterar codigo"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_md",
+      "community": 7,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "\ud83d\ude80 Hubly",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "id": "hubly_readme_hubly",
+      "community": 7,
+      "norm_label": "\ud83d\ude80 hubly"
+    },
+    {
+      "label": "\ud83d\udd17 Demo",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L21",
+      "id": "hubly_readme_demo",
+      "community": 7,
+      "norm_label": "\ud83d\udd17 demo"
+    },
+    {
+      "label": "\ud83c\udf0c Preview",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L29",
+      "id": "hubly_readme_preview",
+      "community": 7,
+      "norm_label": "\ud83c\udf0c preview"
+    },
+    {
+      "label": "\u2699\ufe0f Highlights T\u00e9cnicos",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L37",
+      "id": "hubly_readme_highlights_t\u00e9cnicos",
+      "community": 7,
+      "norm_label": "\u2699\ufe0f highlights tecnicos"
+    },
+    {
+      "label": "\ud83c\udfd7\ufe0f Arquitetura",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L49",
+      "id": "hubly_readme_arquitetura",
+      "community": 7,
+      "norm_label": "\ud83c\udfd7\ufe0f arquitetura"
+    },
+    {
+      "label": "\ud83d\udcc1 Estrutura do projeto",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L75",
+      "id": "hubly_readme_estrutura_do_projeto",
+      "community": 7,
+      "norm_label": "\ud83d\udcc1 estrutura do projeto"
+    },
+    {
+      "label": "\ud83d\udce6 Responsabilidades por pasta",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L101",
+      "id": "hubly_readme_responsabilidades_por_pasta",
+      "community": 16,
+      "norm_label": "\ud83d\udce6 responsabilidades por pasta"
+    },
+    {
+      "label": "`src/`",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L103",
+      "id": "hubly_readme_src",
+      "community": 16,
+      "norm_label": "`src/`"
+    },
+    {
+      "label": "`src/App.jsx`",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L111",
+      "id": "hubly_readme_src_app_jsx",
+      "community": 16,
+      "norm_label": "`src/app.jsx`"
+    },
+    {
+      "label": "`src/main.jsx`",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L125",
+      "id": "hubly_readme_src_main_jsx",
+      "community": 16,
+      "norm_label": "`src/main.jsx`"
+    },
+    {
+      "label": "`src/store/`",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L133",
+      "id": "hubly_readme_src_store",
+      "community": 16,
+      "norm_label": "`src/store/`"
+    },
+    {
+      "label": "`src/components/`",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L154",
+      "id": "hubly_readme_src_components",
+      "community": 16,
+      "norm_label": "`src/components/`"
+    },
+    {
+      "label": "`src/hooks/`",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L171",
+      "id": "hubly_readme_src_hooks",
+      "community": 16,
+      "norm_label": "`src/hooks/`"
+    },
+    {
+      "label": "`src/utils/`",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L184",
+      "id": "hubly_readme_src_utils",
+      "community": 16,
+      "norm_label": "`src/utils/`"
+    },
+    {
+      "label": "`netlify/functions/`",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L199",
+      "id": "hubly_readme_netlify_functions",
+      "community": 16,
+      "norm_label": "`netlify/functions/`"
+    },
+    {
+      "label": "`docs/sql/`",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L214",
+      "id": "hubly_readme_docs_sql",
+      "community": 16,
+      "norm_label": "`docs/sql/`"
+    },
+    {
+      "label": "`versionamento/`",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L222",
+      "id": "hubly_readme_versionamento",
+      "community": 16,
+      "norm_label": "`versionamento/`"
+    },
+    {
+      "label": "\ud83d\udd04 Fluxo principal da aplica\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L230",
+      "id": "hubly_readme_fluxo_principal_da_aplica\u00e7\u00e3o",
+      "community": 7,
+      "norm_label": "\ud83d\udd04 fluxo principal da aplicacao"
+    },
+    {
+      "label": "\ud83d\udcbe Persist\u00eancia",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L245",
+      "id": "hubly_readme_persist\u00eancia",
+      "community": 7,
+      "norm_label": "\ud83d\udcbe persistencia"
+    },
+    {
+      "label": "1. Persist\u00eancia local",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L249",
+      "id": "hubly_readme_1_persist\u00eancia_local",
+      "community": 7,
+      "norm_label": "1. persistencia local"
+    },
+    {
+      "label": "2. Persist\u00eancia remota opcional",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L262",
+      "id": "hubly_readme_2_persist\u00eancia_remota_opcional",
+      "community": 7,
+      "norm_label": "2. persistencia remota opcional"
+    },
+    {
+      "label": "\ud83d\udd10 Seguran\u00e7a e privacidade",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L275",
+      "id": "hubly_readme_seguran\u00e7a_e_privacidade",
+      "community": 7,
+      "norm_label": "\ud83d\udd10 seguranca e privacidade"
+    },
+    {
+      "label": "\ud83d\udd0e Sistema de busca",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L289",
+      "id": "hubly_readme_sistema_de_busca",
+      "community": 7,
+      "norm_label": "\ud83d\udd0e sistema de busca"
+    },
+    {
+      "label": "\ud83e\uddf1 Sites e categorias",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L312",
+      "id": "hubly_readme_sites_e_categorias",
+      "community": 7,
+      "norm_label": "\ud83e\uddf1 sites e categorias"
+    },
+    {
+      "label": "\ud83c\udfa8 Sistema de temas",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L332",
+      "id": "hubly_readme_sistema_de_temas",
+      "community": 7,
+      "norm_label": "\ud83c\udfa8 sistema de temas"
+    },
+    {
+      "label": "\ud83d\udee0\ufe0f Widgets",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L351",
+      "id": "hubly_readme_widgets",
+      "community": 7,
+      "norm_label": "\ud83d\udee0\ufe0f widgets"
+    },
+    {
+      "label": "\ud83c\udf26\ufe0f Clima",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L355",
+      "id": "hubly_readme_clima",
+      "community": 7,
+      "norm_label": "\ud83c\udf26\ufe0f clima"
+    },
+    {
+      "label": "\ud83d\udcdd Bloco de notas",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L359",
+      "id": "hubly_readme_bloco_de_notas",
+      "community": 7,
+      "norm_label": "\ud83d\udcdd bloco de notas"
+    },
+    {
+      "label": "\ud83d\udcf0 Not\u00edcias",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L363",
+      "id": "hubly_readme_not\u00edcias",
+      "community": 7,
+      "norm_label": "\ud83d\udcf0 noticias"
+    },
+    {
+      "label": "\ud83c\udf10 Backend serverless",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L369",
+      "id": "hubly_readme_backend_serverless",
+      "community": 7,
+      "norm_label": "\ud83c\udf10 backend serverless"
+    },
+    {
+      "label": "\ud83d\udc18 Banco de dados",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L383",
+      "id": "hubly_readme_banco_de_dados",
+      "community": 7,
+      "norm_label": "\ud83d\udc18 banco de dados"
+    },
+    {
+      "label": "\u2699\ufe0f Vari\u00e1veis de ambiente",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L401",
+      "id": "hubly_readme_vari\u00e1veis_de_ambiente",
+      "community": 7,
+      "norm_label": "\u2699\ufe0f variaveis de ambiente"
+    },
+    {
+      "label": "\ud83d\ude80 Como rodar localmente",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L415",
+      "id": "hubly_readme_como_rodar_localmente",
+      "community": 7,
+      "norm_label": "\ud83d\ude80 como rodar localmente"
+    },
+    {
+      "label": "\ud83c\udfd7\ufe0f Build",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L437",
+      "id": "hubly_readme_build",
+      "community": 7,
+      "norm_label": "\ud83c\udfd7\ufe0f build"
+    },
+    {
+      "label": "\ud83c\udf0d Deploy",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L453",
+      "id": "hubly_readme_deploy",
+      "community": 7,
+      "norm_label": "\ud83c\udf0d deploy"
+    },
+    {
+      "label": "Recomendado",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L455",
+      "id": "hubly_readme_recomendado",
+      "community": 7,
+      "norm_label": "recomendado"
+    },
+    {
+      "label": "Limitado",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L469",
+      "id": "hubly_readme_limitado",
+      "community": 7,
+      "norm_label": "limitado"
+    },
+    {
+      "label": "\ud83e\uddf0 Tecnologias",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L483",
+      "id": "hubly_readme_tecnologias",
+      "community": 7,
+      "norm_label": "\ud83e\uddf0 tecnologias"
+    },
+    {
+      "label": "\ud83e\uddea Testes",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L501",
+      "id": "hubly_readme_testes",
+      "community": 7,
+      "norm_label": "\ud83e\uddea testes"
+    },
+    {
+      "label": "\ud83d\udce6 Versionamento e cache busting",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L527",
+      "id": "hubly_readme_versionamento_e_cache_busting",
+      "community": 7,
+      "norm_label": "\ud83d\udce6 versionamento e cache busting"
+    },
+    {
+      "label": "\ud83e\udded Fluxo de dados resumido",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L549",
+      "id": "hubly_readme_fluxo_de_dados_resumido",
+      "community": 7,
+      "norm_label": "\ud83e\udded fluxo de dados resumido"
+    },
+    {
+      "label": "\ud83d\udccc Decis\u00f5es t\u00e9cnicas",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L567",
+      "id": "hubly_readme_decis\u00f5es_t\u00e9cnicas",
+      "community": 7,
+      "norm_label": "\ud83d\udccc decisoes tecnicas"
+    },
+    {
+      "label": "\ud83d\udcc4 Licen\u00e7a",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L579",
+      "id": "hubly_readme_licen\u00e7a",
+      "community": 7,
+      "norm_label": "\ud83d\udcc4 licenca"
+    },
+    {
+      "label": "antigravity-rtk-rules.md",
+      "file_type": "document",
+      "source_file": ".agents/rules/antigravity-rtk-rules.md",
+      "source_location": "L1",
+      "id": "agents_rules_antigravity_rtk_rules_md",
+      "community": 19,
+      "norm_label": "antigravity-rtk-rules.md"
+    },
+    {
+      "label": "RTK - Rust Token Killer (Google Antigravity)",
+      "file_type": "document",
+      "source_file": ".agents/rules/antigravity-rtk-rules.md",
+      "source_location": "L1",
+      "id": "rules_antigravity_rtk_rules_rtk_rust_token_killer_google_antigravity",
+      "community": 19,
+      "norm_label": "rtk - rust token killer (google antigravity)"
+    },
+    {
+      "label": "Rule",
+      "file_type": "document",
+      "source_file": ".agents/rules/antigravity-rtk-rules.md",
+      "source_location": "L5",
+      "id": "rules_antigravity_rtk_rules_rule",
+      "community": 19,
+      "norm_label": "rule"
+    },
+    {
+      "label": "Meta Commands",
+      "file_type": "document",
+      "source_file": ".agents/rules/antigravity-rtk-rules.md",
+      "source_location": "L21",
+      "id": "rules_antigravity_rtk_rules_meta_commands",
+      "community": 19,
+      "norm_label": "meta commands"
+    },
+    {
+      "label": "Why",
+      "file_type": "document",
+      "source_file": ".agents/rules/antigravity-rtk-rules.md",
+      "source_location": "L30",
+      "id": "rules_antigravity_rtk_rules_why",
+      "community": 19,
+      "norm_label": "why"
+    },
+    {
       "label": "getProxiedUrl()",
       "file_type": "code",
       "source_file": "src/components/SiteCard.jsx",
@@ -1013,6 +2210,326 @@
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "out.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "out_json",
+      "target": "hubly_out_datareferencia",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "out.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "out_json",
+      "target": "hubly_out_jogos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "hubly_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "hubly_package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "hubly_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "hubly_package_private",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "hubly_package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "hubly_package_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "package_json",
+      "target": "hubly_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "hubly_package_scripts",
+      "target": "hubly_package_scripts_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "hubly_package_scripts",
+      "target": "hubly_package_scripts_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "hubly_package_scripts",
+      "target": "hubly_package_scripts_preview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "hubly_package_scripts",
+      "target": "hubly_package_scripts_test",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "hubly_package_dependencies",
+      "target": "hubly_package_dependencies_cheerio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "hubly_package_dependencies",
+      "target": "hubly_package_dependencies_crypto_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "hubly_package_dependencies",
+      "target": "hubly_package_dependencies_dnd_kit_core",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "hubly_package_dependencies",
+      "target": "hubly_package_dependencies_dnd_kit_sortable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "hubly_package_dependencies",
+      "target": "hubly_package_dependencies_dnd_kit_utilities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "hubly_package_dependencies",
+      "target": "hubly_package_dependencies_lucide_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "hubly_package_dependencies",
+      "target": "hubly_package_dependencies_neondatabase_serverless",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "hubly_package_dependencies",
+      "target": "hubly_package_dependencies_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "hubly_package_dependencies",
+      "target": "hubly_package_dependencies_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "hubly_package_dependencies",
+      "target": "hubly_package_dependencies_react_markdown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "hubly_package_dependencies",
+      "target": "hubly_package_dependencies_rss_parser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "hubly_package_dependencies",
+      "target": "hubly_package_dependencies_zustand",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "hubly_package_devdependencies",
+      "target": "hubly_package_devdependencies_autoprefixer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "hubly_package_devdependencies",
+      "target": "hubly_package_devdependencies_postcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "hubly_package_devdependencies",
+      "target": "hubly_package_devdependencies_tailwindcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "hubly_package_devdependencies",
+      "target": "hubly_package_devdependencies_types_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "hubly_package_devdependencies",
+      "target": "hubly_package_devdependencies_types_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "hubly_package_devdependencies",
+      "target": "hubly_package_devdependencies_vite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "hubly_package_devdependencies",
+      "target": "hubly_package_devdependencies_vitejs_plugin_react",
+      "confidence_score": 1.0
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -1057,21 +2574,21 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "netlify/functions/proxy-img.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "netlify_functions_proxy_img_js",
-      "target": "functions_proxy_img_isprivateip"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "netlify/functions/proxy-img.js",
       "source_location": "L25",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "netlify_functions_proxy_img_js",
       "target": "functions_proxy_img_handler"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "netlify/functions/proxy-img.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "netlify_functions_proxy_img_js",
+      "target": "functions_proxy_img_isprivateip"
     },
     {
       "relation": "calls",
@@ -1083,16 +2600,6 @@
       "confidence_score": 1.0,
       "source": "functions_proxy_img_handler",
       "target": "functions_proxy_img_isprivateip"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "netlify/functions/resolver-favicon.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "netlify_functions_resolver_favicon_js",
-      "target": "functions_resolver_favicon_isprivateip"
     },
     {
       "relation": "contains",
@@ -1123,6 +2630,16 @@
       "confidence_score": 1.0,
       "source": "netlify_functions_resolver_favicon_js",
       "target": "functions_resolver_favicon_handler"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "netlify/functions/resolver-favicon.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "netlify_functions_resolver_favicon_js",
+      "target": "functions_resolver_favicon_isprivateip"
     },
     {
       "relation": "calls",
@@ -1178,15 +2695,74 @@
       "target": "functions_sync_handler"
     },
     {
-      "relation": "imports",
-      "context": "import",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/App.jsx",
+      "source_file": "public/manifest.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "public_manifest_json",
+      "target": "public_manifest_background_color",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/manifest.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "public_manifest_json",
+      "target": "public_manifest_display",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/manifest.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "public_manifest_json",
+      "target": "public_manifest_icons",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/manifest.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "public_manifest_json",
+      "target": "public_manifest_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/manifest.json",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_app_jsx",
-      "target": "themes_themes_applytheme"
+      "source": "public_manifest_json",
+      "target": "public_manifest_short_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/manifest.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "public_manifest_json",
+      "target": "public_manifest_start_url",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/manifest.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "public_manifest_json",
+      "target": "public_manifest_theme_color",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1199,6 +2775,226 @@
       "target": "src_app_app"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_addsitemodal_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_aichatmodal_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_bottomsection_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_categoryfilter_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_clock_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_confirmmodal_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_floatingmenu_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_importbookmarksmodal_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_noteswidget_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_onboardingmodal_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_searchbar_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_settingsmodal_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_sitegrid_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_starcanvas_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_components_weatherwidget_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_app_jsx",
+      "target": "src_themes_themes_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app_jsx",
+      "target": "themes_themes_applytheme"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_main_jsx",
+      "target": "src_app_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.jsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "src_app_app",
+      "target": "store_usestore_usestore"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/AddSiteModal.jsx",
@@ -1209,6 +3005,28 @@
       "target": "components_addsitemodal_addsitemodal"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/AddSiteModal.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_addsitemodal_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/AddSiteModal.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_addsitemodal_addsitemodal",
+      "target": "store_usestore_usestore"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/AIChatModal.jsx",
@@ -1217,6 +3035,28 @@
       "confidence_score": 1.0,
       "source": "src_components_aichatmodal_jsx",
       "target": "components_aichatmodal_aichatmodal"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/AIChatModal.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_aichatmodal_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/AIChatModal.jsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "components_aichatmodal_aichatmodal",
+      "target": "store_usestore_usestore"
     },
     {
       "relation": "contains",
@@ -1231,12 +3071,109 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/components/BottomSection.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_components_bottomsection_jsx",
+      "target": "components_bottomsection_tabs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/BottomSection.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_bottomsection_jsx",
+      "target": "src_components_futebol_futebolwidget_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/BottomSection.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_components_bottomsection_jsx",
+      "target": "src_components_futebol_noticiaswidget_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/BottomSection.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_bottomsection_jsx",
+      "target": "src_components_newsfeed_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/BottomSection.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_components_bottomsection_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/BottomSection.jsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "components_bottomsection_bottomsection",
+      "target": "store_usestore_usestore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/components/CategoryFilter.jsx",
       "source_location": "L12",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_components_categoryfilter_jsx",
       "target": "components_categoryfilter_categoryfilter"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/CategoryFilter.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_categoryfilter_jsx",
+      "target": "components_categoryfilter_categorylabels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/CategoryFilter.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_categoryfilter_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/CategoryFilter.jsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "components_categoryfilter_categoryfilter",
+      "target": "store_usestore_usestore"
     },
     {
       "relation": "contains",
@@ -1251,12 +3188,54 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/components/Clock.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_clock_jsx",
+      "target": "components_clock_days",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Clock.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_clock_jsx",
+      "target": "components_clock_months",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/components/ConfirmModal.jsx",
       "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_components_confirmmodal_jsx",
       "target": "components_confirmmodal_confirmmodal"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ConfirmModal.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_confirmmodal_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ConfirmModal.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_confirmmodal_confirmmodal",
+      "target": "store_usestore_usestore"
     },
     {
       "relation": "contains",
@@ -1269,6 +3248,28 @@
       "target": "components_floatingmenu_floatingmenu"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/FloatingMenu.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_floatingmenu_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/FloatingMenu.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_floatingmenu_floatingmenu",
+      "target": "store_usestore_usestore"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ImportBookmarksModal.jsx",
@@ -1277,6 +3278,38 @@
       "confidence_score": 1.0,
       "source": "src_components_importbookmarksmodal_jsx",
       "target": "components_importbookmarksmodal_importbookmarksmodal"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ImportBookmarksModal.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_importbookmarksmodal_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ImportBookmarksModal.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_importbookmarksmodal_importbookmarksmodal",
+      "target": "store_usestore_usestore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/NewsFeed.jsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "src_components_newsfeed_jsx",
+      "target": "components_newsfeed_gnewstopics",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1291,12 +3324,66 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/components/NewsFeed.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_components_newsfeed_jsx",
+      "target": "components_newsfeed_rssfeeds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/NewsFeed.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_newsfeed_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/NewsFeed.jsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "components_newsfeed_newsfeed",
+      "target": "store_usestore_usestore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/components/NotesWidget.jsx",
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_components_noteswidget_jsx",
       "target": "components_noteswidget_noteswidget"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/NotesWidget.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_noteswidget_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/NotesWidget.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_noteswidget_noteswidget",
+      "target": "store_usestore_usestore"
     },
     {
       "relation": "contains",
@@ -1309,6 +3396,28 @@
       "target": "components_onboardingmodal_onboardingmodal"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/OnboardingModal.jsx",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_components_onboardingmodal_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/OnboardingModal.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "components_onboardingmodal_onboardingmodal",
+      "target": "store_usestore_usestore"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/SearchBar.jsx",
@@ -1317,6 +3426,79 @@
       "confidence_score": 1.0,
       "source": "src_components_searchbar_jsx",
       "target": "components_searchbar_searchbar"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SearchBar.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_searchbar_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SearchBar.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_searchbar_jsx",
+      "target": "store_usestore_searchproviders",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/SearchBar.jsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "components_searchbar_searchbar",
+      "target": "store_usestore_usestore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SettingsModal.jsx",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "src_components_settingsmodal_jsx",
+      "target": "components_settingsmodal_availablefutebolchampionships",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SettingsModal.jsx",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "src_components_settingsmodal_jsx",
+      "target": "components_settingsmodal_availabletopics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SettingsModal.jsx",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "src_components_settingsmodal_jsx",
+      "target": "components_settingsmodal_newsproviders",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SettingsModal.jsx",
+      "source_location": "L141",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_settingsmodal_jsx",
+      "target": "components_settingsmodal_settingsmodal"
     },
     {
       "relation": "contains",
@@ -1332,66 +3514,107 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/SettingsModal.jsx",
-      "source_location": "L141",
+      "source_location": "L47",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_components_settingsmodal_jsx",
-      "target": "components_settingsmodal_settingsmodal"
+      "target": "components_settingsmodal_tabs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SettingsModal.jsx",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "src_components_settingsmodal_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SettingsModal.jsx",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "src_components_settingsmodal_jsx",
+      "target": "src_themes_themes_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SettingsModal.jsx",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "src_components_settingsmodal_jsx",
+      "target": "store_usestore_searchproviders",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SettingsModal.jsx",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "src_components_settingsmodal_jsx",
+      "target": "themes_themes_themelist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/SettingsModal.jsx",
+      "source_location": "L199",
+      "weight": 1.0,
+      "source": "components_settingsmodal_settingsmodal",
+      "target": "store_usestore_usestore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SiteCard.jsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_sitecard_jsx",
+      "target": "components_sitecard_getavatarcolor"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SiteCard.jsx",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_sitecard_jsx",
+      "target": "components_sitecard_getproxiedurl"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SiteCard.jsx",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_sitecard_jsx",
+      "target": "components_sitecard_sitecard"
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/SiteCard.jsx",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_components_sitecard_jsx",
-      "target": "utils_favicon_getfaviconurls"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/SiteCard.jsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_sitecard_jsx",
-      "target": "utils_favicon_getdomain"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/SiteCard.jsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_sitecard_jsx",
-      "target": "utils_favicon_islocaldomain"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/SiteCard.jsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_sitecard_jsx",
-      "target": "utils_favicon_getproxiedurl"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/SiteCard.jsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_sitecard_jsx",
-      "target": "utils_favicondb_salvarfavicondb"
+      "target": "services_resolvedorfavicon_getcachedfavicon"
     },
     {
       "relation": "imports",
@@ -1413,48 +3636,117 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_components_sitecard_jsx",
-      "target": "services_resolvedorfavicon_getcachedfavicon"
+      "target": "services_resolvedorfavicon_setcachedfavicon"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SiteCard.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_components_sitecard_jsx",
+      "target": "src_services_resolvedorfavicon_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SiteCard.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_components_sitecard_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SiteCard.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_components_sitecard_jsx",
+      "target": "src_utils_favicon_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SiteCard.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_components_sitecard_jsx",
+      "target": "src_utils_favicondb_js",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/SiteCard.jsx",
-      "source_location": "L8",
+      "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_components_sitecard_jsx",
-      "target": "services_resolvedorfavicon_setcachedfavicon"
+      "target": "utils_favicon_getdomain"
     },
     {
-      "relation": "contains",
+      "relation": "imports",
+      "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/SiteCard.jsx",
-      "source_location": "L10",
+      "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_components_sitecard_jsx",
-      "target": "components_sitecard_getavatarcolor"
+      "target": "utils_favicon_getfaviconurls"
     },
     {
-      "relation": "contains",
+      "relation": "imports",
+      "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/SiteCard.jsx",
-      "source_location": "L40",
+      "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_components_sitecard_jsx",
-      "target": "components_sitecard_sitecard"
+      "target": "utils_favicon_getproxiedurl"
     },
     {
-      "relation": "contains",
+      "relation": "imports",
+      "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/SiteCard.jsx",
-      "source_location": "L31",
+      "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_components_sitecard_jsx",
-      "target": "components_sitecard_getproxiedurl"
+      "target": "utils_favicon_islocaldomain"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SiteCard.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_sitecard_jsx",
+      "target": "utils_favicondb_salvarfavicondb"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SiteGrid.jsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_components_sitegrid_jsx",
+      "target": "src_components_sitecard_jsx",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1466,6 +3758,39 @@
       "confidence_score": 1.0,
       "source": "components_sitecard_sitecard",
       "target": "components_sitecard_getavatarcolor"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SiteCard.jsx",
+      "source_location": "L283",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_sitecard_sitecard",
+      "target": "components_sitecard_getproxiedurl"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/components/SiteCard.jsx",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "components_sitecard_sitecard",
+      "target": "services_resolvedorfavicon_getcachedfavicon"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/SiteCard.jsx",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "components_sitecard_sitecard",
+      "target": "store_usestore_usestore"
     },
     {
       "relation": "calls",
@@ -1484,28 +3809,6 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "src/components/SiteCard.jsx",
-      "source_location": "L47",
-      "weight": 1.0,
-      "source": "components_sitecard_sitecard",
-      "target": "utils_favicon_islocaldomain"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/components/SiteCard.jsx",
-      "source_location": "L57",
-      "weight": 1.0,
-      "source": "components_sitecard_sitecard",
-      "target": "services_resolvedorfavicon_getcachedfavicon"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "src/components/SiteCard.jsx",
       "source_location": "L55",
       "weight": 1.0,
       "source": "components_sitecard_sitecard",
@@ -1514,13 +3817,13 @@
     {
       "relation": "calls",
       "context": "call",
-      "confidence": "EXTRACTED",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
       "source_file": "src/components/SiteCard.jsx",
-      "source_location": "L283",
+      "source_location": "L47",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "components_sitecard_sitecard",
-      "target": "components_sitecard_getproxiedurl"
+      "target": "utils_favicon_islocaldomain"
     },
     {
       "relation": "contains",
@@ -1533,6 +3836,28 @@
       "target": "components_sitegrid_sitegrid"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SiteGrid.jsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "src_components_sitegrid_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/SiteGrid.jsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "components_sitegrid_sitegrid",
+      "target": "store_usestore_usestore"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/StarCanvas.jsx",
@@ -1541,6 +3866,28 @@
       "confidence_score": 1.0,
       "source": "src_components_starcanvas_jsx",
       "target": "components_starcanvas_starcanvas"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/StarCanvas.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_starcanvas_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/StarCanvas.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_starcanvas_starcanvas",
+      "target": "store_usestore_usestore"
     },
     {
       "relation": "contains",
@@ -1553,6 +3900,28 @@
       "target": "components_weatherwidget_weatherwidget"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/WeatherWidget.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_weatherwidget_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/WeatherWidget.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "components_weatherwidget_weatherwidget",
+      "target": "store_usestore_usestore"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/futebol/CardJogoHoje.jsx",
@@ -1561,6 +3930,17 @@
       "confidence_score": 1.0,
       "source": "src_components_futebol_cardjogohoje_jsx",
       "target": "futebol_cardjogohoje_cardjogohoje"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/futebol/JogosHoje.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_components_futebol_jogoshoje_jsx",
+      "target": "src_components_futebol_cardjogohoje_jsx",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1573,6 +3953,17 @@
       "target": "futebol_cardnoticiafutebol_cardnoticiafutebol"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/futebol/NoticiasFutebol.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_components_futebol_noticiasfutebol_jsx",
+      "target": "src_components_futebol_cardnoticiafutebol_jsx",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/futebol/FutebolWidget.jsx",
@@ -1581,6 +3972,27 @@
       "confidence_score": 1.0,
       "source": "src_components_futebol_futebolwidget_jsx",
       "target": "futebol_futebolwidget_futebolwidget"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/futebol/FutebolWidget.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_futebol_futebolwidget_jsx",
+      "target": "src_components_futebol_jogoshoje_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/futebol/JogosHoje.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_futebol_jogoshoje_jsx",
+      "target": "futebol_jogoshoje_jogoshoje"
     },
     {
       "relation": "imports",
@@ -1594,14 +4006,26 @@
       "target": "hooks_usejogoshoje_usejogoshoje"
     },
     {
-      "relation": "contains",
+      "relation": "imports_from",
+      "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/futebol/JogosHoje.jsx",
-      "source_location": "L5",
+      "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_components_futebol_jogoshoje_jsx",
-      "target": "futebol_jogoshoje_jogoshoje"
+      "target": "src_hooks_usejogoshoje_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/futebol/JogosHoje.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_futebol_jogoshoje_jsx",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1615,6 +4039,27 @@
       "target": "hooks_usejogoshoje_usejogoshoje"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/futebol/JogosHoje.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "futebol_jogoshoje_jogoshoje",
+      "target": "store_usestore_usestore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/futebol/NoticiasFutebol.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_futebol_noticiasfutebol_jsx",
+      "target": "futebol_noticiasfutebol_noticiasfutebol"
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -1626,14 +4071,26 @@
       "target": "hooks_usenoticiasfutebol_usenoticiasfutebol"
     },
     {
-      "relation": "contains",
+      "relation": "imports_from",
+      "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/futebol/NoticiasFutebol.jsx",
-      "source_location": "L5",
+      "source_location": "L2",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_components_futebol_noticiasfutebol_jsx",
-      "target": "futebol_noticiasfutebol_noticiasfutebol"
+      "target": "src_hooks_usenoticiasfutebol_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/futebol/NoticiasWidget.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_futebol_noticiaswidget_jsx",
+      "target": "src_components_futebol_noticiasfutebol_jsx",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -1667,6 +4124,38 @@
       "target": "hooks_usejogoshoje_usejogoshoje"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useJogosHoje.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_hooks_usejogoshoje_js",
+      "target": "src_store_usestore_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/hooks/useJogosHoje.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "hooks_usejogoshoje_usejogoshoje",
+      "target": "store_usestore_usestore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/hooks/useNews.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_hooks_usenews_js",
+      "target": "hooks_usenews_rssfeeds",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/hooks/useNews.js",
@@ -1697,6 +4186,78 @@
       "target": "hooks_usesearch_usesearch"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/resolvedorFavicon.js",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_services_resolvedorfavicon_js",
+      "target": "services_resolvedorfavicon_getcachedfavicon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/resolvedorFavicon.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_services_resolvedorfavicon_js",
+      "target": "services_resolvedorfavicon_processqueue"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/resolvedorFavicon.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_services_resolvedorfavicon_js",
+      "target": "services_resolvedorfavicon_queue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/resolvedorFavicon.js",
+      "source_location": "L57",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_services_resolvedorfavicon_js",
+      "target": "services_resolvedorfavicon_resolverfavicon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/resolvedorFavicon.js",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_services_resolvedorfavicon_js",
+      "target": "services_resolvedorfavicon_setcachedfavicon"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/resolvedorFavicon.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_services_resolvedorfavicon_js",
+      "target": "src_utils_favicon_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/resolvedorFavicon.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_services_resolvedorfavicon_js",
+      "target": "src_utils_storage_js",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -1714,49 +4275,125 @@
       "source_file": "src/services/resolvedorFavicon.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_services_resolvedorfavicon_js",
-      "target": "utils_favicon_islocaldomain",
+      "target": "utils_favicon_islocaldomain"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/resolvedorFavicon.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_services_resolvedorfavicon_js",
+      "target": "utils_storage_storage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/useStore.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_store_usestore_js",
+      "target": "src_themes_themes_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/useStore.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_store_usestore_js",
+      "target": "src_utils_crypto_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/useStore.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_store_usestore_js",
+      "target": "src_utils_favicon_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/useStore.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_store_usestore_js",
+      "target": "src_utils_favicondb_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/useStore.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_store_usestore_js",
+      "target": "src_utils_storage_js",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/services/resolvedorFavicon.js",
-      "source_location": "L12",
+      "source_file": "src/store/useStore.js",
+      "source_location": "L18",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_services_resolvedorfavicon_js",
-      "target": "services_resolvedorfavicon_processqueue"
+      "source": "src_store_usestore_js",
+      "target": "store_usestore_defaultfutebolcampeonatos",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/services/resolvedorFavicon.js",
-      "source_location": "L42",
+      "source_file": "src/store/useStore.js",
+      "source_location": "L18",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "src_services_resolvedorfavicon_js",
-      "target": "services_resolvedorfavicon_getcachedfavicon"
+      "source": "src_store_usestore_js",
+      "target": "store_usestore_getsavedcategory"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/services/resolvedorFavicon.js",
-      "source_location": "L50",
+      "source_file": "src/store/useStore.js",
+      "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_services_resolvedorfavicon_js",
-      "target": "services_resolvedorfavicon_setcachedfavicon"
+      "source": "src_store_usestore_js",
+      "target": "store_usestore_searchproviders",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/services/resolvedorFavicon.js",
-      "source_location": "L57",
+      "source_file": "src/store/useStore.js",
+      "source_location": "L33",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "src_services_resolvedorfavicon_js",
-      "target": "services_resolvedorfavicon_resolverfavicon"
+      "source": "src_store_usestore_js",
+      "target": "store_usestore_setsavedcategory"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/useStore.js",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "src_store_usestore_js",
+      "target": "store_usestore_usestore",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -1778,7 +4415,7 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_store_usestore_js",
-      "target": "utils_crypto_encrypt"
+      "target": "utils_crypto_decrypt"
     },
     {
       "relation": "imports",
@@ -1789,7 +4426,7 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_store_usestore_js",
-      "target": "utils_crypto_decrypt"
+      "target": "utils_crypto_encrypt"
     },
     {
       "relation": "imports",
@@ -1825,24 +4462,48 @@
       "target": "utils_favicondb_deletarfavicondb"
     },
     {
-      "relation": "contains",
+      "relation": "imports",
+      "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/store/useStore.js",
-      "source_location": "L18",
+      "source_location": "L2",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_store_usestore_js",
-      "target": "store_usestore_getsavedcategory"
+      "target": "utils_storage_defaultcategories",
+      "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "imports",
+      "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/store/useStore.js",
-      "source_location": "L33",
+      "source_location": "L2",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "src_store_usestore_js",
-      "target": "store_usestore_setsavedcategory"
+      "target": "utils_storage_defaultnewstopics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/useStore.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_store_usestore_js",
+      "target": "utils_storage_defaultsites",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/useStore.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_store_usestore_js",
+      "target": "utils_storage_storage",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1857,12 +4518,22 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/utils/crypto.js",
-      "source_location": "L3",
+      "source_file": "src/themes/themes.js",
+      "source_location": "L104",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_utils_crypto_js",
-      "target": "utils_crypto_encrypt"
+      "source": "src_themes_themes_js",
+      "target": "themes_themes_themelist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/themes/themes.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_themes_themes_js",
+      "target": "themes_themes_themes",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1877,12 +4548,32 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/utils/crypto.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_utils_crypto_js",
+      "target": "utils_crypto_encrypt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/favicon.js",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_utils_favicon_js",
+      "target": "utils_favicon_getdomain"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/utils/favicon.js",
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_utils_favicon_js",
-      "target": "utils_favicon_islocaldomain"
+      "target": "utils_favicon_getfaviconurls"
     },
     {
       "relation": "contains",
@@ -1902,28 +4593,7 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_utils_favicon_js",
-      "target": "utils_favicon_getfaviconurls"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/favicon.js",
-      "source_location": "L43",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_utils_favicon_js",
-      "target": "utils_favicon_getdomain"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/favicon.js",
-      "source_location": "L39",
-      "weight": 1.0,
-      "source": "utils_favicon_getproxiedurl",
-      "target": "utils_favicon_islocaldomain",
-      "confidence_score": 1.0
+      "target": "utils_favicon_islocaldomain"
     },
     {
       "relation": "calls",
@@ -1934,6 +4604,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "utils_favicon_getfaviconurls",
+      "target": "utils_favicon_islocaldomain"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/favicon.js",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "utils_favicon_getproxiedurl",
       "target": "utils_favicon_islocaldomain"
     },
     {
@@ -1950,6 +4631,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/utils/faviconDb.js",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_utils_favicondb_js",
+      "target": "utils_favicondb_deletarfavicondb"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/faviconDb.js",
       "source_location": "L24",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -1959,12 +4650,92 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/utils/faviconDb.js",
-      "source_location": "L43",
+      "source_file": "src/utils/storage.js",
+      "source_location": "L76",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_utils_favicondb_js",
-      "target": "utils_favicondb_deletarfavicondb"
+      "source": "src_utils_storage_js",
+      "target": "utils_storage_defaultcategories",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/storage.js",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "src_utils_storage_js",
+      "target": "utils_storage_defaultnewstopics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/storage.js",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "src_utils_storage_js",
+      "target": "utils_storage_defaultsites",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/storage.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_utils_storage_js",
+      "target": "utils_storage_storage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "versionamento/versionador.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "versionamento_versionador_js",
+      "target": "versionamento_versionador_diretoriobase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "versionamento/versionador.js",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "versionamento_versionador_js",
+      "target": "versionamento_versionador_diretoriosignorados",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "versionamento/versionador.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "versionamento_versionador_js",
+      "target": "versionamento_versionador_dirname",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "versionamento/versionador.js",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "versionamento_versionador_js",
+      "target": "versionamento_versionador_extensoesalvo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "versionamento/versionador.js",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "versionamento_versionador_js",
+      "target": "versionamento_versionador_filename",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1980,21 +4751,21 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "versionamento/versionador.js",
-      "source_location": "L38",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "versionamento_versionador_js",
-      "target": "versionamento_versionador_processarurl"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "versionamento/versionador.js",
       "source_location": "L73",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "versionamento_versionador_js",
       "target": "versionamento_versionador_processarconteudo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "versionamento/versionador.js",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "versionamento_versionador_js",
+      "target": "versionamento_versionador_processarurl"
     },
     {
       "relation": "contains",
@@ -2016,8 +4787,618 @@
       "confidence_score": 1.0,
       "source": "versionamento_versionador_processarurl",
       "target": "versionamento_versionador_gerarhash"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "agents_md",
+      "target": "hubly_agents_agents_md_hubly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "hubly_agents_agents_md_hubly",
+      "target": "hubly_agents_apis_externas_client_side",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "hubly_agents_agents_md_hubly",
+      "target": "hubly_agents_checklist_ao_alterar_c\u00f3digo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "hubly_agents_agents_md_hubly",
+      "target": "hubly_agents_comandos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "hubly_agents_agents_md_hubly",
+      "target": "hubly_agents_estrutura_de_diret\u00f3rios",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "hubly_agents_agents_md_hubly",
+      "target": "hubly_agents_padr\u00f5es_de_c\u00f3digo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "hubly_agents_agents_md_hubly",
+      "target": "hubly_agents_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "hubly_agents_agents_md_hubly",
+      "target": "hubly_agents_vis\u00e3o_geral",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "hubly_agents_padr\u00f5es_de_c\u00f3digo",
+      "target": "hubly_agents_componentes_principais",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "hubly_agents_padr\u00f5es_de_c\u00f3digo",
+      "target": "hubly_agents_dados_padr\u00e3o_src_utils_storage_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "hubly_agents_padr\u00f5es_de_c\u00f3digo",
+      "target": "hubly_agents_estado_zustand",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "hubly_agents_padr\u00f5es_de_c\u00f3digo",
+      "target": "hubly_agents_exporta\u00e7\u00f5es",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "hubly_agents_padr\u00f5es_de_c\u00f3digo",
+      "target": "hubly_agents_modais",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "hubly_agents_padr\u00f5es_de_c\u00f3digo",
+      "target": "hubly_agents_temas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "readme_md",
+      "target": "hubly_readme_hubly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_arquitetura",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L369",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_backend_serverless",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L383",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_banco_de_dados",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L437",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L415",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_como_rodar_localmente",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L567",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_decis\u00f5es_t\u00e9cnicas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_demo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L453",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_deploy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_estrutura_do_projeto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L549",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_fluxo_de_dados_resumido",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L230",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_fluxo_principal_da_aplica\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_highlights_t\u00e9cnicos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L579",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_licen\u00e7a",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L245",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_persist\u00eancia",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_preview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_responsabilidades_por_pasta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L275",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_seguran\u00e7a_e_privacidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L289",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_sistema_de_busca",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L332",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_sistema_de_temas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L312",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_sites_e_categorias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L483",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_tecnologias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L501",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_testes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L401",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_vari\u00e1veis_de_ambiente",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L527",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_versionamento_e_cache_busting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L351",
+      "weight": 1.0,
+      "source": "hubly_readme_hubly",
+      "target": "hubly_readme_widgets",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L214",
+      "weight": 1.0,
+      "source": "hubly_readme_responsabilidades_por_pasta",
+      "target": "hubly_readme_docs_sql",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L199",
+      "weight": 1.0,
+      "source": "hubly_readme_responsabilidades_por_pasta",
+      "target": "hubly_readme_netlify_functions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "hubly_readme_responsabilidades_por_pasta",
+      "target": "hubly_readme_src",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "hubly_readme_responsabilidades_por_pasta",
+      "target": "hubly_readme_src_app_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "hubly_readme_responsabilidades_por_pasta",
+      "target": "hubly_readme_src_components",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "hubly_readme_responsabilidades_por_pasta",
+      "target": "hubly_readme_src_hooks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L125",
+      "weight": 1.0,
+      "source": "hubly_readme_responsabilidades_por_pasta",
+      "target": "hubly_readme_src_main_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L133",
+      "weight": 1.0,
+      "source": "hubly_readme_responsabilidades_por_pasta",
+      "target": "hubly_readme_src_store",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L184",
+      "weight": 1.0,
+      "source": "hubly_readme_responsabilidades_por_pasta",
+      "target": "hubly_readme_src_utils",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L222",
+      "weight": 1.0,
+      "source": "hubly_readme_responsabilidades_por_pasta",
+      "target": "hubly_readme_versionamento",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L249",
+      "weight": 1.0,
+      "source": "hubly_readme_persist\u00eancia",
+      "target": "hubly_readme_1_persist\u00eancia_local",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L262",
+      "weight": 1.0,
+      "source": "hubly_readme_persist\u00eancia",
+      "target": "hubly_readme_2_persist\u00eancia_remota_opcional",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L359",
+      "weight": 1.0,
+      "source": "hubly_readme_widgets",
+      "target": "hubly_readme_bloco_de_notas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L355",
+      "weight": 1.0,
+      "source": "hubly_readme_widgets",
+      "target": "hubly_readme_clima",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L363",
+      "weight": 1.0,
+      "source": "hubly_readme_widgets",
+      "target": "hubly_readme_not\u00edcias",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L469",
+      "weight": 1.0,
+      "source": "hubly_readme_deploy",
+      "target": "hubly_readme_limitado",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L455",
+      "weight": 1.0,
+      "source": "hubly_readme_deploy",
+      "target": "hubly_readme_recomendado",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/rules/antigravity-rtk-rules.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "agents_rules_antigravity_rtk_rules_md",
+      "target": "rules_antigravity_rtk_rules_rtk_rust_token_killer_google_antigravity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/rules/antigravity-rtk-rules.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "rules_antigravity_rtk_rules_rtk_rust_token_killer_google_antigravity",
+      "target": "rules_antigravity_rtk_rules_meta_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/rules/antigravity-rtk-rules.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "rules_antigravity_rtk_rules_rtk_rust_token_killer_google_antigravity",
+      "target": "rules_antigravity_rtk_rules_rule",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/rules/antigravity-rtk-rules.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "rules_antigravity_rtk_rules_rtk_rust_token_killer_google_antigravity",
+      "target": "rules_antigravity_rtk_rules_why",
+      "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4578c95de54c1c8abd2dfa7e485ee641cceac47e"
+  "built_at_commit": "ae824d5c54c4e779142da687728d2f284970bfe8"
 }

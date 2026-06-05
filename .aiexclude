@@ -1,5 +1,30 @@
 ############################################
-# 🚫 PESADO / IRRELEVANTE PARA IA
+# 🤖 INTEGRIDADE DA IA (Obrigatório)
+############################################
+.gemini
+.claude.json
+.cursor
+.anthropic
+.aiexclude
+.geminiignore
+
+############################################
+# 🛡️ SEGURANÇA (Hardening)
+############################################
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.pfx
+secrets.*
+credentials.*
+*.config.json
+*.bak
+*.old
+
+############################################
+# 📦 BUILD / ARTEFATOS (Token Efficiency)
 ############################################
 node_modules
 dist
@@ -9,14 +34,23 @@ coverage
 .next
 .nuxt
 out
+vendor
+*.min.*
+*.map
+*.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
 ############################################
-# 🧪 TESTES / RELATORIOS
+# 📊 RELATÓRIOS / GRÁFICOS
 ############################################
-test-results
-playwright-report
-blob-report
-.playwright
+graphify-out/
+test-results/
+playwright-report/
+blob-report/
+.playwright/
+.nyc_output/
 
 ############################################
 # 🐍 PYTHON CACHE
@@ -27,46 +61,30 @@ __pycache__
 *.pyd
 
 ############################################
-# 🔒 SEGURANCA / SENSIVEL
+# 🧠 IDE / SISTEMA / TEMP
 ############################################
-.env
-.env.*
-*.pem
-*.key
-*.crt
-*.pfx
-secrets.json
-
-############################################
-# 📄 LOGS
-############################################
-*.log
-logs
-
-############################################
-# 🧠 IDE / SISTEMA
-############################################
-.vscode
-.idea
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
+tmp/
+temp/
+backup/
+logs/
+*.log
 
 ############################################
-# 📁 TEMP / LOCAL
+# 📁 BINÁRIOS / COMPRIMIDOS
 ############################################
-tmp
-temp
-backup
-
-############################################
-# ⚙️ BINARIOS / LIXO
-############################################
-*.min.js
-*.map
-*.lock
-
-############################################
-# 🧪 NÃO RELEVANTE PARA CONTEXTO
-############################################
-docs/history
+*.exe
+*.dll
+*.so
+*.bin
+*.zip
+*.rar
 *.7z
+*.tar.gz
+*.pdf
+*.docx
+*.pptx
+*.xlsx
