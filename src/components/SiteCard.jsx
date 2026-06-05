@@ -289,7 +289,7 @@ export default function SiteCard({ site, disableDrag, isDraggingGlobal, lastDrop
     <div 
       ref={setNodeRef}
       style={style}
-      className={`relative group flex flex-col items-center select-none ${isDragging ? 'z-50' : 'z-0'}`}
+      className={`relative group flex flex-col items-center select-none ${isDragging ? 'z-50' : 'z-0 hover:z-10'}`}
       {...attributes}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -347,7 +347,7 @@ export default function SiteCard({ site, disableDrag, isDraggingGlobal, lastDrop
           {site.name}
         </h3>
         {/* Tooltip customizado */}
-        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 px-3 py-1.5 bg-card/95 backdrop-blur-md border border-border/60 rounded-lg text-xs text-text whitespace-nowrap opacity-0 translate-y-1 group-hover/title:opacity-100 group-hover/title:translate-y-0 transition-all duration-200 pointer-events-none shadow-lg z-30">
+        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 px-3 py-1.5 bg-card/95 backdrop-blur-md border border-border/60 rounded-lg text-xs text-text max-w-[320px] whitespace-normal opacity-0 translate-y-1 group-hover/title:opacity-100 group-hover/title:translate-y-0 transition-all duration-200 pointer-events-none shadow-lg z-30">
           {site.name}
           {/* Seta inferior */}
           <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-px w-2 h-2 bg-card/95 border-r border-b border-border/60 rotate-45" />
