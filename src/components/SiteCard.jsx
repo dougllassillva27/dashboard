@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import { Pencil, Trash2 } from 'lucide-react';
@@ -66,6 +67,11 @@ export default function SiteCard({ site, disableDrag, isDraggingGlobal, lastDrop
   // Se já está no cache global, não precisamos do estado 'resolving' nem ocultar a imagem
   const [isResolving, setIsResolving] = useState(() => !initialUrl && !isLocal);
   const [isImageLoaded, setIsImageLoaded] = useState(isAlreadyLoaded);
+
+  // Tooltip portal state
+  const [tooltipVisible, setTooltipVisible] = useState(false);
+  const [tooltipRect, setTooltipRect] = useState(null);
+  const titleRef = useRef(null);
 
 
   const timerRef = useRef(null);
@@ -255,6 +261,18 @@ export default function SiteCard({ site, disableDrag, isDraggingGlobal, lastDrop
     }
   };
 
+  const handleTitleEnter = () => {
+    if (titleRef.current) {
+      const rect = titleRef.current.getBoundingClientRect();
+      setTooltipRect(rect);
+      setTooltipVisible(true);
+    }
+  };
+
+  const handleTitleLeave = () => {
+    setTooltipVisible(false);
+  };
+
   const handleImageError = () => {
     if (currentUrlIndex < faviconUrls.length - 1) {
       const nextIndex = currentUrlIndex + 1;
@@ -289,7 +307,7 @@ export default function SiteCard({ site, disableDrag, isDraggingGlobal, lastDrop
     <div 
       ref={setNodeRef}
       style={style}
-      className={`relative group flex flex-col items-center select-none ${isDragging ? 'z-50' : 'z-0 hover:z-10'}`}
+      className={`relative group flex flex-col items-center select-none ${isDragging ? 'z-50' : 'z-0'}`}
       {...attributes}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -342,17 +360,34 @@ export default function SiteCard({ site, disableDrag, isDraggingGlobal, lastDrop
       </a>
 
       {/* Name below card */}
-      <div className="relative group/title w-full flex justify-center">
-        <h3 className="text-xs sm:text-sm font-medium text-muted text-center line-clamp-1 w-full px-1 group-hover:text-text transition-colors drop-shadow-sm">
+      <div className="w-full flex justify-center">
+        <h3
+          ref={titleRef}
+          className="text-xs sm:text-sm font-medium text-muted text-center line-clamp-1 w-full px-1 group-hover:text-text transition-colors drop-shadow-sm"
+          onMouseEnter={handleTitleEnter}
+          onMouseLeave={handleTitleLeave}
+        >
           {site.name}
         </h3>
-        {/* Tooltip customizado */}
-        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 px-3 py-1.5 bg-card/95 backdrop-blur-md border border-border/60 rounded-lg text-xs text-text max-w-[320px] whitespace-normal opacity-0 translate-y-1 group-hover/title:opacity-100 group-hover/title:translate-y-0 transition-all duration-200 pointer-events-none shadow-lg z-30">
-          {site.name}
-          {/* Seta inferior */}
-          <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-px w-2 h-2 bg-card/95 border-r border-b border-border/60 rotate-45" />
-        </div>
       </div>
+
+      {/* Tooltip via Portal — renderizado no body, acima de tudo */}
+      {tooltipVisible && tooltipRect && createPortal(
+        <div
+          className="fixed px-3 py-1.5 bg-card/95 backdrop-blur-md border border-border/60 rounded-lg text-xs text-text whitespace-nowrap shadow-lg pointer-events-none"
+          style={{
+            left: tooltipRect.left + (tooltipRect.width / 2),
+            top: tooltipRect.top - 8,
+            transform: 'translate(-50%, -100%)',
+            zIndex: 99999,
+            animation: 'tooltipIn 0.2s ease-out',
+          }}
+        >
+          {site.name}
+          <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-px w-2 h-2 bg-card/95 border-r border-b border-border/60 rotate-45" />
+        </div>,
+        document.body
+      )}
 
       {/* Action Buttons */}
       {showActions && (
