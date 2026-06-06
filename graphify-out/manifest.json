@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\src\\components\\SiteCard.jsx": {
-    "mtime": 1778697608.4763982,
-    "ast_hash": "b8ff20518a321bff12667a9d005deedc",
+    "mtime": 1780680817.8836641,
+    "ast_hash": "45f4463b2e160d7c1336e4ffdf0994cc",
     "semantic_hash": ""
   },
   "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\src\\components\\SiteGrid.jsx": {
@@ -772,6 +772,91 @@
   "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\public\\social-share.webp": {
     "mtime": 1776861523.28497,
     "ast_hash": "8d7a24466d4abed7957ced1bf47f5c22",
+    "semantic_hash": ""
+  },
+  "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\.eslintrc.json": {
+    "mtime": 1779729107.9002295,
+    "ast_hash": "d3d804ef7d8d4ed60d67d36326f53fcc",
+    "semantic_hash": ""
+  },
+  "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\setup.ps1": {
+    "mtime": 1779990247.2573304,
+    "ast_hash": "dac890c26e99bffc7b5934eae5eed837",
+    "semantic_hash": ""
+  },
+  "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\setup.sh": {
+    "mtime": 1779990259.8113382,
+    "ast_hash": "ef35e0202201195fdd67c5430268f5ad",
+    "semantic_hash": ""
+  },
+  "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\.githooks\\commit-msg": {
+    "mtime": 1779729147.1428955,
+    "ast_hash": "cd9d323fd1eae091df42602c911bb9e3",
+    "semantic_hash": ""
+  },
+  "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\.githooks\\commit-msg.py": {
+    "mtime": 1779729143.669237,
+    "ast_hash": "6de48d687509e1759a627e298e15cc1d",
+    "semantic_hash": ""
+  },
+  "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\.githooks\\pre-commit": {
+    "mtime": 1779729126.820832,
+    "ast_hash": "a8823a11792aa5f100187c40ce5639d9",
+    "semantic_hash": ""
+  },
+  "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\.githooks\\pre-commit.py": {
+    "mtime": 1779991285.6783605,
+    "ast_hash": "7495a1b6e2cb689a382275973685190c",
+    "semantic_hash": ""
+  },
+  "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\docs\\sql\\migration_favicons.sql": {
+    "mtime": 1776856050.5371127,
+    "ast_hash": "ec797740de7b779b29f9f75c04d67de9",
+    "semantic_hash": ""
+  },
+  "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\docs\\sql\\setup_neon.sql": {
+    "mtime": 1776862167.901153,
+    "ast_hash": "88eae30a083cd46c1507455e97af81a8",
+    "semantic_hash": ""
+  },
+  "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\tests\\test_git_hooks.py": {
+    "mtime": 1779729162.994639,
+    "ast_hash": "43a001baf392508176d09a666578f943",
+    "semantic_hash": ""
+  },
+  "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\AGENT.md": {
+    "mtime": 1779730060.4419403,
+    "ast_hash": "4b53083027c85282bd7b68af59cfcf43",
+    "semantic_hash": ""
+  },
+  "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\CLAUDE.md": {
+    "mtime": 1780671799.4955807,
+    "ast_hash": "905b97166b686d3dc7a99acd9faeacb2",
+    "semantic_hash": ""
+  },
+  "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\GEMINI.md": {
+    "mtime": 1779730062.9923341,
+    "ast_hash": "bc106fe15bb4e834fa4c3e45f2195433",
+    "semantic_hash": ""
+  },
+  "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\requirements.txt": {
+    "mtime": 1779729109.8742208,
+    "ast_hash": "89f3ea12b290ef6bb7c33634db6d0c07",
+    "semantic_hash": ""
+  },
+  "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\docs\\GSD_FLOW.md": {
+    "mtime": 1779729203.6548276,
+    "ast_hash": "f1db9b994649fc1efeb9ae8f6af7c5b8",
+    "semantic_hash": ""
+  },
+  "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\docs\\RTK_GUIDE.md": {
+    "mtime": 1779729207.7171998,
+    "ast_hash": "1b762a900ec3060119ec451955ce0fdf",
+    "semantic_hash": ""
+  },
+  "D:\\Onedrive - Douglas\\OneDrive\\Pessoal\\Dodo\\Programacao\\Git\\hubly\\tasks\\lessons.md": {
+    "mtime": 1780260893.0457466,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": ""
   }
 }

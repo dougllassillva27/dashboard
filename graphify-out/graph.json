@@ -4,6 +4,150 @@
   "graph": {},
   "nodes": [
     {
+      "label": ".eslintrc.json",
+      "file_type": "code",
+      "source_file": ".eslintrc.json",
+      "source_location": "L1",
+      "id": "eslintrc_json",
+      "community": 1,
+      "norm_label": ".eslintrc.json"
+    },
+    {
+      "label": "env",
+      "file_type": "code",
+      "source_file": ".eslintrc.json",
+      "source_location": "L2",
+      "id": "hubly_eslintrc_env",
+      "community": 1,
+      "norm_label": "env"
+    },
+    {
+      "label": "browser",
+      "file_type": "code",
+      "source_file": ".eslintrc.json",
+      "source_location": "L3",
+      "id": "hubly_eslintrc_env_browser",
+      "community": 1,
+      "norm_label": "browser"
+    },
+    {
+      "label": "es2021",
+      "file_type": "code",
+      "source_file": ".eslintrc.json",
+      "source_location": "L4",
+      "id": "hubly_eslintrc_env_es2021",
+      "community": 1,
+      "norm_label": "es2021"
+    },
+    {
+      "label": "node",
+      "file_type": "code",
+      "source_file": ".eslintrc.json",
+      "source_location": "L5",
+      "id": "hubly_eslintrc_env_node",
+      "community": 1,
+      "norm_label": "node"
+    },
+    {
+      "label": "extends",
+      "file_type": "code",
+      "source_file": ".eslintrc.json",
+      "source_location": "L7",
+      "id": "hubly_eslintrc_extends",
+      "community": 1,
+      "norm_label": "extends"
+    },
+    {
+      "label": "parserOptions",
+      "file_type": "code",
+      "source_file": ".eslintrc.json",
+      "source_location": "L8",
+      "id": "hubly_eslintrc_parseroptions",
+      "community": 1,
+      "norm_label": "parseroptions"
+    },
+    {
+      "label": "ecmaVersion",
+      "file_type": "code",
+      "source_file": ".eslintrc.json",
+      "source_location": "L9",
+      "id": "hubly_eslintrc_parseroptions_ecmaversion",
+      "community": 1,
+      "norm_label": "ecmaversion"
+    },
+    {
+      "label": "sourceType",
+      "file_type": "code",
+      "source_file": ".eslintrc.json",
+      "source_location": "L10",
+      "id": "hubly_eslintrc_parseroptions_sourcetype",
+      "community": 1,
+      "norm_label": "sourcetype"
+    },
+    {
+      "label": "rules",
+      "file_type": "code",
+      "source_file": ".eslintrc.json",
+      "source_location": "L12",
+      "id": "hubly_eslintrc_rules",
+      "community": 1,
+      "norm_label": "rules"
+    },
+    {
+      "label": "no-unused-vars",
+      "file_type": "code",
+      "source_file": ".eslintrc.json",
+      "source_location": "L13",
+      "id": "hubly_eslintrc_rules_no_unused_vars",
+      "community": 1,
+      "norm_label": "no-unused-vars"
+    },
+    {
+      "label": "no-console",
+      "file_type": "code",
+      "source_file": ".eslintrc.json",
+      "source_location": "L14",
+      "id": "hubly_eslintrc_rules_no_console",
+      "community": 1,
+      "norm_label": "no-console"
+    },
+    {
+      "label": "eqeqeq",
+      "file_type": "code",
+      "source_file": ".eslintrc.json",
+      "source_location": "L15",
+      "id": "hubly_eslintrc_rules_eqeqeq",
+      "community": 1,
+      "norm_label": "eqeqeq"
+    },
+    {
+      "label": "curly",
+      "file_type": "code",
+      "source_file": ".eslintrc.json",
+      "source_location": "L16",
+      "id": "hubly_eslintrc_rules_curly",
+      "community": 1,
+      "norm_label": "curly"
+    },
+    {
+      "label": "no-var",
+      "file_type": "code",
+      "source_file": ".eslintrc.json",
+      "source_location": "L17",
+      "id": "hubly_eslintrc_rules_no_var",
+      "community": 1,
+      "norm_label": "no-var"
+    },
+    {
+      "label": "prefer-const",
+      "file_type": "code",
+      "source_file": ".eslintrc.json",
+      "source_location": "L18",
+      "id": "hubly_eslintrc_rules_prefer_const",
+      "community": 1,
+      "norm_label": "prefer-const"
+    },
+    {
       "label": "out.json",
       "file_type": "code",
       "source_file": "out.json",
@@ -252,7 +396,7 @@
       "source_file": "package.json",
       "source_location": "L26",
       "id": "hubly_package_devdependencies",
-      "community": 17,
+      "community": 14,
       "norm_label": "devdependencies"
     },
     {
@@ -261,7 +405,7 @@
       "source_file": "package.json",
       "source_location": "L27",
       "id": "hubly_package_devdependencies_types_react",
-      "community": 17,
+      "community": 14,
       "norm_label": "@types/react"
     },
     {
@@ -270,7 +414,7 @@
       "source_file": "package.json",
       "source_location": "L28",
       "id": "hubly_package_devdependencies_types_react_dom",
-      "community": 17,
+      "community": 14,
       "norm_label": "@types/react-dom"
     },
     {
@@ -279,7 +423,7 @@
       "source_file": "package.json",
       "source_location": "L29",
       "id": "hubly_package_devdependencies_vitejs_plugin_react",
-      "community": 17,
+      "community": 14,
       "norm_label": "@vitejs/plugin-react"
     },
     {
@@ -288,7 +432,7 @@
       "source_file": "package.json",
       "source_location": "L30",
       "id": "hubly_package_devdependencies_autoprefixer",
-      "community": 17,
+      "community": 14,
       "norm_label": "autoprefixer"
     },
     {
@@ -297,7 +441,7 @@
       "source_file": "package.json",
       "source_location": "L31",
       "id": "hubly_package_devdependencies_postcss",
-      "community": 17,
+      "community": 14,
       "norm_label": "postcss"
     },
     {
@@ -306,7 +450,7 @@
       "source_file": "package.json",
       "source_location": "L32",
       "id": "hubly_package_devdependencies_tailwindcss",
-      "community": 17,
+      "community": 14,
       "norm_label": "tailwindcss"
     },
     {
@@ -315,7 +459,7 @@
       "source_file": "package.json",
       "source_location": "L33",
       "id": "hubly_package_devdependencies_vite",
-      "community": 17,
+      "community": 14,
       "norm_label": "vite"
     },
     {
@@ -326,6 +470,41 @@
       "id": "postcss_config_js",
       "community": 35,
       "norm_label": "postcss.config.js"
+    },
+    {
+      "label": "setup.ps1",
+      "file_type": "code",
+      "source_file": "setup.ps1",
+      "source_location": "L1",
+      "id": "setup_ps1",
+      "community": 30,
+      "norm_label": "setup.ps1"
+    },
+    {
+      "label": "setup.sh",
+      "file_type": "code",
+      "source_file": "setup.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "id": "setup_sh",
+      "community": 27,
+      "norm_label": "setup.sh"
+    },
+    {
+      "label": "setup.sh script",
+      "file_type": "code",
+      "source_file": "setup.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "id": "d_onedrive_douglas_onedrive_pessoal_dodo_programacao_git_hubly_setup_sh__entry",
+      "community": 27,
+      "norm_label": "setup.sh script"
     },
     {
       "label": "tailwind.config.js",
@@ -344,6 +523,69 @@
       "id": "vite_config_js",
       "community": 37,
       "norm_label": "vite.config.js"
+    },
+    {
+      "label": "commit-msg.py",
+      "file_type": "code",
+      "source_file": ".githooks/commit-msg.py",
+      "source_location": "L1",
+      "id": "githooks_commit_msg_py",
+      "community": 29,
+      "norm_label": "commit-msg.py"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": ".githooks/commit-msg.py",
+      "source_location": "L20",
+      "id": "githooks_commit_msg_main",
+      "community": 29,
+      "norm_label": "main()"
+    },
+    {
+      "label": "pre-commit.py",
+      "file_type": "code",
+      "source_file": ".githooks/pre-commit.py",
+      "source_location": "L1",
+      "id": "githooks_pre_commit_py",
+      "community": 25,
+      "norm_label": "pre-commit.py"
+    },
+    {
+      "label": "get_staged_files()",
+      "file_type": "code",
+      "source_file": ".githooks/pre-commit.py",
+      "source_location": "L28",
+      "id": "githooks_pre_commit_get_staged_files",
+      "community": 25,
+      "norm_label": "get_staged_files()"
+    },
+    {
+      "label": "scan_file()",
+      "file_type": "code",
+      "source_file": ".githooks/pre-commit.py",
+      "source_location": "L39",
+      "id": "githooks_pre_commit_scan_file",
+      "community": 25,
+      "norm_label": "scan_file()"
+    },
+    {
+      "label": "run_quality_checks()",
+      "file_type": "code",
+      "source_file": ".githooks/pre-commit.py",
+      "source_location": "L59",
+      "id": "githooks_pre_commit_run_quality_checks",
+      "community": 25,
+      "norm_label": "run_quality_checks()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": ".githooks/pre-commit.py",
+      "source_location": "L87",
+      "id": "githooks_pre_commit_main",
+      "community": 25,
+      "norm_label": "main()"
     },
     {
       "label": "chat.js",
@@ -882,7 +1124,7 @@
       "source_file": "src/components/SearchBar.jsx",
       "source_location": "L1",
       "id": "src_components_searchbar_jsx",
-      "community": 1,
+      "community": 4,
       "norm_label": "searchbar.jsx"
     },
     {
@@ -891,7 +1133,7 @@
       "source_file": "src/components/SearchBar.jsx",
       "source_location": "L5",
       "id": "components_searchbar_searchbar",
-      "community": 1,
+      "community": 4,
       "norm_label": "searchbar()"
     },
     {
@@ -970,7 +1212,7 @@
       "label": "getAvatarColor()",
       "file_type": "code",
       "source_file": "src/components/SiteCard.jsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "id": "components_sitecard_getavatarcolor",
       "community": 0,
       "norm_label": "getavatarcolor()"
@@ -979,7 +1221,7 @@
       "label": "SiteCard()",
       "file_type": "code",
       "source_file": "src/components/SiteCard.jsx",
-      "source_location": "L31",
+      "source_location": "L32",
       "id": "components_sitecard_sitecard",
       "community": 0,
       "norm_label": "sitecard()"
@@ -1296,7 +1538,7 @@
       "source_file": "src/store/useStore.js",
       "source_location": "L1",
       "id": "src_store_usestore_js",
-      "community": 1,
+      "community": 4,
       "norm_label": "usestore.js"
     },
     {
@@ -1305,7 +1547,7 @@
       "source_file": "src/store/useStore.js",
       "source_location": "L8",
       "id": "store_usestore_searchproviders",
-      "community": 1,
+      "community": 4,
       "norm_label": "searchproviders"
     },
     {
@@ -1314,7 +1556,7 @@
       "source_file": "src/store/useStore.js",
       "source_location": "L18",
       "id": "store_usestore_defaultfutebolcampeonatos",
-      "community": 1,
+      "community": 4,
       "norm_label": "defaultfutebolcampeonatos"
     },
     {
@@ -1323,7 +1565,7 @@
       "source_file": "src/store/useStore.js",
       "source_location": "L29",
       "id": "store_usestore_getsavedcategory",
-      "community": 1,
+      "community": 4,
       "norm_label": "getsavedcategory()"
     },
     {
@@ -1332,7 +1574,7 @@
       "source_file": "src/store/useStore.js",
       "source_location": "L44",
       "id": "store_usestore_setsavedcategory",
-      "community": 1,
+      "community": 4,
       "norm_label": "setsavedcategory()"
     },
     {
@@ -1386,7 +1628,7 @@
       "source_file": "src/utils/crypto.js",
       "source_location": "L1",
       "id": "src_utils_crypto_js",
-      "community": 1,
+      "community": 4,
       "norm_label": "crypto.js"
     },
     {
@@ -1395,7 +1637,7 @@
       "source_file": "src/utils/crypto.js",
       "source_location": "L3",
       "id": "utils_crypto_encrypt",
-      "community": 1,
+      "community": 4,
       "norm_label": "encrypt()"
     },
     {
@@ -1404,7 +1646,7 @@
       "source_file": "src/utils/crypto.js",
       "source_location": "L8",
       "id": "utils_crypto_decrypt",
-      "community": 1,
+      "community": 4,
       "norm_label": "decrypt()"
     },
     {
@@ -1458,7 +1700,7 @@
       "source_file": "src/utils/faviconDb.js",
       "source_location": "L1",
       "id": "src_utils_favicondb_js",
-      "community": 1,
+      "community": 4,
       "norm_label": "favicondb.js"
     },
     {
@@ -1467,7 +1709,7 @@
       "source_file": "src/utils/faviconDb.js",
       "source_location": "L7",
       "id": "utils_favicondb_carregarfaviconsdb",
-      "community": 1,
+      "community": 4,
       "norm_label": "carregarfaviconsdb()"
     },
     {
@@ -1476,7 +1718,7 @@
       "source_file": "src/utils/faviconDb.js",
       "source_location": "L24",
       "id": "utils_favicondb_salvarfavicondb",
-      "community": 1,
+      "community": 4,
       "norm_label": "salvarfavicondb()"
     },
     {
@@ -1485,7 +1727,7 @@
       "source_file": "src/utils/faviconDb.js",
       "source_location": "L43",
       "id": "utils_favicondb_deletarfavicondb",
-      "community": 1,
+      "community": 4,
       "norm_label": "deletarfavicondb()"
     },
     {
@@ -1494,7 +1736,7 @@
       "source_file": "src/utils/storage.js",
       "source_location": "L1",
       "id": "src_utils_storage_js",
-      "community": 1,
+      "community": 4,
       "norm_label": "storage.js"
     },
     {
@@ -1503,7 +1745,7 @@
       "source_file": "src/utils/storage.js",
       "source_location": "L3",
       "id": "utils_storage_storage",
-      "community": 1,
+      "community": 4,
       "norm_label": "storage"
     },
     {
@@ -1512,7 +1754,7 @@
       "source_file": "src/utils/storage.js",
       "source_location": "L65",
       "id": "utils_storage_defaultsites",
-      "community": 1,
+      "community": 4,
       "norm_label": "defaultsites"
     },
     {
@@ -1521,7 +1763,7 @@
       "source_file": "src/utils/storage.js",
       "source_location": "L76",
       "id": "utils_storage_defaultcategories",
-      "community": 1,
+      "community": 4,
       "norm_label": "defaultcategories"
     },
     {
@@ -1530,8 +1772,71 @@
       "source_file": "src/utils/storage.js",
       "source_location": "L78",
       "id": "utils_storage_defaultnewstopics",
-      "community": 1,
+      "community": 4,
       "norm_label": "defaultnewstopics"
+    },
+    {
+      "label": "test_git_hooks.py",
+      "file_type": "code",
+      "source_file": "tests/test_git_hooks.py",
+      "source_location": "L1",
+      "id": "tests_test_git_hooks_py",
+      "community": 24,
+      "norm_label": "test_git_hooks.py"
+    },
+    {
+      "label": "test_pre_commit_secret_detection()",
+      "file_type": "code",
+      "source_file": "tests/test_git_hooks.py",
+      "source_location": "L31",
+      "id": "tests_test_git_hooks_test_pre_commit_secret_detection",
+      "community": 24,
+      "norm_label": "test_pre_commit_secret_detection()"
+    },
+    {
+      "label": "test_pre_commit_protected_paths()",
+      "file_type": "code",
+      "source_file": "tests/test_git_hooks.py",
+      "source_location": "L51",
+      "id": "tests_test_git_hooks_test_pre_commit_protected_paths",
+      "community": 24,
+      "norm_label": "test_pre_commit_protected_paths()"
+    },
+    {
+      "label": "test_commit_msg_validation()",
+      "file_type": "code",
+      "source_file": "tests/test_git_hooks.py",
+      "source_location": "L80",
+      "id": "tests_test_git_hooks_test_commit_msg_validation",
+      "community": 24,
+      "norm_label": "test_commit_msg_validation()"
+    },
+    {
+      "label": "Garante que segredos reais sejam casados pelas regexes de seguran\u00e7a.",
+      "file_type": "rationale",
+      "source_file": "tests/test_git_hooks.py",
+      "source_location": "L32",
+      "id": "tests_test_git_hooks_rationale_32",
+      "community": 24,
+      "norm_label": "garante que segredos reais sejam casados pelas regexes de seguranca."
+    },
+    {
+      "label": "Valida se caminhos protegidos e secretos s\u00e3o interceptados de forma correta.",
+      "file_type": "rationale",
+      "source_file": "tests/test_git_hooks.py",
+      "source_location": "L52",
+      "id": "tests_test_git_hooks_rationale_52",
+      "community": 24,
+      "norm_label": "valida se caminhos protegidos e secretos sao interceptados de forma correta."
+    },
+    {
+      "label": "Valida se o formato Conventional Commit + ID de Observa\u00e7\u00e3o \u00e9 rigidamente exigido",
+      "file_type": "rationale",
+      "source_file": "tests/test_git_hooks.py",
+      "source_location": "L81",
+      "id": "tests_test_git_hooks_rationale_81",
+      "community": 24,
+      "norm_label": "valida se o formato conventional commit + id de observacao e rigidamente exigido"
     },
     {
       "label": "versionador.js",
@@ -1622,6 +1927,24 @@
       "id": "versionamento_versionador_varrerdiretorio",
       "community": 3,
       "norm_label": "varrerdiretorio()"
+    },
+    {
+      "label": "AGENT.md",
+      "file_type": "document",
+      "source_file": "AGENT.md",
+      "source_location": "L1",
+      "id": "agent_md",
+      "community": 26,
+      "norm_label": "agent.md"
+    },
+    {
+      "label": "\ud83e\udda4 Dodo Starter Pack \u2014 Instru\u00e7\u00f5es do Agente",
+      "file_type": "document",
+      "source_file": "AGENT.md",
+      "source_location": "L1",
+      "id": "hubly_agent_dodo_starter_pack_instru\u00e7\u00f5es_do_agente",
+      "community": 26,
+      "norm_label": "\ud83e\udda4 dodo starter pack \u2014 instrucoes do agente"
     },
     {
       "label": "AGENTS.md",
@@ -1757,6 +2080,105 @@
       "id": "hubly_agents_checklist_ao_alterar_c\u00f3digo",
       "community": 15,
       "norm_label": "checklist ao alterar codigo"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "id": "claude_md",
+      "community": 22,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "Dodo Starter Pack - Manifesto Anti-Vibe Coding",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "id": "hubly_claude_dodo_starter_pack_manifesto_anti_vibe_coding",
+      "community": 22,
+      "norm_label": "dodo starter pack - manifesto anti-vibe coding"
+    },
+    {
+      "label": "Regras Globais",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L7",
+      "id": "hubly_claude_regras_globais",
+      "community": 22,
+      "norm_label": "regras globais"
+    },
+    {
+      "label": "Stack do Projeto",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L20",
+      "id": "hubly_claude_stack_do_projeto",
+      "community": 22,
+      "norm_label": "stack do projeto"
+    },
+    {
+      "label": "Comandos Essenciais",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L27",
+      "id": "hubly_claude_comandos_essenciais",
+      "community": 22,
+      "norm_label": "comandos essenciais"
+    },
+    {
+      "label": "Regras Inegociaveis (Anti-Vibe Coding)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L42",
+      "id": "hubly_claude_regras_inegociaveis_anti_vibe_coding",
+      "community": 22,
+      "norm_label": "regras inegociaveis (anti-vibe coding)"
+    },
+    {
+      "label": "Estrutura de Dominio Recomendada",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L49",
+      "id": "hubly_claude_estrutura_de_dominio_recomendada",
+      "community": 22,
+      "norm_label": "estrutura de dominio recomendada"
+    },
+    {
+      "label": "Referencia Cruzada",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L63",
+      "id": "hubly_claude_referencia_cruzada",
+      "community": 22,
+      "norm_label": "referencia cruzada"
+    },
+    {
+      "label": "Setup Obrigatorio (Primeira Execucao)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L67",
+      "id": "hubly_claude_setup_obrigatorio_primeira_execucao",
+      "community": 22,
+      "norm_label": "setup obrigatorio (primeira execucao)"
+    },
+    {
+      "label": "GEMINI.md",
+      "file_type": "document",
+      "source_file": "GEMINI.md",
+      "source_location": "L1",
+      "id": "gemini_md",
+      "community": 28,
+      "norm_label": "gemini.md"
+    },
+    {
+      "label": "\ud83e\udda4 Dodo Starter Pack \u2014 Instru\u00e7\u00f5es do Agente Gemini",
+      "file_type": "document",
+      "source_file": "GEMINI.md",
+      "source_location": "L1",
+      "id": "hubly_gemini_dodo_starter_pack_instru\u00e7\u00f5es_do_agente_gemini",
+      "community": 28,
+      "norm_label": "\ud83e\udda4 dodo starter pack \u2014 instrucoes do agente gemini"
     },
     {
       "label": "README.md",
@@ -2200,6 +2622,177 @@
       "norm_label": "why"
     },
     {
+      "label": "GSD_FLOW.md",
+      "file_type": "document",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L1",
+      "id": "docs_gsd_flow_md",
+      "community": 17,
+      "norm_label": "gsd_flow.md"
+    },
+    {
+      "label": "\ud83d\ude80 Fluxo GSD (Get Shit Done) 4-D & Protocolo de Mem\u00f3ria",
+      "file_type": "document",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L1",
+      "id": "docs_gsd_flow_fluxo_gsd_get_shit_done_4_d_protocolo_de_mem\u00f3ria",
+      "community": 17,
+      "norm_label": "\ud83d\ude80 fluxo gsd (get shit done) 4-d & protocolo de memoria"
+    },
+    {
+      "label": "\ud83c\udfdb\ufe0f O Fluxo GSD 4-D em Quatro Etapas",
+      "file_type": "document",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L7",
+      "id": "docs_gsd_flow_o_fluxo_gsd_4_d_em_quatro_etapas",
+      "community": 17,
+      "norm_label": "\ud83c\udfdb\ufe0f o fluxo gsd 4-d em quatro etapas"
+    },
+    {
+      "label": "Fase 1: Discuss & Diagnose (A Regra do Mago Acad\u00eamico)",
+      "file_type": "document",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L9",
+      "id": "docs_gsd_flow_fase_1_discuss_diagnose_a_regra_do_mago_acad\u00eamico",
+      "community": 17,
+      "norm_label": "fase 1: discuss & diagnose (a regra do mago academico)"
+    },
+    {
+      "label": "Fase 2: Plan & Develop (O Planejamento Checklist)",
+      "file_type": "document",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L15",
+      "id": "docs_gsd_flow_fase_2_plan_develop_o_planejamento_checklist",
+      "community": 17,
+      "norm_label": "fase 2: plan & develop (o planejamento checklist)"
+    },
+    {
+      "label": "Fase 3: Execute & Deliver (Execu\u00e7\u00e3o At\u00f4mica e Testabilidade)",
+      "file_type": "document",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L21",
+      "id": "docs_gsd_flow_fase_3_execute_deliver_execu\u00e7\u00e3o_at\u00f4mica_e_testabilidade",
+      "community": 17,
+      "norm_label": "fase 3: execute & deliver (execucao atomica e testabilidade)"
+    },
+    {
+      "label": "Fase 4: Verify & Commit (UAT e Auditoria de Muta\u00e7\u00e3o)",
+      "file_type": "document",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L27",
+      "id": "docs_gsd_flow_fase_4_verify_commit_uat_e_auditoria_de_muta\u00e7\u00e3o",
+      "community": 17,
+      "norm_label": "fase 4: verify & commit (uat e auditoria de mutacao)"
+    },
+    {
+      "label": "\ud83e\udde0 A Lei da Mem\u00f3ria Virtual (ID-Based)",
+      "file_type": "document",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L35",
+      "id": "docs_gsd_flow_a_lei_da_mem\u00f3ria_virtual_id_based",
+      "community": 17,
+      "norm_label": "\ud83e\udde0 a lei da memoria virtual (id-based)"
+    },
+    {
+      "label": "O Padr\u00e3o de ID de Observa\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L39",
+      "id": "docs_gsd_flow_o_padr\u00e3o_de_id_de_observa\u00e7\u00e3o",
+      "community": 17,
+      "norm_label": "o padrao de id de observacao"
+    },
+    {
+      "label": "O Arquivo `resumo-de-trabalho.md`",
+      "file_type": "document",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L47",
+      "id": "docs_gsd_flow_o_arquivo_resumo_de_trabalho_md",
+      "community": 17,
+      "norm_label": "o arquivo `resumo-de-trabalho.md`"
+    },
+    {
+      "label": "RTK_GUIDE.md",
+      "file_type": "document",
+      "source_file": "docs/RTK_GUIDE.md",
+      "source_location": "L1",
+      "id": "docs_rtk_guide_md",
+      "community": 23,
+      "norm_label": "rtk_guide.md"
+    },
+    {
+      "label": "\u26a1 RTK (Rust Token Killer) Mindset \u2014 Efici\u00eancia de Tokens",
+      "file_type": "document",
+      "source_file": "docs/RTK_GUIDE.md",
+      "source_location": "L1",
+      "id": "docs_rtk_guide_rtk_rust_token_killer_mindset_efici\u00eancia_de_tokens",
+      "community": 23,
+      "norm_label": "\u26a1 rtk (rust token killer) mindset \u2014 eficiencia de tokens"
+    },
+    {
+      "label": "\ud83c\udfce\ufe0f O Protocolo de Busca Cir\u00fargica em 3 Camadas",
+      "file_type": "document",
+      "source_file": "docs/RTK_GUIDE.md",
+      "source_location": "L7",
+      "id": "docs_rtk_guide_o_protocolo_de_busca_cir\u00fargica_em_3_camadas",
+      "community": 23,
+      "norm_label": "\ud83c\udfce\ufe0f o protocolo de busca cirurgica em 3 camadas"
+    },
+    {
+      "label": "1. Camada de Filtro (Precision Search)",
+      "file_type": "document",
+      "source_file": "docs/RTK_GUIDE.md",
+      "source_location": "L11",
+      "id": "docs_rtk_guide_1_camada_de_filtro_precision_search",
+      "community": 23,
+      "norm_label": "1. camada de filtro (precision search)"
+    },
+    {
+      "label": "2. Camada de Scan (Linhas Imediatas)",
+      "file_type": "document",
+      "source_file": "docs/RTK_GUIDE.md",
+      "source_location": "L22",
+      "id": "docs_rtk_guide_2_camada_de_scan_linhas_imediatas",
+      "community": 23,
+      "norm_label": "2. camada de scan (linhas imediatas)"
+    },
+    {
+      "label": "3. Camada de Deep Dive (Leitura Seletiva)",
+      "file_type": "document",
+      "source_file": "docs/RTK_GUIDE.md",
+      "source_location": "L29",
+      "id": "docs_rtk_guide_3_camada_de_deep_dive_leitura_seletiva",
+      "community": 23,
+      "norm_label": "3. camada de deep dive (leitura seletiva)"
+    },
+    {
+      "label": "\ud83d\udd07 Supress\u00e3o de Ru\u00eddo no Terminal",
+      "file_type": "document",
+      "source_file": "docs/RTK_GUIDE.md",
+      "source_location": "L34",
+      "id": "docs_rtk_guide_supress\u00e3o_de_ru\u00eddo_no_terminal",
+      "community": 23,
+      "norm_label": "\ud83d\udd07 supressao de ruido no terminal"
+    },
+    {
+      "label": "\ud83d\udee1\ufe0f Prefixo RTK Obrigat\u00f3rio no Terminal",
+      "file_type": "document",
+      "source_file": "docs/RTK_GUIDE.md",
+      "source_location": "L50",
+      "id": "docs_rtk_guide_prefixo_rtk_obrigat\u00f3rio_no_terminal",
+      "community": 23,
+      "norm_label": "\ud83d\udee1\ufe0f prefixo rtk obrigatorio no terminal"
+    },
+    {
+      "label": "lessons.md",
+      "file_type": "document",
+      "source_file": "tasks/lessons.md",
+      "source_location": "L1",
+      "id": "tasks_lessons_md",
+      "community": 31,
+      "norm_label": "lessons.md"
+    },
+    {
       "label": "getProxiedUrl()",
       "file_type": "code",
       "source_file": "src/components/SiteCard.jsx",
@@ -2213,11 +2806,151 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "out.json",
-      "source_location": "L1",
+      "source_file": ".eslintrc.json",
+      "source_location": "L2",
       "weight": 1.0,
-      "source": "out_json",
-      "target": "hubly_out_datareferencia",
+      "source": "eslintrc_json",
+      "target": "hubly_eslintrc_env",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".eslintrc.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "eslintrc_json",
+      "target": "hubly_eslintrc_extends",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".eslintrc.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "eslintrc_json",
+      "target": "hubly_eslintrc_parseroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".eslintrc.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "eslintrc_json",
+      "target": "hubly_eslintrc_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".eslintrc.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "hubly_eslintrc_env",
+      "target": "hubly_eslintrc_env_browser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".eslintrc.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "hubly_eslintrc_env",
+      "target": "hubly_eslintrc_env_es2021",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".eslintrc.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "hubly_eslintrc_env",
+      "target": "hubly_eslintrc_env_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".eslintrc.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "hubly_eslintrc_parseroptions",
+      "target": "hubly_eslintrc_parseroptions_ecmaversion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".eslintrc.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "hubly_eslintrc_parseroptions",
+      "target": "hubly_eslintrc_parseroptions_sourcetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".eslintrc.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "hubly_eslintrc_rules",
+      "target": "hubly_eslintrc_rules_curly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".eslintrc.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "hubly_eslintrc_rules",
+      "target": "hubly_eslintrc_rules_eqeqeq",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".eslintrc.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "hubly_eslintrc_rules",
+      "target": "hubly_eslintrc_rules_no_console",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".eslintrc.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "hubly_eslintrc_rules",
+      "target": "hubly_eslintrc_rules_no_unused_vars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".eslintrc.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "hubly_eslintrc_rules",
+      "target": "hubly_eslintrc_rules_no_var",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".eslintrc.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "hubly_eslintrc_rules",
+      "target": "hubly_eslintrc_rules_prefer_const",
       "confidence_score": 1.0
     },
     {
@@ -2226,9 +2959,19 @@
       "source_file": "out.json",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "out_json",
-      "target": "hubly_out_jogos",
-      "confidence_score": 1.0
+      "target": "hubly_out_datareferencia"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "out.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "out_json",
+      "target": "hubly_out_jogos"
     },
     {
       "relation": "contains",
@@ -2236,9 +2979,9 @@
       "source_file": "package.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_json",
-      "target": "hubly_package_dependencies",
-      "confidence_score": 1.0
+      "target": "hubly_package_dependencies"
     },
     {
       "relation": "contains",
@@ -2246,9 +2989,9 @@
       "source_file": "package.json",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_json",
-      "target": "hubly_package_devdependencies",
-      "confidence_score": 1.0
+      "target": "hubly_package_devdependencies"
     },
     {
       "relation": "contains",
@@ -2256,9 +2999,9 @@
       "source_file": "package.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_json",
-      "target": "hubly_package_name",
-      "confidence_score": 1.0
+      "target": "hubly_package_name"
     },
     {
       "relation": "contains",
@@ -2266,9 +3009,9 @@
       "source_file": "package.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_json",
-      "target": "hubly_package_private",
-      "confidence_score": 1.0
+      "target": "hubly_package_private"
     },
     {
       "relation": "contains",
@@ -2276,9 +3019,9 @@
       "source_file": "package.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_json",
-      "target": "hubly_package_scripts",
-      "confidence_score": 1.0
+      "target": "hubly_package_scripts"
     },
     {
       "relation": "contains",
@@ -2286,9 +3029,9 @@
       "source_file": "package.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_json",
-      "target": "hubly_package_type",
-      "confidence_score": 1.0
+      "target": "hubly_package_type"
     },
     {
       "relation": "contains",
@@ -2296,9 +3039,9 @@
       "source_file": "package.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_json",
-      "target": "hubly_package_version",
-      "confidence_score": 1.0
+      "target": "hubly_package_version"
     },
     {
       "relation": "contains",
@@ -2306,9 +3049,9 @@
       "source_file": "package.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_scripts",
-      "target": "hubly_package_scripts_build",
-      "confidence_score": 1.0
+      "target": "hubly_package_scripts_build"
     },
     {
       "relation": "contains",
@@ -2316,9 +3059,9 @@
       "source_file": "package.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_scripts",
-      "target": "hubly_package_scripts_dev",
-      "confidence_score": 1.0
+      "target": "hubly_package_scripts_dev"
     },
     {
       "relation": "contains",
@@ -2326,9 +3069,9 @@
       "source_file": "package.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_scripts",
-      "target": "hubly_package_scripts_preview",
-      "confidence_score": 1.0
+      "target": "hubly_package_scripts_preview"
     },
     {
       "relation": "contains",
@@ -2336,9 +3079,9 @@
       "source_file": "package.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_scripts",
-      "target": "hubly_package_scripts_test",
-      "confidence_score": 1.0
+      "target": "hubly_package_scripts_test"
     },
     {
       "relation": "contains",
@@ -2346,9 +3089,9 @@
       "source_file": "package.json",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_dependencies",
-      "target": "hubly_package_dependencies_cheerio",
-      "confidence_score": 1.0
+      "target": "hubly_package_dependencies_cheerio"
     },
     {
       "relation": "contains",
@@ -2356,9 +3099,9 @@
       "source_file": "package.json",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_dependencies",
-      "target": "hubly_package_dependencies_crypto_js",
-      "confidence_score": 1.0
+      "target": "hubly_package_dependencies_crypto_js"
     },
     {
       "relation": "contains",
@@ -2366,9 +3109,9 @@
       "source_file": "package.json",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_dependencies",
-      "target": "hubly_package_dependencies_dnd_kit_core",
-      "confidence_score": 1.0
+      "target": "hubly_package_dependencies_dnd_kit_core"
     },
     {
       "relation": "contains",
@@ -2376,9 +3119,9 @@
       "source_file": "package.json",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_dependencies",
-      "target": "hubly_package_dependencies_dnd_kit_sortable",
-      "confidence_score": 1.0
+      "target": "hubly_package_dependencies_dnd_kit_sortable"
     },
     {
       "relation": "contains",
@@ -2386,9 +3129,9 @@
       "source_file": "package.json",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_dependencies",
-      "target": "hubly_package_dependencies_dnd_kit_utilities",
-      "confidence_score": 1.0
+      "target": "hubly_package_dependencies_dnd_kit_utilities"
     },
     {
       "relation": "contains",
@@ -2396,9 +3139,9 @@
       "source_file": "package.json",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_dependencies",
-      "target": "hubly_package_dependencies_lucide_react",
-      "confidence_score": 1.0
+      "target": "hubly_package_dependencies_lucide_react"
     },
     {
       "relation": "contains",
@@ -2406,9 +3149,9 @@
       "source_file": "package.json",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_dependencies",
-      "target": "hubly_package_dependencies_neondatabase_serverless",
-      "confidence_score": 1.0
+      "target": "hubly_package_dependencies_neondatabase_serverless"
     },
     {
       "relation": "contains",
@@ -2416,9 +3159,9 @@
       "source_file": "package.json",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_dependencies",
-      "target": "hubly_package_dependencies_react",
-      "confidence_score": 1.0
+      "target": "hubly_package_dependencies_react"
     },
     {
       "relation": "contains",
@@ -2426,9 +3169,9 @@
       "source_file": "package.json",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_dependencies",
-      "target": "hubly_package_dependencies_react_dom",
-      "confidence_score": 1.0
+      "target": "hubly_package_dependencies_react_dom"
     },
     {
       "relation": "contains",
@@ -2436,9 +3179,9 @@
       "source_file": "package.json",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_dependencies",
-      "target": "hubly_package_dependencies_react_markdown",
-      "confidence_score": 1.0
+      "target": "hubly_package_dependencies_react_markdown"
     },
     {
       "relation": "contains",
@@ -2446,9 +3189,9 @@
       "source_file": "package.json",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_dependencies",
-      "target": "hubly_package_dependencies_rss_parser",
-      "confidence_score": 1.0
+      "target": "hubly_package_dependencies_rss_parser"
     },
     {
       "relation": "contains",
@@ -2456,9 +3199,9 @@
       "source_file": "package.json",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_dependencies",
-      "target": "hubly_package_dependencies_zustand",
-      "confidence_score": 1.0
+      "target": "hubly_package_dependencies_zustand"
     },
     {
       "relation": "contains",
@@ -2466,9 +3209,9 @@
       "source_file": "package.json",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_devdependencies",
-      "target": "hubly_package_devdependencies_autoprefixer",
-      "confidence_score": 1.0
+      "target": "hubly_package_devdependencies_autoprefixer"
     },
     {
       "relation": "contains",
@@ -2476,9 +3219,9 @@
       "source_file": "package.json",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_devdependencies",
-      "target": "hubly_package_devdependencies_postcss",
-      "confidence_score": 1.0
+      "target": "hubly_package_devdependencies_postcss"
     },
     {
       "relation": "contains",
@@ -2486,9 +3229,9 @@
       "source_file": "package.json",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_devdependencies",
-      "target": "hubly_package_devdependencies_tailwindcss",
-      "confidence_score": 1.0
+      "target": "hubly_package_devdependencies_tailwindcss"
     },
     {
       "relation": "contains",
@@ -2496,9 +3239,9 @@
       "source_file": "package.json",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_devdependencies",
-      "target": "hubly_package_devdependencies_types_react",
-      "confidence_score": 1.0
+      "target": "hubly_package_devdependencies_types_react"
     },
     {
       "relation": "contains",
@@ -2506,9 +3249,9 @@
       "source_file": "package.json",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_devdependencies",
-      "target": "hubly_package_devdependencies_types_react_dom",
-      "confidence_score": 1.0
+      "target": "hubly_package_devdependencies_types_react_dom"
     },
     {
       "relation": "contains",
@@ -2516,9 +3259,9 @@
       "source_file": "package.json",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_devdependencies",
-      "target": "hubly_package_devdependencies_vite",
-      "confidence_score": 1.0
+      "target": "hubly_package_devdependencies_vite"
     },
     {
       "relation": "contains",
@@ -2526,8 +3269,101 @@
       "source_file": "package.json",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_package_devdependencies",
-      "target": "hubly_package_devdependencies_vitejs_plugin_react",
+      "target": "hubly_package_devdependencies_vitejs_plugin_react"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setup.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "setup_sh",
+      "target": "d_onedrive_douglas_onedrive_pessoal_dodo_programacao_git_hubly_setup_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".githooks/commit-msg.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "githooks_commit_msg_py",
+      "target": "githooks_commit_msg_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".githooks/pre-commit.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "githooks_pre_commit_py",
+      "target": "githooks_pre_commit_get_staged_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".githooks/pre-commit.py",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "githooks_pre_commit_py",
+      "target": "githooks_pre_commit_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".githooks/pre-commit.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "githooks_pre_commit_py",
+      "target": "githooks_pre_commit_run_quality_checks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".githooks/pre-commit.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "githooks_pre_commit_py",
+      "target": "githooks_pre_commit_scan_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": ".githooks/pre-commit.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "githooks_pre_commit_main",
+      "target": "githooks_pre_commit_get_staged_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": ".githooks/pre-commit.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "githooks_pre_commit_main",
+      "target": "githooks_pre_commit_scan_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": ".githooks/pre-commit.py",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "githooks_pre_commit_main",
+      "target": "githooks_pre_commit_run_quality_checks",
       "confidence_score": 1.0
     },
     {
@@ -2700,9 +3536,9 @@
       "source_file": "public/manifest.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "public_manifest_json",
-      "target": "public_manifest_background_color",
-      "confidence_score": 1.0
+      "target": "public_manifest_background_color"
     },
     {
       "relation": "contains",
@@ -2710,9 +3546,9 @@
       "source_file": "public/manifest.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "public_manifest_json",
-      "target": "public_manifest_display",
-      "confidence_score": 1.0
+      "target": "public_manifest_display"
     },
     {
       "relation": "contains",
@@ -2720,9 +3556,9 @@
       "source_file": "public/manifest.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "public_manifest_json",
-      "target": "public_manifest_icons",
-      "confidence_score": 1.0
+      "target": "public_manifest_icons"
     },
     {
       "relation": "contains",
@@ -2730,9 +3566,9 @@
       "source_file": "public/manifest.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "public_manifest_json",
-      "target": "public_manifest_name",
-      "confidence_score": 1.0
+      "target": "public_manifest_name"
     },
     {
       "relation": "contains",
@@ -2740,9 +3576,9 @@
       "source_file": "public/manifest.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "public_manifest_json",
-      "target": "public_manifest_short_name",
-      "confidence_score": 1.0
+      "target": "public_manifest_short_name"
     },
     {
       "relation": "contains",
@@ -2750,9 +3586,9 @@
       "source_file": "public/manifest.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "public_manifest_json",
-      "target": "public_manifest_start_url",
-      "confidence_score": 1.0
+      "target": "public_manifest_start_url"
     },
     {
       "relation": "contains",
@@ -2760,9 +3596,9 @@
       "source_file": "public/manifest.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "public_manifest_json",
-      "target": "public_manifest_theme_color",
-      "confidence_score": 1.0
+      "target": "public_manifest_theme_color"
     },
     {
       "relation": "contains",
@@ -2781,9 +3617,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_components_addsitemodal_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_addsitemodal_jsx"
     },
     {
       "relation": "imports_from",
@@ -2792,9 +3628,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_components_aichatmodal_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_aichatmodal_jsx"
     },
     {
       "relation": "imports_from",
@@ -2803,9 +3639,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_components_bottomsection_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_bottomsection_jsx"
     },
     {
       "relation": "imports_from",
@@ -2814,9 +3650,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_components_categoryfilter_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_categoryfilter_jsx"
     },
     {
       "relation": "imports_from",
@@ -2825,9 +3661,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_components_clock_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_clock_jsx"
     },
     {
       "relation": "imports_from",
@@ -2836,9 +3672,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_components_confirmmodal_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_confirmmodal_jsx"
     },
     {
       "relation": "imports_from",
@@ -2847,9 +3683,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_components_floatingmenu_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_floatingmenu_jsx"
     },
     {
       "relation": "imports_from",
@@ -2858,9 +3694,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_components_importbookmarksmodal_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_importbookmarksmodal_jsx"
     },
     {
       "relation": "imports_from",
@@ -2869,9 +3705,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_components_noteswidget_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_noteswidget_jsx"
     },
     {
       "relation": "imports_from",
@@ -2880,9 +3716,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_components_onboardingmodal_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_onboardingmodal_jsx"
     },
     {
       "relation": "imports_from",
@@ -2891,9 +3727,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_components_searchbar_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_searchbar_jsx"
     },
     {
       "relation": "imports_from",
@@ -2902,9 +3738,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_components_settingsmodal_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_settingsmodal_jsx"
     },
     {
       "relation": "imports_from",
@@ -2913,9 +3749,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_components_sitegrid_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_sitegrid_jsx"
     },
     {
       "relation": "imports_from",
@@ -2924,9 +3760,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_components_starcanvas_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_starcanvas_jsx"
     },
     {
       "relation": "imports_from",
@@ -2935,9 +3771,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_components_weatherwidget_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_weatherwidget_jsx"
     },
     {
       "relation": "imports_from",
@@ -2946,9 +3782,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "imports_from",
@@ -2957,9 +3793,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_app_jsx",
-      "target": "src_themes_themes_js",
-      "confidence_score": 1.0
+      "target": "src_themes_themes_js"
     },
     {
       "relation": "imports",
@@ -2979,9 +3815,9 @@
       "source_file": "src/main.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_main_jsx",
-      "target": "src_app_jsx",
-      "confidence_score": 1.0
+      "target": "src_app_jsx"
     },
     {
       "relation": "calls",
@@ -3011,9 +3847,9 @@
       "source_file": "src/components/AddSiteModal.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_addsitemodal_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "calls",
@@ -3043,9 +3879,9 @@
       "source_file": "src/components/AIChatModal.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_aichatmodal_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "calls",
@@ -3074,9 +3910,9 @@
       "source_file": "src/components/BottomSection.jsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_bottomsection_jsx",
-      "target": "components_bottomsection_tabs",
-      "confidence_score": 1.0
+      "target": "components_bottomsection_tabs"
     },
     {
       "relation": "imports_from",
@@ -3085,9 +3921,9 @@
       "source_file": "src/components/BottomSection.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_bottomsection_jsx",
-      "target": "src_components_futebol_futebolwidget_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_futebol_futebolwidget_jsx"
     },
     {
       "relation": "imports_from",
@@ -3096,9 +3932,9 @@
       "source_file": "src/components/BottomSection.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_bottomsection_jsx",
-      "target": "src_components_futebol_noticiaswidget_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_futebol_noticiaswidget_jsx"
     },
     {
       "relation": "imports_from",
@@ -3107,9 +3943,9 @@
       "source_file": "src/components/BottomSection.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_bottomsection_jsx",
-      "target": "src_components_newsfeed_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_newsfeed_jsx"
     },
     {
       "relation": "imports_from",
@@ -3118,9 +3954,9 @@
       "source_file": "src/components/BottomSection.jsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_bottomsection_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "calls",
@@ -3149,9 +3985,9 @@
       "source_file": "src/components/CategoryFilter.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_categoryfilter_jsx",
-      "target": "components_categoryfilter_categorylabels",
-      "confidence_score": 1.0
+      "target": "components_categoryfilter_categorylabels"
     },
     {
       "relation": "imports_from",
@@ -3160,9 +3996,9 @@
       "source_file": "src/components/CategoryFilter.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_categoryfilter_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "calls",
@@ -3191,9 +4027,9 @@
       "source_file": "src/components/Clock.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_clock_jsx",
-      "target": "components_clock_days",
-      "confidence_score": 1.0
+      "target": "components_clock_days"
     },
     {
       "relation": "contains",
@@ -3201,9 +4037,9 @@
       "source_file": "src/components/Clock.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_clock_jsx",
-      "target": "components_clock_months",
-      "confidence_score": 1.0
+      "target": "components_clock_months"
     },
     {
       "relation": "contains",
@@ -3222,9 +4058,9 @@
       "source_file": "src/components/ConfirmModal.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_confirmmodal_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "calls",
@@ -3254,9 +4090,9 @@
       "source_file": "src/components/FloatingMenu.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_floatingmenu_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "calls",
@@ -3286,9 +4122,9 @@
       "source_file": "src/components/ImportBookmarksModal.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_importbookmarksmodal_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "calls",
@@ -3307,9 +4143,9 @@
       "source_file": "src/components/NewsFeed.jsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_newsfeed_jsx",
-      "target": "components_newsfeed_gnewstopics",
-      "confidence_score": 1.0
+      "target": "components_newsfeed_gnewstopics"
     },
     {
       "relation": "contains",
@@ -3327,9 +4163,9 @@
       "source_file": "src/components/NewsFeed.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_newsfeed_jsx",
-      "target": "components_newsfeed_rssfeeds",
-      "confidence_score": 1.0
+      "target": "components_newsfeed_rssfeeds"
     },
     {
       "relation": "imports_from",
@@ -3338,9 +4174,9 @@
       "source_file": "src/components/NewsFeed.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_newsfeed_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "calls",
@@ -3370,9 +4206,9 @@
       "source_file": "src/components/NotesWidget.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_noteswidget_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "calls",
@@ -3402,9 +4238,9 @@
       "source_file": "src/components/OnboardingModal.jsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_onboardingmodal_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "calls",
@@ -3434,9 +4270,9 @@
       "source_file": "src/components/SearchBar.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_searchbar_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "imports",
@@ -3445,9 +4281,9 @@
       "source_file": "src/components/SearchBar.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_searchbar_jsx",
-      "target": "store_usestore_searchproviders",
-      "confidence_score": 1.0
+      "target": "store_usestore_searchproviders"
     },
     {
       "relation": "calls",
@@ -3466,9 +4302,9 @@
       "source_file": "src/components/SettingsModal.jsx",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_settingsmodal_jsx",
-      "target": "components_settingsmodal_availablefutebolchampionships",
-      "confidence_score": 1.0
+      "target": "components_settingsmodal_availablefutebolchampionships"
     },
     {
       "relation": "contains",
@@ -3476,9 +4312,9 @@
       "source_file": "src/components/SettingsModal.jsx",
       "source_location": "L64",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_settingsmodal_jsx",
-      "target": "components_settingsmodal_availabletopics",
-      "confidence_score": 1.0
+      "target": "components_settingsmodal_availabletopics"
     },
     {
       "relation": "contains",
@@ -3486,9 +4322,9 @@
       "source_file": "src/components/SettingsModal.jsx",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_settingsmodal_jsx",
-      "target": "components_settingsmodal_newsproviders",
-      "confidence_score": 1.0
+      "target": "components_settingsmodal_newsproviders"
     },
     {
       "relation": "contains",
@@ -3516,9 +4352,9 @@
       "source_file": "src/components/SettingsModal.jsx",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_settingsmodal_jsx",
-      "target": "components_settingsmodal_tabs",
-      "confidence_score": 1.0
+      "target": "components_settingsmodal_tabs"
     },
     {
       "relation": "imports_from",
@@ -3527,9 +4363,9 @@
       "source_file": "src/components/SettingsModal.jsx",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_settingsmodal_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "imports_from",
@@ -3538,9 +4374,9 @@
       "source_file": "src/components/SettingsModal.jsx",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_settingsmodal_jsx",
-      "target": "src_themes_themes_js",
-      "confidence_score": 1.0
+      "target": "src_themes_themes_js"
     },
     {
       "relation": "imports",
@@ -3549,9 +4385,9 @@
       "source_file": "src/components/SettingsModal.jsx",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_settingsmodal_jsx",
-      "target": "store_usestore_searchproviders",
-      "confidence_score": 1.0
+      "target": "store_usestore_searchproviders"
     },
     {
       "relation": "imports",
@@ -3560,9 +4396,9 @@
       "source_file": "src/components/SettingsModal.jsx",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_settingsmodal_jsx",
-      "target": "themes_themes_themelist",
-      "confidence_score": 1.0
+      "target": "themes_themes_themelist"
     },
     {
       "relation": "calls",
@@ -3645,9 +4481,9 @@
       "source_file": "src/components/SiteCard.jsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_sitecard_jsx",
-      "target": "src_services_resolvedorfavicon_js",
-      "confidence_score": 1.0
+      "target": "src_services_resolvedorfavicon_js"
     },
     {
       "relation": "imports_from",
@@ -3656,9 +4492,9 @@
       "source_file": "src/components/SiteCard.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_sitecard_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "imports_from",
@@ -3667,9 +4503,9 @@
       "source_file": "src/components/SiteCard.jsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_sitecard_jsx",
-      "target": "src_utils_favicon_js",
-      "confidence_score": 1.0
+      "target": "src_utils_favicon_js"
     },
     {
       "relation": "imports_from",
@@ -3678,9 +4514,9 @@
       "source_file": "src/components/SiteCard.jsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_sitecard_jsx",
-      "target": "src_utils_favicondb_js",
-      "confidence_score": 1.0
+      "target": "src_utils_favicondb_js"
     },
     {
       "relation": "imports",
@@ -3744,9 +4580,9 @@
       "source_file": "src/components/SiteGrid.jsx",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_sitegrid_jsx",
-      "target": "src_components_sitecard_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_sitecard_jsx"
     },
     {
       "relation": "calls",
@@ -3842,9 +4678,9 @@
       "source_file": "src/components/SiteGrid.jsx",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_sitegrid_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "calls",
@@ -3874,9 +4710,9 @@
       "source_file": "src/components/StarCanvas.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_starcanvas_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "calls",
@@ -3906,9 +4742,9 @@
       "source_file": "src/components/WeatherWidget.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_weatherwidget_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "calls",
@@ -3938,9 +4774,9 @@
       "source_file": "src/components/futebol/JogosHoje.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_futebol_jogoshoje_jsx",
-      "target": "src_components_futebol_cardjogohoje_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_futebol_cardjogohoje_jsx"
     },
     {
       "relation": "contains",
@@ -3959,9 +4795,9 @@
       "source_file": "src/components/futebol/NoticiasFutebol.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_futebol_noticiasfutebol_jsx",
-      "target": "src_components_futebol_cardnoticiafutebol_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_futebol_cardnoticiafutebol_jsx"
     },
     {
       "relation": "contains",
@@ -3980,9 +4816,9 @@
       "source_file": "src/components/futebol/FutebolWidget.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_futebol_futebolwidget_jsx",
-      "target": "src_components_futebol_jogoshoje_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_futebol_jogoshoje_jsx"
     },
     {
       "relation": "contains",
@@ -4012,9 +4848,9 @@
       "source_file": "src/components/futebol/JogosHoje.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_futebol_jogoshoje_jsx",
-      "target": "src_hooks_usejogoshoje_js",
-      "confidence_score": 1.0
+      "target": "src_hooks_usejogoshoje_js"
     },
     {
       "relation": "imports_from",
@@ -4023,9 +4859,9 @@
       "source_file": "src/components/futebol/JogosHoje.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_futebol_jogoshoje_jsx",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "calls",
@@ -4077,9 +4913,9 @@
       "source_file": "src/components/futebol/NoticiasFutebol.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_futebol_noticiasfutebol_jsx",
-      "target": "src_hooks_usenoticiasfutebol_js",
-      "confidence_score": 1.0
+      "target": "src_hooks_usenoticiasfutebol_js"
     },
     {
       "relation": "imports_from",
@@ -4088,9 +4924,9 @@
       "source_file": "src/components/futebol/NoticiasWidget.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_components_futebol_noticiaswidget_jsx",
-      "target": "src_components_futebol_noticiasfutebol_jsx",
-      "confidence_score": 1.0
+      "target": "src_components_futebol_noticiasfutebol_jsx"
     },
     {
       "relation": "calls",
@@ -4130,9 +4966,9 @@
       "source_file": "src/hooks/useJogosHoje.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_hooks_usejogoshoje_js",
-      "target": "src_store_usestore_js",
-      "confidence_score": 1.0
+      "target": "src_store_usestore_js"
     },
     {
       "relation": "calls",
@@ -4151,9 +4987,9 @@
       "source_file": "src/hooks/useNews.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_hooks_usenews_js",
-      "target": "hooks_usenews_rssfeeds",
-      "confidence_score": 1.0
+      "target": "hooks_usenews_rssfeeds"
     },
     {
       "relation": "contains",
@@ -4211,9 +5047,9 @@
       "source_file": "src/services/resolvedorFavicon.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_services_resolvedorfavicon_js",
-      "target": "services_resolvedorfavicon_queue",
-      "confidence_score": 1.0
+      "target": "services_resolvedorfavicon_queue"
     },
     {
       "relation": "contains",
@@ -4242,9 +5078,9 @@
       "source_file": "src/services/resolvedorFavicon.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_services_resolvedorfavicon_js",
-      "target": "src_utils_favicon_js",
-      "confidence_score": 1.0
+      "target": "src_utils_favicon_js"
     },
     {
       "relation": "imports_from",
@@ -4253,9 +5089,9 @@
       "source_file": "src/services/resolvedorFavicon.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_services_resolvedorfavicon_js",
-      "target": "src_utils_storage_js",
-      "confidence_score": 1.0
+      "target": "src_utils_storage_js"
     },
     {
       "relation": "imports",
@@ -4286,9 +5122,9 @@
       "source_file": "src/services/resolvedorFavicon.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_services_resolvedorfavicon_js",
-      "target": "utils_storage_storage",
-      "confidence_score": 1.0
+      "target": "utils_storage_storage"
     },
     {
       "relation": "imports_from",
@@ -4297,9 +5133,9 @@
       "source_file": "src/store/useStore.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_store_usestore_js",
-      "target": "src_themes_themes_js",
-      "confidence_score": 1.0
+      "target": "src_themes_themes_js"
     },
     {
       "relation": "imports_from",
@@ -4308,9 +5144,9 @@
       "source_file": "src/store/useStore.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_store_usestore_js",
-      "target": "src_utils_crypto_js",
-      "confidence_score": 1.0
+      "target": "src_utils_crypto_js"
     },
     {
       "relation": "imports_from",
@@ -4319,9 +5155,9 @@
       "source_file": "src/store/useStore.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_store_usestore_js",
-      "target": "src_utils_favicon_js",
-      "confidence_score": 1.0
+      "target": "src_utils_favicon_js"
     },
     {
       "relation": "imports_from",
@@ -4330,9 +5166,9 @@
       "source_file": "src/store/useStore.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_store_usestore_js",
-      "target": "src_utils_favicondb_js",
-      "confidence_score": 1.0
+      "target": "src_utils_favicondb_js"
     },
     {
       "relation": "imports_from",
@@ -4341,9 +5177,9 @@
       "source_file": "src/store/useStore.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_store_usestore_js",
-      "target": "src_utils_storage_js",
-      "confidence_score": 1.0
+      "target": "src_utils_storage_js"
     },
     {
       "relation": "contains",
@@ -4351,9 +5187,9 @@
       "source_file": "src/store/useStore.js",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_store_usestore_js",
-      "target": "store_usestore_defaultfutebolcampeonatos",
-      "confidence_score": 1.0
+      "target": "store_usestore_defaultfutebolcampeonatos"
     },
     {
       "relation": "contains",
@@ -4371,9 +5207,9 @@
       "source_file": "src/store/useStore.js",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_store_usestore_js",
-      "target": "store_usestore_searchproviders",
-      "confidence_score": 1.0
+      "target": "store_usestore_searchproviders"
     },
     {
       "relation": "contains",
@@ -4391,9 +5227,9 @@
       "source_file": "src/store/useStore.js",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_store_usestore_js",
-      "target": "store_usestore_usestore",
-      "confidence_score": 1.0
+      "target": "store_usestore_usestore"
     },
     {
       "relation": "imports",
@@ -4468,9 +5304,9 @@
       "source_file": "src/store/useStore.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_store_usestore_js",
-      "target": "utils_storage_defaultcategories",
-      "confidence_score": 1.0
+      "target": "utils_storage_defaultcategories"
     },
     {
       "relation": "imports",
@@ -4479,9 +5315,9 @@
       "source_file": "src/store/useStore.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_store_usestore_js",
-      "target": "utils_storage_defaultnewstopics",
-      "confidence_score": 1.0
+      "target": "utils_storage_defaultnewstopics"
     },
     {
       "relation": "imports",
@@ -4490,9 +5326,9 @@
       "source_file": "src/store/useStore.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_store_usestore_js",
-      "target": "utils_storage_defaultsites",
-      "confidence_score": 1.0
+      "target": "utils_storage_defaultsites"
     },
     {
       "relation": "imports",
@@ -4501,9 +5337,9 @@
       "source_file": "src/store/useStore.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_store_usestore_js",
-      "target": "utils_storage_storage",
-      "confidence_score": 1.0
+      "target": "utils_storage_storage"
     },
     {
       "relation": "contains",
@@ -4521,9 +5357,9 @@
       "source_file": "src/themes/themes.js",
       "source_location": "L104",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_themes_themes_js",
-      "target": "themes_themes_themelist",
-      "confidence_score": 1.0
+      "target": "themes_themes_themelist"
     },
     {
       "relation": "contains",
@@ -4531,9 +5367,9 @@
       "source_file": "src/themes/themes.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_themes_themes_js",
-      "target": "themes_themes_themes",
-      "confidence_score": 1.0
+      "target": "themes_themes_themes"
     },
     {
       "relation": "contains",
@@ -4653,9 +5489,9 @@
       "source_file": "src/utils/storage.js",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_utils_storage_js",
-      "target": "utils_storage_defaultcategories",
-      "confidence_score": 1.0
+      "target": "utils_storage_defaultcategories"
     },
     {
       "relation": "contains",
@@ -4663,9 +5499,9 @@
       "source_file": "src/utils/storage.js",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_utils_storage_js",
-      "target": "utils_storage_defaultnewstopics",
-      "confidence_score": 1.0
+      "target": "utils_storage_defaultnewstopics"
     },
     {
       "relation": "contains",
@@ -4673,9 +5509,9 @@
       "source_file": "src/utils/storage.js",
       "source_location": "L65",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_utils_storage_js",
-      "target": "utils_storage_defaultsites",
-      "confidence_score": 1.0
+      "target": "utils_storage_defaultsites"
     },
     {
       "relation": "contains",
@@ -4683,8 +5519,68 @@
       "source_file": "src/utils/storage.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_utils_storage_js",
-      "target": "utils_storage_storage",
+      "target": "utils_storage_storage"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_git_hooks.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "tests_test_git_hooks_py",
+      "target": "tests_test_git_hooks_test_commit_msg_validation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_git_hooks.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "tests_test_git_hooks_py",
+      "target": "tests_test_git_hooks_test_pre_commit_protected_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_git_hooks.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "tests_test_git_hooks_py",
+      "target": "tests_test_git_hooks_test_pre_commit_secret_detection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_git_hooks.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "tests_test_git_hooks_rationale_32",
+      "target": "tests_test_git_hooks_test_pre_commit_secret_detection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_git_hooks.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "tests_test_git_hooks_rationale_52",
+      "target": "tests_test_git_hooks_test_pre_commit_protected_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_git_hooks.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "tests_test_git_hooks_rationale_81",
+      "target": "tests_test_git_hooks_test_commit_msg_validation",
       "confidence_score": 1.0
     },
     {
@@ -4693,9 +5589,9 @@
       "source_file": "versionamento/versionador.js",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "versionamento_versionador_js",
-      "target": "versionamento_versionador_diretoriobase",
-      "confidence_score": 1.0
+      "target": "versionamento_versionador_diretoriobase"
     },
     {
       "relation": "contains",
@@ -4703,9 +5599,9 @@
       "source_file": "versionamento/versionador.js",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "versionamento_versionador_js",
-      "target": "versionamento_versionador_diretoriosignorados",
-      "confidence_score": 1.0
+      "target": "versionamento_versionador_diretoriosignorados"
     },
     {
       "relation": "contains",
@@ -4713,9 +5609,9 @@
       "source_file": "versionamento/versionador.js",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "versionamento_versionador_js",
-      "target": "versionamento_versionador_dirname",
-      "confidence_score": 1.0
+      "target": "versionamento_versionador_dirname"
     },
     {
       "relation": "contains",
@@ -4723,9 +5619,9 @@
       "source_file": "versionamento/versionador.js",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "versionamento_versionador_js",
-      "target": "versionamento_versionador_extensoesalvo",
-      "confidence_score": 1.0
+      "target": "versionamento_versionador_extensoesalvo"
     },
     {
       "relation": "contains",
@@ -4733,9 +5629,9 @@
       "source_file": "versionamento/versionador.js",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "versionamento_versionador_js",
-      "target": "versionamento_versionador_filename",
-      "confidence_score": 1.0
+      "target": "versionamento_versionador_filename"
     },
     {
       "relation": "contains",
@@ -4791,12 +5687,22 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "AGENT.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "agent_md",
+      "target": "hubly_agent_dodo_starter_pack_instru\u00e7\u00f5es_do_agente",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "AGENTS.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_md",
-      "target": "hubly_agents_agents_md_hubly",
-      "confidence_score": 1.0
+      "target": "hubly_agents_agents_md_hubly"
     },
     {
       "relation": "contains",
@@ -4804,9 +5710,9 @@
       "source_file": "AGENTS.md",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_agents_agents_md_hubly",
-      "target": "hubly_agents_apis_externas_client_side",
-      "confidence_score": 1.0
+      "target": "hubly_agents_apis_externas_client_side"
     },
     {
       "relation": "contains",
@@ -4814,9 +5720,9 @@
       "source_file": "AGENTS.md",
       "source_location": "L98",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_agents_agents_md_hubly",
-      "target": "hubly_agents_checklist_ao_alterar_c\u00f3digo",
-      "confidence_score": 1.0
+      "target": "hubly_agents_checklist_ao_alterar_c\u00f3digo"
     },
     {
       "relation": "contains",
@@ -4824,9 +5730,9 @@
       "source_file": "AGENTS.md",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_agents_agents_md_hubly",
-      "target": "hubly_agents_comandos",
-      "confidence_score": 1.0
+      "target": "hubly_agents_comandos"
     },
     {
       "relation": "contains",
@@ -4834,9 +5740,9 @@
       "source_file": "AGENTS.md",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_agents_agents_md_hubly",
-      "target": "hubly_agents_estrutura_de_diret\u00f3rios",
-      "confidence_score": 1.0
+      "target": "hubly_agents_estrutura_de_diret\u00f3rios"
     },
     {
       "relation": "contains",
@@ -4844,9 +5750,9 @@
       "source_file": "AGENTS.md",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_agents_agents_md_hubly",
-      "target": "hubly_agents_padr\u00f5es_de_c\u00f3digo",
-      "confidence_score": 1.0
+      "target": "hubly_agents_padr\u00f5es_de_c\u00f3digo"
     },
     {
       "relation": "contains",
@@ -4854,9 +5760,9 @@
       "source_file": "AGENTS.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_agents_agents_md_hubly",
-      "target": "hubly_agents_stack",
-      "confidence_score": 1.0
+      "target": "hubly_agents_stack"
     },
     {
       "relation": "contains",
@@ -4864,9 +5770,9 @@
       "source_file": "AGENTS.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_agents_agents_md_hubly",
-      "target": "hubly_agents_vis\u00e3o_geral",
-      "confidence_score": 1.0
+      "target": "hubly_agents_vis\u00e3o_geral"
     },
     {
       "relation": "contains",
@@ -4874,9 +5780,9 @@
       "source_file": "AGENTS.md",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_agents_padr\u00f5es_de_c\u00f3digo",
-      "target": "hubly_agents_componentes_principais",
-      "confidence_score": 1.0
+      "target": "hubly_agents_componentes_principais"
     },
     {
       "relation": "contains",
@@ -4884,9 +5790,9 @@
       "source_file": "AGENTS.md",
       "source_location": "L75",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_agents_padr\u00f5es_de_c\u00f3digo",
-      "target": "hubly_agents_dados_padr\u00e3o_src_utils_storage_js",
-      "confidence_score": 1.0
+      "target": "hubly_agents_dados_padr\u00e3o_src_utils_storage_js"
     },
     {
       "relation": "contains",
@@ -4894,9 +5800,9 @@
       "source_file": "AGENTS.md",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_agents_padr\u00f5es_de_c\u00f3digo",
-      "target": "hubly_agents_estado_zustand",
-      "confidence_score": 1.0
+      "target": "hubly_agents_estado_zustand"
     },
     {
       "relation": "contains",
@@ -4904,9 +5810,9 @@
       "source_file": "AGENTS.md",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_agents_padr\u00f5es_de_c\u00f3digo",
-      "target": "hubly_agents_exporta\u00e7\u00f5es",
-      "confidence_score": 1.0
+      "target": "hubly_agents_exporta\u00e7\u00f5es"
     },
     {
       "relation": "contains",
@@ -4914,9 +5820,9 @@
       "source_file": "AGENTS.md",
       "source_location": "L69",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_agents_padr\u00f5es_de_c\u00f3digo",
-      "target": "hubly_agents_modais",
-      "confidence_score": 1.0
+      "target": "hubly_agents_modais"
     },
     {
       "relation": "contains",
@@ -4924,8 +5830,98 @@
       "source_file": "AGENTS.md",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_agents_padr\u00f5es_de_c\u00f3digo",
-      "target": "hubly_agents_temas",
+      "target": "hubly_agents_temas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "claude_md",
+      "target": "hubly_claude_dodo_starter_pack_manifesto_anti_vibe_coding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "hubly_claude_dodo_starter_pack_manifesto_anti_vibe_coding",
+      "target": "hubly_claude_comandos_essenciais",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "hubly_claude_dodo_starter_pack_manifesto_anti_vibe_coding",
+      "target": "hubly_claude_estrutura_de_dominio_recomendada",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "hubly_claude_dodo_starter_pack_manifesto_anti_vibe_coding",
+      "target": "hubly_claude_referencia_cruzada",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "hubly_claude_dodo_starter_pack_manifesto_anti_vibe_coding",
+      "target": "hubly_claude_regras_globais",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "hubly_claude_dodo_starter_pack_manifesto_anti_vibe_coding",
+      "target": "hubly_claude_regras_inegociaveis_anti_vibe_coding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "hubly_claude_dodo_starter_pack_manifesto_anti_vibe_coding",
+      "target": "hubly_claude_setup_obrigatorio_primeira_execucao",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "hubly_claude_dodo_starter_pack_manifesto_anti_vibe_coding",
+      "target": "hubly_claude_stack_do_projeto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "GEMINI.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "gemini_md",
+      "target": "hubly_gemini_dodo_starter_pack_instru\u00e7\u00f5es_do_agente_gemini",
       "confidence_score": 1.0
     },
     {
@@ -4934,9 +5930,9 @@
       "source_file": "README.md",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_md",
-      "target": "hubly_readme_hubly",
-      "confidence_score": 1.0
+      "target": "hubly_readme_hubly"
     },
     {
       "relation": "contains",
@@ -4944,9 +5940,9 @@
       "source_file": "README.md",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_arquitetura",
-      "confidence_score": 1.0
+      "target": "hubly_readme_arquitetura"
     },
     {
       "relation": "contains",
@@ -4954,9 +5950,9 @@
       "source_file": "README.md",
       "source_location": "L369",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_backend_serverless",
-      "confidence_score": 1.0
+      "target": "hubly_readme_backend_serverless"
     },
     {
       "relation": "contains",
@@ -4964,9 +5960,9 @@
       "source_file": "README.md",
       "source_location": "L383",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_banco_de_dados",
-      "confidence_score": 1.0
+      "target": "hubly_readme_banco_de_dados"
     },
     {
       "relation": "contains",
@@ -4974,9 +5970,9 @@
       "source_file": "README.md",
       "source_location": "L437",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_build",
-      "confidence_score": 1.0
+      "target": "hubly_readme_build"
     },
     {
       "relation": "contains",
@@ -4984,9 +5980,9 @@
       "source_file": "README.md",
       "source_location": "L415",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_como_rodar_localmente",
-      "confidence_score": 1.0
+      "target": "hubly_readme_como_rodar_localmente"
     },
     {
       "relation": "contains",
@@ -4994,9 +5990,9 @@
       "source_file": "README.md",
       "source_location": "L567",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_decis\u00f5es_t\u00e9cnicas",
-      "confidence_score": 1.0
+      "target": "hubly_readme_decis\u00f5es_t\u00e9cnicas"
     },
     {
       "relation": "contains",
@@ -5004,9 +6000,9 @@
       "source_file": "README.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_demo",
-      "confidence_score": 1.0
+      "target": "hubly_readme_demo"
     },
     {
       "relation": "contains",
@@ -5014,9 +6010,9 @@
       "source_file": "README.md",
       "source_location": "L453",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_deploy",
-      "confidence_score": 1.0
+      "target": "hubly_readme_deploy"
     },
     {
       "relation": "contains",
@@ -5024,9 +6020,9 @@
       "source_file": "README.md",
       "source_location": "L75",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_estrutura_do_projeto",
-      "confidence_score": 1.0
+      "target": "hubly_readme_estrutura_do_projeto"
     },
     {
       "relation": "contains",
@@ -5034,9 +6030,9 @@
       "source_file": "README.md",
       "source_location": "L549",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_fluxo_de_dados_resumido",
-      "confidence_score": 1.0
+      "target": "hubly_readme_fluxo_de_dados_resumido"
     },
     {
       "relation": "contains",
@@ -5044,9 +6040,9 @@
       "source_file": "README.md",
       "source_location": "L230",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_fluxo_principal_da_aplica\u00e7\u00e3o",
-      "confidence_score": 1.0
+      "target": "hubly_readme_fluxo_principal_da_aplica\u00e7\u00e3o"
     },
     {
       "relation": "contains",
@@ -5054,9 +6050,9 @@
       "source_file": "README.md",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_highlights_t\u00e9cnicos",
-      "confidence_score": 1.0
+      "target": "hubly_readme_highlights_t\u00e9cnicos"
     },
     {
       "relation": "contains",
@@ -5064,9 +6060,9 @@
       "source_file": "README.md",
       "source_location": "L579",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_licen\u00e7a",
-      "confidence_score": 1.0
+      "target": "hubly_readme_licen\u00e7a"
     },
     {
       "relation": "contains",
@@ -5074,9 +6070,9 @@
       "source_file": "README.md",
       "source_location": "L245",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_persist\u00eancia",
-      "confidence_score": 1.0
+      "target": "hubly_readme_persist\u00eancia"
     },
     {
       "relation": "contains",
@@ -5084,9 +6080,9 @@
       "source_file": "README.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_preview",
-      "confidence_score": 1.0
+      "target": "hubly_readme_preview"
     },
     {
       "relation": "contains",
@@ -5094,9 +6090,9 @@
       "source_file": "README.md",
       "source_location": "L101",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_responsabilidades_por_pasta",
-      "confidence_score": 1.0
+      "target": "hubly_readme_responsabilidades_por_pasta"
     },
     {
       "relation": "contains",
@@ -5104,9 +6100,9 @@
       "source_file": "README.md",
       "source_location": "L275",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_seguran\u00e7a_e_privacidade",
-      "confidence_score": 1.0
+      "target": "hubly_readme_seguran\u00e7a_e_privacidade"
     },
     {
       "relation": "contains",
@@ -5114,9 +6110,9 @@
       "source_file": "README.md",
       "source_location": "L289",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_sistema_de_busca",
-      "confidence_score": 1.0
+      "target": "hubly_readme_sistema_de_busca"
     },
     {
       "relation": "contains",
@@ -5124,9 +6120,9 @@
       "source_file": "README.md",
       "source_location": "L332",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_sistema_de_temas",
-      "confidence_score": 1.0
+      "target": "hubly_readme_sistema_de_temas"
     },
     {
       "relation": "contains",
@@ -5134,9 +6130,9 @@
       "source_file": "README.md",
       "source_location": "L312",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_sites_e_categorias",
-      "confidence_score": 1.0
+      "target": "hubly_readme_sites_e_categorias"
     },
     {
       "relation": "contains",
@@ -5144,9 +6140,9 @@
       "source_file": "README.md",
       "source_location": "L483",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_tecnologias",
-      "confidence_score": 1.0
+      "target": "hubly_readme_tecnologias"
     },
     {
       "relation": "contains",
@@ -5154,9 +6150,9 @@
       "source_file": "README.md",
       "source_location": "L501",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_testes",
-      "confidence_score": 1.0
+      "target": "hubly_readme_testes"
     },
     {
       "relation": "contains",
@@ -5164,9 +6160,9 @@
       "source_file": "README.md",
       "source_location": "L401",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_vari\u00e1veis_de_ambiente",
-      "confidence_score": 1.0
+      "target": "hubly_readme_vari\u00e1veis_de_ambiente"
     },
     {
       "relation": "contains",
@@ -5174,9 +6170,9 @@
       "source_file": "README.md",
       "source_location": "L527",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_versionamento_e_cache_busting",
-      "confidence_score": 1.0
+      "target": "hubly_readme_versionamento_e_cache_busting"
     },
     {
       "relation": "contains",
@@ -5184,9 +6180,9 @@
       "source_file": "README.md",
       "source_location": "L351",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_hubly",
-      "target": "hubly_readme_widgets",
-      "confidence_score": 1.0
+      "target": "hubly_readme_widgets"
     },
     {
       "relation": "contains",
@@ -5194,9 +6190,9 @@
       "source_file": "README.md",
       "source_location": "L214",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_responsabilidades_por_pasta",
-      "target": "hubly_readme_docs_sql",
-      "confidence_score": 1.0
+      "target": "hubly_readme_docs_sql"
     },
     {
       "relation": "contains",
@@ -5204,9 +6200,9 @@
       "source_file": "README.md",
       "source_location": "L199",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_responsabilidades_por_pasta",
-      "target": "hubly_readme_netlify_functions",
-      "confidence_score": 1.0
+      "target": "hubly_readme_netlify_functions"
     },
     {
       "relation": "contains",
@@ -5214,9 +6210,9 @@
       "source_file": "README.md",
       "source_location": "L103",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_responsabilidades_por_pasta",
-      "target": "hubly_readme_src",
-      "confidence_score": 1.0
+      "target": "hubly_readme_src"
     },
     {
       "relation": "contains",
@@ -5224,9 +6220,9 @@
       "source_file": "README.md",
       "source_location": "L111",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_responsabilidades_por_pasta",
-      "target": "hubly_readme_src_app_jsx",
-      "confidence_score": 1.0
+      "target": "hubly_readme_src_app_jsx"
     },
     {
       "relation": "contains",
@@ -5234,9 +6230,9 @@
       "source_file": "README.md",
       "source_location": "L154",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_responsabilidades_por_pasta",
-      "target": "hubly_readme_src_components",
-      "confidence_score": 1.0
+      "target": "hubly_readme_src_components"
     },
     {
       "relation": "contains",
@@ -5244,9 +6240,9 @@
       "source_file": "README.md",
       "source_location": "L171",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_responsabilidades_por_pasta",
-      "target": "hubly_readme_src_hooks",
-      "confidence_score": 1.0
+      "target": "hubly_readme_src_hooks"
     },
     {
       "relation": "contains",
@@ -5254,9 +6250,9 @@
       "source_file": "README.md",
       "source_location": "L125",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_responsabilidades_por_pasta",
-      "target": "hubly_readme_src_main_jsx",
-      "confidence_score": 1.0
+      "target": "hubly_readme_src_main_jsx"
     },
     {
       "relation": "contains",
@@ -5264,9 +6260,9 @@
       "source_file": "README.md",
       "source_location": "L133",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_responsabilidades_por_pasta",
-      "target": "hubly_readme_src_store",
-      "confidence_score": 1.0
+      "target": "hubly_readme_src_store"
     },
     {
       "relation": "contains",
@@ -5274,9 +6270,9 @@
       "source_file": "README.md",
       "source_location": "L184",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_responsabilidades_por_pasta",
-      "target": "hubly_readme_src_utils",
-      "confidence_score": 1.0
+      "target": "hubly_readme_src_utils"
     },
     {
       "relation": "contains",
@@ -5284,9 +6280,9 @@
       "source_file": "README.md",
       "source_location": "L222",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_responsabilidades_por_pasta",
-      "target": "hubly_readme_versionamento",
-      "confidence_score": 1.0
+      "target": "hubly_readme_versionamento"
     },
     {
       "relation": "contains",
@@ -5294,9 +6290,9 @@
       "source_file": "README.md",
       "source_location": "L249",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_persist\u00eancia",
-      "target": "hubly_readme_1_persist\u00eancia_local",
-      "confidence_score": 1.0
+      "target": "hubly_readme_1_persist\u00eancia_local"
     },
     {
       "relation": "contains",
@@ -5304,9 +6300,9 @@
       "source_file": "README.md",
       "source_location": "L262",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_persist\u00eancia",
-      "target": "hubly_readme_2_persist\u00eancia_remota_opcional",
-      "confidence_score": 1.0
+      "target": "hubly_readme_2_persist\u00eancia_remota_opcional"
     },
     {
       "relation": "contains",
@@ -5314,9 +6310,9 @@
       "source_file": "README.md",
       "source_location": "L359",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_widgets",
-      "target": "hubly_readme_bloco_de_notas",
-      "confidence_score": 1.0
+      "target": "hubly_readme_bloco_de_notas"
     },
     {
       "relation": "contains",
@@ -5324,9 +6320,9 @@
       "source_file": "README.md",
       "source_location": "L355",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_widgets",
-      "target": "hubly_readme_clima",
-      "confidence_score": 1.0
+      "target": "hubly_readme_clima"
     },
     {
       "relation": "contains",
@@ -5334,9 +6330,9 @@
       "source_file": "README.md",
       "source_location": "L363",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_widgets",
-      "target": "hubly_readme_not\u00edcias",
-      "confidence_score": 1.0
+      "target": "hubly_readme_not\u00edcias"
     },
     {
       "relation": "contains",
@@ -5344,9 +6340,9 @@
       "source_file": "README.md",
       "source_location": "L469",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_deploy",
-      "target": "hubly_readme_limitado",
-      "confidence_score": 1.0
+      "target": "hubly_readme_limitado"
     },
     {
       "relation": "contains",
@@ -5354,9 +6350,9 @@
       "source_file": "README.md",
       "source_location": "L455",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hubly_readme_deploy",
-      "target": "hubly_readme_recomendado",
-      "confidence_score": 1.0
+      "target": "hubly_readme_recomendado"
     },
     {
       "relation": "contains",
@@ -5364,9 +6360,9 @@
       "source_file": ".agents/rules/antigravity-rtk-rules.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_rules_antigravity_rtk_rules_md",
-      "target": "rules_antigravity_rtk_rules_rtk_rust_token_killer_google_antigravity",
-      "confidence_score": 1.0
+      "target": "rules_antigravity_rtk_rules_rtk_rust_token_killer_google_antigravity"
     },
     {
       "relation": "contains",
@@ -5374,9 +6370,9 @@
       "source_file": ".agents/rules/antigravity-rtk-rules.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "rules_antigravity_rtk_rules_rtk_rust_token_killer_google_antigravity",
-      "target": "rules_antigravity_rtk_rules_meta_commands",
-      "confidence_score": 1.0
+      "target": "rules_antigravity_rtk_rules_meta_commands"
     },
     {
       "relation": "contains",
@@ -5384,9 +6380,9 @@
       "source_file": ".agents/rules/antigravity-rtk-rules.md",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "rules_antigravity_rtk_rules_rtk_rust_token_killer_google_antigravity",
-      "target": "rules_antigravity_rtk_rules_rule",
-      "confidence_score": 1.0
+      "target": "rules_antigravity_rtk_rules_rule"
     },
     {
       "relation": "contains",
@@ -5394,11 +6390,171 @@
       "source_file": ".agents/rules/antigravity-rtk-rules.md",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "rules_antigravity_rtk_rules_rtk_rust_token_killer_google_antigravity",
-      "target": "rules_antigravity_rtk_rules_why",
+      "target": "rules_antigravity_rtk_rules_why"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_gsd_flow_md",
+      "target": "docs_gsd_flow_fluxo_gsd_get_shit_done_4_d_protocolo_de_mem\u00f3ria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "docs_gsd_flow_fluxo_gsd_get_shit_done_4_d_protocolo_de_mem\u00f3ria",
+      "target": "docs_gsd_flow_a_lei_da_mem\u00f3ria_virtual_id_based",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "docs_gsd_flow_fluxo_gsd_get_shit_done_4_d_protocolo_de_mem\u00f3ria",
+      "target": "docs_gsd_flow_o_fluxo_gsd_4_d_em_quatro_etapas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "docs_gsd_flow_o_fluxo_gsd_4_d_em_quatro_etapas",
+      "target": "docs_gsd_flow_fase_1_discuss_diagnose_a_regra_do_mago_acad\u00eamico",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "docs_gsd_flow_o_fluxo_gsd_4_d_em_quatro_etapas",
+      "target": "docs_gsd_flow_fase_2_plan_develop_o_planejamento_checklist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "docs_gsd_flow_o_fluxo_gsd_4_d_em_quatro_etapas",
+      "target": "docs_gsd_flow_fase_3_execute_deliver_execu\u00e7\u00e3o_at\u00f4mica_e_testabilidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "docs_gsd_flow_o_fluxo_gsd_4_d_em_quatro_etapas",
+      "target": "docs_gsd_flow_fase_4_verify_commit_uat_e_auditoria_de_muta\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "docs_gsd_flow_a_lei_da_mem\u00f3ria_virtual_id_based",
+      "target": "docs_gsd_flow_o_arquivo_resumo_de_trabalho_md",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/GSD_FLOW.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "docs_gsd_flow_a_lei_da_mem\u00f3ria_virtual_id_based",
+      "target": "docs_gsd_flow_o_padr\u00e3o_de_id_de_observa\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RTK_GUIDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_rtk_guide_md",
+      "target": "docs_rtk_guide_rtk_rust_token_killer_mindset_efici\u00eancia_de_tokens",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RTK_GUIDE.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "docs_rtk_guide_rtk_rust_token_killer_mindset_efici\u00eancia_de_tokens",
+      "target": "docs_rtk_guide_o_protocolo_de_busca_cir\u00fargica_em_3_camadas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RTK_GUIDE.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "docs_rtk_guide_rtk_rust_token_killer_mindset_efici\u00eancia_de_tokens",
+      "target": "docs_rtk_guide_prefixo_rtk_obrigat\u00f3rio_no_terminal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RTK_GUIDE.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "docs_rtk_guide_rtk_rust_token_killer_mindset_efici\u00eancia_de_tokens",
+      "target": "docs_rtk_guide_supress\u00e3o_de_ru\u00eddo_no_terminal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RTK_GUIDE.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "docs_rtk_guide_o_protocolo_de_busca_cir\u00fargica_em_3_camadas",
+      "target": "docs_rtk_guide_1_camada_de_filtro_precision_search",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RTK_GUIDE.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "docs_rtk_guide_o_protocolo_de_busca_cir\u00fargica_em_3_camadas",
+      "target": "docs_rtk_guide_2_camada_de_scan_linhas_imediatas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/RTK_GUIDE.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "docs_rtk_guide_o_protocolo_de_busca_cir\u00fargica_em_3_camadas",
+      "target": "docs_rtk_guide_3_camada_de_deep_dive_leitura_seletiva",
       "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ae824d5c54c4e779142da687728d2f284970bfe8"
+  "built_at_commit": "9143db6c309a234fa059934180007dabc2b4eab1"
 }

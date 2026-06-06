@@ -154,8 +154,8 @@ export const handler = async (event, context) => {
           'la liga',
         ];
 
-    // Regra VIP (invisível): Competições gigantes sempre passam no filtro
-    const vips = ['copa do mundo', 'eurocopa', 'copa américa', 'recopa gaúcha', 'gauchão', 'campeonato gaúcho'];
+    // Regra VIP (invisível): Competições gigantes + Amistosos/Eliminatórias de seleções
+    const vips = ['copa do mundo', 'eurocopa', 'copa américa', 'recopa gaúcha', 'gauchão', 'campeonato gaúcho', 'amistoso', 'eliminatórias'];
     campeonatosAlvo = [...new Set([...campeonatosAlvo, ...vips])];
 
     // Blocklist invisível: Remove lixo das buscas parciais
